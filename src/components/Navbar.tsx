@@ -45,9 +45,12 @@ const Navbar = () => {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex items-center gap-2">
-              <div className="w-10 h-10 bg-[#fd2929] rounded-lg flex items-center justify-center font-bold text-xl">
-                A
-              </div>
+              <img
+                src="/logo.jpeg"
+                alt="AJIZ logo"
+                className="w-10 h-10 rounded-lg object-contain"
+                style={{ background: "#f2f5f4" }}
+              />
               <span className="text-xl font-bold text-white">AJIZ</span>
             </Link>
           </div>

@@ -2,21 +2,24 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const { t, i18n } = useTranslation();
 
   const isActive = (path: string) => location.pathname === path;
 
   const navItems = [
-    { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
-    { name: "Clubs", path: "/clubs" },
-    { name: "Activities", path: "/activities" },
-    { name: "Workshops", path: "/workshops" },
-    { name: "Trainings", path: "/trainings" },
-  ];
+    { key: "home", path: "/" },
+    { key: "about", path: "/about" },
+    { key: "clubs", path: "/clubs" },
+    { key: "activities", path: "/activities" },
+    { key: "workshops", path: "/workshops" },
+    { key: "trainings", path: "/trainings" },
+  ] as const;
 
   return (
     <nav className="bg-[#184260] text-white shadow-lg sticky top-0 z-50">
@@ -41,14 +44,25 @@ const Navbar = () => {
                   isActive(item.path) ? "text-[#fd2929] border-b-2 border-[#fd2929]" : ""
                 }`}
               >
-                {item.name}
+                {t(`nav.${item.key}`)}
               </Link>
             ))}
+
+            <Select value={i18n.resolvedLanguage} onValueChange={(value) => i18n.changeLanguage(value)}>
+              <SelectTrigger className="w-[110px] bg-transparent text-white border-white/30">
+                <SelectValue placeholder={t("nav.language")} />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="en">EN</SelectItem>
+                <SelectItem value="fr">FR</SelectItem>
+              </SelectContent>
+            </Select>
+
             <Button 
               className="bg-[#fd2929] hover:bg-[#cf1919] text-white px-6 py-2 rounded-lg transition-colors duration-200"
               asChild
             >
-              <Link to="/activities" className="text-white">Join Us</Link>
+              <Link to="/activities" className="text-white">{t("nav.joinUs")}</Link>
             </Button>
           </div>
 
@@ -82,14 +96,27 @@ const Navbar = () => {
                   }`}
                   onClick={() => setIsOpen(false)}
                 >
-                  {item.name}
+                  {t(`nav.${item.key}`)}
                 </Link>
               ))}
+
+              <div className="px-3 pt-2">
+                <Select value={i18n.resolvedLanguage} onValueChange={(value) => i18n.changeLanguage(value)}>
+                  <SelectTrigger className="w-full bg-transparent text-white border-white/30">
+                    <SelectValue placeholder={t("nav.language")} />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="en">EN</SelectItem>
+                    <SelectItem value="fr">FR</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+
               <Button 
                 className="w-full mt-4 bg-[#fd2929] hover:bg-[#cf1919] text-white"
                 asChild
               >
-                <Link to="/activities" onClick={() => setIsOpen(false)} className="text-white">Join Us</Link>
+                <Link to="/activities" onClick={() => setIsOpen(false)} className="text-white">{t("nav.joinUs")}</Link>
               </Button>
             </div>
           </div>

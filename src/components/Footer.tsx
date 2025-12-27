@@ -1,7 +1,10 @@
 
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <footer className="bg-[#184260] text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -14,10 +17,7 @@ const Footer = () => {
               </div>
               <span className="text-xl font-bold">AJIZ</span>
             </div>
-            <p className="text-gray-300 mb-4 max-w-md">
-              Association of Young Engineers in Zarzis - Empowering youth through technology, 
-              innovation, and entrepreneurship.
-            </p>
+            <p className="text-gray-300 mb-4 max-w-md">{t("footer.description")}</p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-300 hover:text-[#fd2929] transition-colors">
                 <span className="sr-only">Facebook</span>
@@ -36,29 +36,29 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-white">Quick Links</h3>
+            <h3 className="text-lg font-semibold mb-4 text-white">{t("footer.quickLinks")}</h3>
             <ul className="space-y-2">
-              <li><Link to="/" className="text-gray-300 hover:text-[#fd2929] transition-colors">Home</Link></li>
-              <li><Link to="/about" className="text-gray-300 hover:text-[#fd2929] transition-colors">About</Link></li>
-              <li><Link to="/clubs" className="text-gray-300 hover:text-[#fd2929] transition-colors">Clubs</Link></li>
-              <li><Link to="/activities" className="text-gray-300 hover:text-[#fd2929] transition-colors">Activities</Link></li>
+              <li><Link to="/" className="text-gray-300 hover:text-[#fd2929] transition-colors">{t("nav.home")}</Link></li>
+              <li><Link to="/about" className="text-gray-300 hover:text-[#fd2929] transition-colors">{t("nav.about")}</Link></li>
+              <li><Link to="/clubs" className="text-gray-300 hover:text-[#fd2929] transition-colors">{t("nav.clubs")}</Link></li>
+              <li><Link to="/activities" className="text-gray-300 hover:text-[#fd2929] transition-colors">{t("nav.activities")}</Link></li>
             </ul>
           </div>
 
           {/* Contact */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-white">Contact</h3>
+            <h3 className="text-lg font-semibold mb-4 text-white">{t("footer.contact")}</h3>
             <ul className="space-y-2 text-gray-300">
-              <li>Zarzis, Tunisia</li>
-              <li>contact@ajiz.org</li>
-              <li>+216 XX XXX XXX</li>
+              <li>{t("footer.location")}</li>
+              <li>{t("footer.email")}</li>
+              <li>{t("footer.phone")}</li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-gray-600 mt-8 pt-8 text-center">
           <p className="text-gray-300">
-            © 2024 AJIZ - Association of Young Engineers in Zarzis. All rights reserved.
+            {t("footer.copyright", { year: new Date().getFullYear() })}
           </p>
         </div>
       </div>

@@ -2,42 +2,45 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
+import { Trans, useTranslation } from "react-i18next";
 
 const Home = () => {
+  const { t } = useTranslation();
+
   const thematicAxes = [
     {
-      title: "Youth",
-      description: "Empowering young minds to lead innovation and drive positive change in their communities.",
+      title: t("home.axes.youth.title"),
+      description: t("home.axes.youth.description"),
       icon: "👥",
     },
     {
-      title: "Technology",
-      description: "Advancing technological skills and knowledge through hands-on learning and practical applications.",
+      title: t("home.axes.technology.title"),
+      description: t("home.axes.technology.description"),
       icon: "💻",
     },
     {
-      title: "Entrepreneurship",
-      description: "Fostering entrepreneurial spirit and supporting startup initiatives among young engineers.",
+      title: t("home.axes.entrepreneurship.title"),
+      description: t("home.axes.entrepreneurship.description"),
       icon: "🚀",
     },
   ];
 
   const clubs = [
     {
-      name: "Coding Club",
-      description: "Master programming languages, develop innovative software solutions, and build the future through code.",
+      name: t("home.cards.codingClub.name"),
+      description: t("home.cards.codingClub.description"),
       image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop",
       link: "/clubs/coding",
     },
     {
-      name: "Robotics Club",
-      description: "Design, build, and program robots while exploring automation, AI, and cutting-edge hardware technologies.",
+      name: t("home.cards.roboticsClub.name"),
+      description: t("home.cards.roboticsClub.description"),
       image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=300&fit=crop",
       link: "/clubs/robotics",
     },
     {
-      name: "Art Club",
-      description: "Express creativity through digital art, design, multimedia projects, and innovative visual storytelling.",
+      name: t("home.cards.artClub.name"),
+      description: t("home.cards.artClub.description"),
       image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&h=300&fit=crop",
       link: "/clubs/art",
     },
@@ -45,15 +48,15 @@ const Home = () => {
 
   const testimonials = [
     {
-      name: "Amira Ben Salem",
-      role: "Software Engineer",
-      content: "AJIZ transformed my passion for coding into a successful career. The mentorship and hands-on projects were invaluable.",
+      name: t("home.testimonialsData.amira.name"),
+      role: t("home.testimonialsData.amira.role"),
+      content: t("home.testimonialsData.amira.content"),
       avatar: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=100&h=100&fit=crop&crop=face",
     },
     {
-      name: "Mohamed Khalil",
-      role: "Robotics Specialist",
-      content: "The robotics club at AJIZ gave me the practical experience I needed to excel in my field. Amazing community!",
+      name: t("home.testimonialsData.mohamed.name"),
+      role: t("home.testimonialsData.mohamed.role"),
+      content: t("home.testimonialsData.mohamed.content"),
       avatar: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=100&h=100&fit=crop&crop=face",
     },
   ];
@@ -69,14 +72,15 @@ const Home = () => {
       >
         <div className="text-center text-white px-4 max-w-4xl">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
-            Welcome to <span className="text-[#fd2929]">AJIZ</span>
+            <Trans i18nKey="home.hero.welcome">
+              Welcome to <span className="text-[#fd2929]">AJIZ</span>
+            </Trans>
           </h1>
           <p className="text-xl md:text-2xl mb-8 animate-fade-in">
-            Association of Young Engineers in Zarzis
+            {t("home.hero.subtitle")}
           </p>
           <p className="text-lg md:text-xl mb-12 max-w-2xl mx-auto animate-fade-in">
-            Empowering youth through technology, innovation, and entrepreneurship. 
-            Join our community of passionate engineers shaping the future.
+            {t("home.hero.description")}
           </p>
           <div className="space-y-4 md:space-y-0 md:space-x-4 md:flex md:justify-center animate-fade-in">
             <Button 
@@ -84,7 +88,7 @@ const Home = () => {
               className="bg-[#fd2929] hover:bg-[#cf1919] text-white px-8 py-4 text-lg rounded-lg transition-all duration-300 hover:scale-105"
               asChild
             >
-              <Link to="/activities">Join Our Community</Link>
+              <Link to="/activities">{t("home.hero.primaryCta")}</Link>
             </Button>
             <Button 
               size="lg" 
@@ -92,7 +96,7 @@ const Home = () => {
               className="border-white text-white hover:bg-white hover:text-[#184260] px-8 py-4 text-lg rounded-lg transition-all duration-300 bg-transparent"
               asChild
             >
-              <Link to="/about">Learn More</Link>
+              <Link to="/about">{t("home.hero.secondaryCta")}</Link>
             </Button>
           </div>
         </div>
@@ -102,9 +106,9 @@ const Home = () => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#184260] mb-4">Our Thematic Axes</h2>
+            <h2 className="text-4xl font-bold text-[#184260] mb-4">{t("home.axes.title")}</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              AJIZ operates on three fundamental pillars that guide our mission and activities
+              {t("home.axes.subtitle")}
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -125,9 +129,9 @@ const Home = () => {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#184260] mb-4">Our Clubs</h2>
+            <h2 className="text-4xl font-bold text-[#184260] mb-4">{t("home.clubs.title")}</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Explore our specialized clubs designed to nurture your interests and skills
+              {t("home.clubs.subtitle")}
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -141,7 +145,7 @@ const Home = () => {
                     className="bg-[#fd2929] hover:bg-[#cf1919] text-white w-full transition-colors duration-200"
                     asChild
                   >
-                    <Link to={club.link}>Learn More</Link>
+                    <Link to={club.link}>{t("common.learnMore")}</Link>
                   </Button>
                 </CardContent>
               </Card>
@@ -155,23 +159,19 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-bold text-[#184260] mb-6">About AJIZ</h2>
+              <h2 className="text-4xl font-bold text-[#184260] mb-6">{t("home.about.title")}</h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                The Association of Young Engineers in Zarzis (AJIZ) is a dynamic community 
-                dedicated to fostering innovation, technology advancement, and entrepreneurial 
-                spirit among young engineers in Tunisia.
+                {t("home.about.p1")}
               </p>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                Through our comprehensive programs, specialized clubs, and collaborative 
-                initiatives, we provide a platform for growth, learning, and networking 
-                that prepares our members for successful careers in engineering and technology.
+                {t("home.about.p2")}
               </p>
               <Button 
                 size="lg" 
                 className="bg-[#fd2929] hover:bg-[#cf1919] text-white px-8 py-3 rounded-lg transition-colors duration-200"
                 asChild
               >
-                <Link to="/about">Discover Our Story</Link>
+                <Link to="/about">{t("common.discoverOurStory")}</Link>
               </Button>
             </div>
             <div className="relative">
@@ -189,9 +189,9 @@ const Home = () => {
       <section className="py-20 bg-[#184260] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">What Our Members Say</h2>
+            <h2 className="text-4xl font-bold mb-4">{t("home.testimonials.title")}</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Hear from our community members about their transformative experiences with AJIZ
+              {t("home.testimonials.subtitle")}
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -220,10 +220,9 @@ const Home = () => {
       {/* Call to Action Section */}
       <section className="py-20 bg-gradient-to-r from-[#fd2929] to-[#cf1919] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Shape the Future?</h2>
+          <h2 className="text-4xl font-bold mb-6">{t("home.cta.title")}</h2>
           <p className="text-xl mb-12 max-w-3xl mx-auto leading-relaxed">
-            Join AJIZ and become part of a community that's driving innovation, 
-            fostering entrepreneurship, and building tomorrow's technology today.
+            {t("home.cta.description")}
           </p>
           <div className="space-y-4 md:space-y-0 md:space-x-6 md:flex md:justify-center">
             <Button 
@@ -231,7 +230,7 @@ const Home = () => {
               className="bg-white text-[#fd2929] hover:bg-gray-100 px-8 py-4 text-lg rounded-lg transition-all duration-300 hover:scale-105"
               asChild
             >
-              <Link to="/activities">Join Our Events</Link>
+              <Link to="/activities">{t("common.joinOurEvents")}</Link>
             </Button>
             <Button 
               size="lg" 
@@ -239,7 +238,7 @@ const Home = () => {
               className="border-white text-white hover:bg-white hover:text-[#fd2929] px-8 py-4 text-lg rounded-lg transition-all duration-300 bg-transparent"
               asChild
             >
-              <Link to="/clubs">Explore Clubs</Link>
+              <Link to="/clubs">{t("common.exploreClubs")}</Link>
             </Button>
           </div>
         </div>
@@ -249,22 +248,22 @@ const Home = () => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#184260] mb-4">Get In Touch</h2>
+            <h2 className="text-4xl font-bold text-[#184260] mb-4">{t("home.contact.title")}</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Have questions? Want to learn more? We'd love to hear from you.
+              {t("home.contact.subtitle")}
             </p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
-              <h3 className="text-2xl font-bold text-[#184260] mb-6">Contact Information</h3>
+              <h3 className="text-2xl font-bold text-[#184260] mb-6">{t("home.contact.contactInfoTitle")}</h3>
               <div className="space-y-4">
                 <div className="flex items-center">
                   <div className="w-12 h-12 bg-[#fd2929] rounded-lg flex items-center justify-center mr-4">
                     <span className="text-white">📍</span>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-[#184260]">Location</h4>
-                    <p className="text-gray-600">Zarzis, Tunisia</p>
+                    <h4 className="font-semibold text-[#184260]">{t("home.contact.locationLabel")}</h4>
+                    <p className="text-gray-600">{t("footer.location")}</p>
                   </div>
                 </div>
                 <div className="flex items-center">
@@ -272,8 +271,8 @@ const Home = () => {
                     <span className="text-white">📧</span>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-[#184260]">Email</h4>
-                    <p className="text-gray-600">contact@ajiz.org</p>
+                    <h4 className="font-semibold text-[#184260]">{t("home.contact.emailLabel")}</h4>
+                    <p className="text-gray-600">{t("footer.email")}</p>
                   </div>
                 </div>
                 <div className="flex items-center">
@@ -281,8 +280,8 @@ const Home = () => {
                     <span className="text-white">📱</span>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-[#184260]">Phone</h4>
-                    <p className="text-gray-600">+216 XX XXX XXX</p>
+                    <h4 className="font-semibold text-[#184260]">{t("home.contact.phoneLabel")}</h4>
+                    <p className="text-gray-600">{t("footer.phone")}</p>
                   </div>
                 </div>
               </div>

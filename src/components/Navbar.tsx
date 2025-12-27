@@ -73,8 +73,12 @@ const Navbar = () => {
                   variant="ghost"
                   className="border border-white/40 bg-white/10 text-white hover:bg-white/20 hover:text-white px-4 py-2 rounded-full"
                   aria-label={t("nav.language")}
+                  style={{ paddingInlineStart: "8px" }}
                 >
-                  <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white/15 text-base font-semibold uppercase">
+                  <span
+                    className="flex items-center justify-center bg-white/15 text-base font-semibold uppercase"
+                    style={{ width: "40px", height: "26px", borderRadius: "13px" }}
+                  >
                     {currentLanguageMeta.badge}
                   </span>
                   <div className="text-left">
@@ -94,11 +98,14 @@ const Navbar = () => {
                       event.preventDefault();
                       i18n.changeLanguage(opt.value);
                     }}
-                    className={`flex items-center gap-3 rounded-md ${
+                    className={`flex items-center gap-3 rounded-md cursor-pointer mb-1 ${
                       currentLanguage === opt.value ? "bg-accent text-accent-foreground" : ""
                     }`}
                   >
-                    <span className="flex h-9 w-9 items-center justify-center rounded-full bg-muted text-sm font-semibold uppercase">
+                    <span
+                      className="flex items-center justify-center bg-muted text-sm font-semibold uppercase"
+                      style={{ width: "40px", height: "26px", borderRadius: "13px" }}
+                    >
                       {opt.badge}
                     </span>
                     <div>
@@ -162,14 +169,18 @@ const Navbar = () => {
                         i18n.changeLanguage(opt.value);
                         setIsOpen(false);
                       }}
-                      className={`flex items-center justify-between rounded-lg border px-3 py-2 text-white transition-colors ${
+                      className={`flex items-center justify-between rounded-lg border px-3 py-2 text-white transition-colors cursor-pointer ${
                         currentLanguage === opt.value
                           ? "border-white bg-white/10"
                           : "border-white/20 hover:border-white/50 hover:bg-white/5"
                       }`}
+                      style={{ marginBlock: "4px" }}
                     >
                       <span className="flex items-center gap-2">
-                        <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white/15 text-sm font-semibold uppercase">
+                        <span
+                          className="flex items-center justify-center bg-white/15 text-sm font-semibold uppercase"
+                          style={{ width: "40px", height: "26px", borderRadius: "13px" }}
+                        >
                           {opt.badge}
                         </span>
                         <span className="font-semibold">{opt.description}</span>

@@ -2,13 +2,33 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuLabel,
+  DropdownMenuRadioGroup,
+  DropdownMenuRadioItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { Languages } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
   const { t, i18n } = useTranslation();
+
+  const currentLanguage = i18n.resolvedLanguage ?? i18n.language;
+
+  const languageOptions = [
+    { value: "en", label: "EN" },
+    { value: "fr", label: "FR" },
+    { value: "ar", label: "العربية" },
+  ] as const;
+
+  const currentLanguageLabel =
+    languageOptions.find((opt) => opt.value === currentLanguage)?.label ?? "EN";
 
   const isActive = (path: string) => location.pathname === path;
 
@@ -48,19 +68,32 @@ const Navbar = () => {
               </Link>
             ))}
 
-            <Select
-              value={i18n.resolvedLanguage ?? i18n.language}
-              onValueChange={(value) => i18n.changeLanguage(value)}
-            >
-              <SelectTrigger className="w-[110px] bg-transparent text-white border-white/30">
-                <SelectValue placeholder={t("nav.language")} />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="en">EN</SelectItem>
-                <SelectItem value="fr">FR</SelectItem>
-                <SelectItem value="ar">العربية</SelectItem>
-              </SelectContent>
-            </Select>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button
+                  type="button"
+                  variant="ghost"
+                  className="border border-white/30 bg-transparent text-white hover:bg-white/10 hover:text-white"
+                >
+                  <Languages className="h-4 w-4" />
+                  <span className="font-medium">{currentLanguageLabel}</span>
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end">
+                <DropdownMenuLabel>{t("nav.language")}</DropdownMenuLabel>
+                <DropdownMenuSeparator />
+                <DropdownMenuRadioGroup
+                  value={currentLanguage}
+                  onValueChange={(value) => i18n.changeLanguage(value)}
+                >
+                  {languageOptions.map((opt) => (
+                    <DropdownMenuRadioItem key={opt.value} value={opt.value}>
+                      {opt.label}
+                    </DropdownMenuRadioItem>
+                  ))}
+                </DropdownMenuRadioGroup>
+              </DropdownMenuContent>
+            </DropdownMenu>
 
             <Button 
               className="bg-[#fd2929] hover:bg-[#cf1919] text-white px-6 py-2 rounded-lg transition-colors duration-200"
@@ -105,19 +138,35 @@ const Navbar = () => {
               ))}
 
               <div className="px-3 pt-2">
-                <Select
-                  value={i18n.resolvedLanguage ?? i18n.language}
-                  onValueChange={(value) => i18n.changeLanguage(value)}
-                >
-                  <SelectTrigger className="w-full bg-transparent text-white border-white/30">
-                    <SelectValue placeholder={t("nav.language")} />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="en">EN</SelectItem>
-                    <SelectItem value="fr">FR</SelectItem>
-                    <SelectItem value="ar">العربية</SelectItem>
-                  </SelectContent>
-                </Select>
+                <DropdownMenu>
+                  <DropdownMenuTrigger asChild>
+                    <Button
+                      type="button"
+                      variant="ghost"
+                      className="w-full justify-between border border-white/30 bg-transparent text-white hover:bg-white/10 hover:text-white"
+                    >
+                      <span className="inline-flex items-center gap-2">
+                        <Languages className="h-4 w-4" />
+                        <span>{t("nav.language")}</span>
+                      </span>
+                      <span className="text-white/80">{currentLanguageLabel}</span>
+                    </Button>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent align="start" className="w-[200px]">
+                    <DropdownMenuLabel>{t("nav.language")}</DropdownMenuLabel>
+                    <DropdownMenuSeparator />
+                    <DropdownMenuRadioGroup
+                      value={currentLanguage}
+                      onValueChange={(value) => i18n.changeLanguage(value)}
+                    >
+                      {languageOptions.map((opt) => (
+                        <DropdownMenuRadioItem key={opt.value} value={opt.value}>
+                          {opt.label}
+                        </DropdownMenuRadioItem>
+                      ))}
+                    </DropdownMenuRadioGroup>
+                  </DropdownMenuContent>
+                </DropdownMenu>
               </div>
 
               <Button 

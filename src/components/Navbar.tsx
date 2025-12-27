@@ -19,6 +19,7 @@ const Navbar = () => {
   const { t, i18n } = useTranslation();
 
   const currentLanguage = i18n.resolvedLanguage ?? i18n.language;
+  const currentDirection = i18n.dir(currentLanguage) as "ltr" | "rtl";
 
   const languageOptions = [
     { value: "en", label: "EN", badge: "EN", description: "English" },
@@ -69,7 +70,7 @@ const Navbar = () => {
               </Link>
             ))}
 
-            <DropdownMenu>
+            <DropdownMenu dir={currentDirection}>
               <DropdownMenuTrigger asChild>
                 <Button
                   type="button"

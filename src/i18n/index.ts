@@ -4,13 +4,15 @@ import { initReactI18next } from "react-i18next";
 
 import en from "./locales/en";
 import fr from "./locales/fr";
+import ar from "./locales/ar";
 
-export const supportedLanguages = ["en", "fr"] as const;
+export const supportedLanguages = ["en", "fr", "ar"] as const;
 export type SupportedLanguage = (typeof supportedLanguages)[number];
 
 const resources = {
   en: { translation: en },
   fr: { translation: fr },
+  ar: { translation: ar },
 } as const;
 
 i18n
@@ -32,8 +34,15 @@ i18n
     },
   });
 
-i18n.on("languageChanged", (lng) => {
+const applyDocumentLanguage = (lng: string) => {
   document.documentElement.lang = lng;
+  document.documentElement.dir = i18n.dir(lng);
+};
+
+applyDocumentLanguage(i18n.resolvedLanguage ?? i18n.language);
+
+i18n.on("languageChanged", (lng) => {
+  applyDocumentLanguage(lng);
 });
 
 export default i18n;

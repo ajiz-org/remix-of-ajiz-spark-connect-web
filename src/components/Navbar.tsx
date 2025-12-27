@@ -26,7 +26,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
-            <Link to="/" className="flex items-center space-x-2">
+            <Link to="/" className="flex items-center gap-2">
               <div className="w-10 h-10 bg-[#fd2929] rounded-lg flex items-center justify-center font-bold text-xl">
                 A
               </div>
@@ -35,7 +35,7 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
               <Link
                 key={item.path}
@@ -48,13 +48,17 @@ const Navbar = () => {
               </Link>
             ))}
 
-            <Select value={i18n.resolvedLanguage} onValueChange={(value) => i18n.changeLanguage(value)}>
+            <Select
+              value={i18n.resolvedLanguage ?? i18n.language}
+              onValueChange={(value) => i18n.changeLanguage(value)}
+            >
               <SelectTrigger className="w-[110px] bg-transparent text-white border-white/30">
                 <SelectValue placeholder={t("nav.language")} />
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="en">EN</SelectItem>
                 <SelectItem value="fr">FR</SelectItem>
+                <SelectItem value="ar">العربية</SelectItem>
               </SelectContent>
             </Select>
 
@@ -101,13 +105,17 @@ const Navbar = () => {
               ))}
 
               <div className="px-3 pt-2">
-                <Select value={i18n.resolvedLanguage} onValueChange={(value) => i18n.changeLanguage(value)}>
+                <Select
+                  value={i18n.resolvedLanguage ?? i18n.language}
+                  onValueChange={(value) => i18n.changeLanguage(value)}
+                >
                   <SelectTrigger className="w-full bg-transparent text-white border-white/30">
                     <SelectValue placeholder={t("nav.language")} />
                   </SelectTrigger>
                   <SelectContent>
                     <SelectItem value="en">EN</SelectItem>
                     <SelectItem value="fr">FR</SelectItem>
+                    <SelectItem value="ar">العربية</SelectItem>
                   </SelectContent>
                 </Select>
               </div>

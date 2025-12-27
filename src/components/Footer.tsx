@@ -11,14 +11,14 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center space-x-2 mb-4">
+            <div className="flex items-center gap-2 mb-4">
               <div className="w-10 h-10 bg-[#fd2929] rounded-lg flex items-center justify-center font-bold text-xl">
                 A
               </div>
               <span className="text-xl font-bold">AJIZ</span>
             </div>
             <p className="text-gray-300 mb-4 max-w-md">{t("footer.description")}</p>
-            <div className="flex space-x-4">
+            <div className="flex gap-4">
               <a href="#" className="text-gray-300 hover:text-[#fd2929] transition-colors">
                 <span className="sr-only">Facebook</span>
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">

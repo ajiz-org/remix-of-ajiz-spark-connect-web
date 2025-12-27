@@ -82,7 +82,7 @@ const Home = () => {
           <p className="text-lg md:text-xl mb-12 max-w-2xl mx-auto animate-fade-in">
             {t("home.hero.description")}
           </p>
-          <div className="space-y-4 md:space-y-0 md:space-x-4 md:flex md:justify-center animate-fade-in">
+          <div className="space-y-4 md:space-y-0 md:flex md:justify-center md:gap-4 animate-fade-in">
             <Button 
               size="lg" 
               className="bg-[#fd2929] hover:bg-[#cf1919] text-white px-8 py-4 text-lg rounded-lg transition-all duration-300 hover:scale-105"
@@ -224,7 +224,7 @@ const Home = () => {
           <p className="text-xl mb-12 max-w-3xl mx-auto leading-relaxed">
             {t("home.cta.description")}
           </p>
-          <div className="space-y-4 md:space-y-0 md:space-x-6 md:flex md:justify-center">
+          <div className="space-y-4 md:space-y-0 md:flex md:justify-center md:gap-6">
             <Button 
               size="lg" 
               className="bg-white text-[#fd2929] hover:bg-gray-100 px-8 py-4 text-lg rounded-lg transition-all duration-300 hover:scale-105"
@@ -258,7 +258,10 @@ const Home = () => {
               <h3 className="text-2xl font-bold text-[#184260] mb-6">{t("home.contact.contactInfoTitle")}</h3>
               <div className="space-y-4">
                 <div className="flex items-center">
-                  <div className="w-12 h-12 bg-[#fd2929] rounded-lg flex items-center justify-center mr-4">
+                  <div
+                    className="w-12 h-12 bg-[#fd2929] rounded-lg flex items-center justify-center"
+                    style={{ marginInlineEnd: "1rem" }}
+                  >
                     <span className="text-white">📍</span>
                   </div>
                   <div>
@@ -267,7 +270,10 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="flex items-center">
-                  <div className="w-12 h-12 bg-[#fd2929] rounded-lg flex items-center justify-center mr-4">
+                  <div
+                    className="w-12 h-12 bg-[#fd2929] rounded-lg flex items-center justify-center"
+                    style={{ marginInlineEnd: "1rem" }}
+                  >
                     <span className="text-white">📧</span>
                   </div>
                   <div>
@@ -276,7 +282,10 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="flex items-center">
-                  <div className="w-12 h-12 bg-[#fd2929] rounded-lg flex items-center justify-center mr-4">
+                  <div
+                    className="w-12 h-12 bg-[#fd2929] rounded-lg flex items-center justify-center"
+                    style={{ marginInlineEnd: "1rem" }}
+                  >
                     <span className="text-white">📱</span>
                   </div>
                   <div>

@@ -5,9 +5,8 @@ import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
+  DropdownMenuItem,
   DropdownMenuLabel,
-  DropdownMenuRadioGroup,
-  DropdownMenuRadioItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
@@ -22,13 +21,12 @@ const Navbar = () => {
   const currentLanguage = i18n.resolvedLanguage ?? i18n.language;
 
   const languageOptions = [
-    { value: "en", label: "EN" },
-    { value: "fr", label: "FR" },
-    { value: "ar", label: "العربية" },
+    { value: "en", label: "EN", badge: "EN", description: "English" },
+    { value: "fr", label: "FR", badge: "FR", description: "Français" },
+    { value: "ar", label: "AR", badge: "ع", description: "العربية" },
   ] as const;
 
-  const currentLanguageLabel =
-    languageOptions.find((opt) => opt.value === currentLanguage)?.label ?? "EN";
+  const currentLanguageMeta = languageOptions.find((opt) => opt.value === currentLanguage) ?? languageOptions[0];
 
   const isActive = (path: string) => location.pathname === path;
 
@@ -73,25 +71,42 @@ const Navbar = () => {
                 <Button
                   type="button"
                   variant="ghost"
-                  className="border border-white/30 bg-transparent text-white hover:bg-white/10 hover:text-white"
+                  className="border border-white/40 bg-white/10 text-white hover:bg-white/20 hover:text-white px-4 py-2 rounded-full"
+                  aria-label={t("nav.language")}
                 >
-                  <Languages className="h-4 w-4" />
-                  <span className="font-medium">{currentLanguageLabel}</span>
+                  <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white/15 text-base font-semibold uppercase">
+                    {currentLanguageMeta.badge}
+                  </span>
+                  <div className="text-left">
+                    <p className="text-xs uppercase tracking-wide text-white/70">{t("nav.language")}</p>
+                    <p className="font-semibold leading-tight">{currentLanguageMeta.description}</p>
+                  </div>
+                  <Languages className="h-4 w-4 opacity-70" />
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end">
                 <DropdownMenuLabel>{t("nav.language")}</DropdownMenuLabel>
                 <DropdownMenuSeparator />
-                <DropdownMenuRadioGroup
-                  value={currentLanguage}
-                  onValueChange={(value) => i18n.changeLanguage(value)}
-                >
-                  {languageOptions.map((opt) => (
-                    <DropdownMenuRadioItem key={opt.value} value={opt.value}>
-                      {opt.label}
-                    </DropdownMenuRadioItem>
-                  ))}
-                </DropdownMenuRadioGroup>
+                {languageOptions.map((opt) => (
+                  <DropdownMenuItem
+                    key={opt.value}
+                    onSelect={(event) => {
+                      event.preventDefault();
+                      i18n.changeLanguage(opt.value);
+                    }}
+                    className={`flex items-center gap-3 rounded-md ${
+                      currentLanguage === opt.value ? "bg-accent text-accent-foreground" : ""
+                    }`}
+                  >
+                    <span className="flex h-9 w-9 items-center justify-center rounded-full bg-muted text-sm font-semibold uppercase">
+                      {opt.badge}
+                    </span>
+                    <div>
+                      <p className="font-semibold">{opt.description}</p>
+                      <p className="text-xs text-muted-foreground">{opt.label}</p>
+                    </div>
+                  </DropdownMenuItem>
+                ))}
               </DropdownMenuContent>
             </DropdownMenu>
 
@@ -137,36 +152,32 @@ const Navbar = () => {
                 </Link>
               ))}
 
-              <div className="px-3 pt-2">
-                <DropdownMenu>
-                  <DropdownMenuTrigger asChild>
-                    <Button
-                      type="button"
-                      variant="ghost"
-                      className="w-full justify-between border border-white/30 bg-transparent text-white hover:bg-white/10 hover:text-white"
+              <div className="px-3 pt-2 space-y-2">
+                <p className="text-xs uppercase tracking-wide text-white/60">{t("nav.language")}</p>
+                <div className="grid grid-cols-1 gap-2">
+                  {languageOptions.map((opt) => (
+                    <button
+                      key={opt.value}
+                      onClick={() => {
+                        i18n.changeLanguage(opt.value);
+                        setIsOpen(false);
+                      }}
+                      className={`flex items-center justify-between rounded-lg border px-3 py-2 text-white transition-colors ${
+                        currentLanguage === opt.value
+                          ? "border-white bg-white/10"
+                          : "border-white/20 hover:border-white/50 hover:bg-white/5"
+                      }`}
                     >
-                      <span className="inline-flex items-center gap-2">
-                        <Languages className="h-4 w-4" />
-                        <span>{t("nav.language")}</span>
+                      <span className="flex items-center gap-2">
+                        <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white/15 text-sm font-semibold uppercase">
+                          {opt.badge}
+                        </span>
+                        <span className="font-semibold">{opt.description}</span>
                       </span>
-                      <span className="text-white/80">{currentLanguageLabel}</span>
-                    </Button>
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent align="start" className="w-[200px]">
-                    <DropdownMenuLabel>{t("nav.language")}</DropdownMenuLabel>
-                    <DropdownMenuSeparator />
-                    <DropdownMenuRadioGroup
-                      value={currentLanguage}
-                      onValueChange={(value) => i18n.changeLanguage(value)}
-                    >
-                      {languageOptions.map((opt) => (
-                        <DropdownMenuRadioItem key={opt.value} value={opt.value}>
-                          {opt.label}
-                        </DropdownMenuRadioItem>
-                      ))}
-                    </DropdownMenuRadioGroup>
-                  </DropdownMenuContent>
-                </DropdownMenu>
+                      <span className="text-sm text-white/70">{opt.label}</span>
+                    </button>
+                  ))}
+                </div>
               </div>
 
               <Button 

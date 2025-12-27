@@ -16,7 +16,7 @@ const fr = {
     contact: "Contact",
     location: "Zarzis, Tunisie",
     email: "contact@ajiz.org",
-    phone: "+216 XX XXX XXX",
+    phone: "+216 24 785 026",
     copyright:
       "© {{year}} AJIZ - Association des Jeunes Ingénieurs de Zarzis. Tous droits réservés.",
   },

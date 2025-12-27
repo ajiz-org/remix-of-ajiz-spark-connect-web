@@ -54,7 +54,7 @@ const Footer = () => {
             <ul className="space-y-2 text-gray-300">
               <li>{t("footer.location")}</li>
               <li>{t("footer.email")}</li>
-              <li>{t("footer.phone")}</li>
+              <li><span style={{ unicodeBidi: "plaintext" }}>{t("footer.phone")}</span></li>
             </ul>
           </div>
         </div>

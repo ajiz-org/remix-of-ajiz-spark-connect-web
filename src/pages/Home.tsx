@@ -290,7 +290,9 @@ const Home = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-[#184260]">{t("home.contact.phoneLabel")}</h4>
-                    <p className="text-gray-600">{t("footer.phone")}</p>
+                    <p className="text-gray-600" style={{ unicodeBidi: "plaintext" }}>
+                      {t("footer.phone")}
+                    </p>
                   </div>
                 </div>
               </div>

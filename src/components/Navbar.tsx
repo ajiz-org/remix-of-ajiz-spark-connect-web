@@ -50,7 +50,7 @@ const Navbar = () => {
                 src="/logo.jpeg"
                 alt="AJIZ logo"
                 className="w-10 h-10 rounded-lg object-contain"
-                style={{ background: "#f2f5f4" }}
+                style={{ background: "#f2f5f4", objectPosition: "0 5px" }}
               />
               <span className="text-xl font-bold text-white">AJIZ</span>
             </Link>

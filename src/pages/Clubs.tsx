@@ -2,71 +2,68 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+
+type ClubInfo = {
+  name: string;
+  description: string;
+  image: string;
+  features: string[];
+  link: string;
+  color: string;
+};
 
 const Clubs = () => {
-  const clubs = [
+  const { t } = useTranslation();
+
+  const clubs: ClubInfo[] = [
     {
-      name: "Coding Club",
-      description: "Master the art of programming and software development through hands-on projects, collaborative coding sessions, and industry-relevant workshops.",
+      name: t("clubs.codingClub.name"),
+      description: t("clubs.codingClub.description"),
       image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=400&fit=crop",
-      features: [
-        "Weekly coding workshops",
-        "Open source project contributions",
-        "Competitive programming competitions",
-        "Industry mentorship programs"
-      ],
+      features: t("clubs.codingClub.features", { returnObjects: true }) as string[],
       link: "/clubs/coding",
-      color: "from-blue-500 to-purple-600"
+      color: "from-blue-500 to-purple-600",
     },
     {
-      name: "Robotics Club",
-      description: "Explore the fascinating world of robotics, automation, and AI through practical projects, competitions, and cutting-edge research initiatives.",
+      name: t("clubs.roboticsClub.name"),
+      description: t("clubs.roboticsClub.description"),
       image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&h=400&fit=crop",
-      features: [
-        "Robot design and building",
-        "Automation projects",
-        "IoT development",
-        "National robotics competitions"
-      ],
+      features: t("clubs.roboticsClub.features", { returnObjects: true }) as string[],
       link: "/clubs/robotics",
-      color: "from-green-500 to-teal-600"
+      color: "from-green-500 to-teal-600",
     },
     {
-      name: "Art Club",
-      description: "Unleash your creativity through digital art, multimedia design, and innovative visual storytelling projects that blend technology with artistic expression.",
+      name: t("clubs.artClub.name"),
+      description: t("clubs.artClub.description"),
       image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&h=400&fit=crop",
-      features: [
-        "Digital art workshops",
-        "UI/UX design training",
-        "Video production projects",
-        "Creative technology exhibitions"
-      ],
+      features: t("clubs.artClub.features", { returnObjects: true }) as string[],
       link: "/clubs/art",
-      color: "from-pink-500 to-red-600"
-    }
+      color: "from-pink-500 to-red-600",
+    },
   ];
 
   const benefits = [
     {
-      title: "Skill Development",
-      description: "Learn cutting-edge technologies and develop practical skills through hands-on projects.",
-      icon: "🎯"
+      title: t("clubs.benefits.skillDevelopment.title"),
+      description: t("clubs.benefits.skillDevelopment.description"),
+      icon: "🎯",
     },
     {
-      title: "Networking",
-      description: "Connect with like-minded peers, industry professionals, and potential mentors.",
-      icon: "🤝"
+      title: t("clubs.benefits.networking.title"),
+      description: t("clubs.benefits.networking.description"),
+      icon: "🤝",
     },
     {
-      title: "Project Experience",
-      description: "Work on real-world projects that build your portfolio and resume.",
-      icon: "💼"
+      title: t("clubs.benefits.projectExperience.title"),
+      description: t("clubs.benefits.projectExperience.description"),
+      icon: "💼",
     },
     {
-      title: "Leadership Opportunities",
-      description: "Take on leadership roles and develop management and organizational skills.",
-      icon: "👑"
-    }
+      title: t("clubs.benefits.leadership.title"),
+      description: t("clubs.benefits.leadership.description"),
+      icon: "👑",
+    },
   ];
 
   return (
@@ -75,11 +72,9 @@ const Clubs = () => {
       <section className="py-20 bg-gradient-to-br from-[#184260] to-[#fd2929] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in">Our Clubs</h1>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in">{t("clubs.header.title")}</h1>
             <p className="text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed animate-fade-in">
-              Join specialized communities of passionate learners and innovators. 
-              Each club offers unique opportunities to grow your skills, work on exciting projects, 
-              and connect with fellow enthusiasts.
+              {t("clubs.header.subtitle")}
             </p>
           </div>
         </div>
@@ -89,11 +84,9 @@ const Clubs = () => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#184260] mb-6">Why Join Our Clubs?</h2>
+            <h2 className="text-4xl font-bold text-[#184260] mb-6">{t("clubs.whyJoinTitle")}</h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Our clubs are more than just study groups – they're vibrant communities where 
-              innovation happens, friendships form, and future leaders emerge. Each club provides 
-              structured learning paths, mentorship opportunities, and real-world project experience.
+              {t("clubs.whyJoinSubtitle")}
             </p>
           </div>
 
@@ -115,9 +108,9 @@ const Clubs = () => {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#184260] mb-4">Explore Our Clubs</h2>
+            <h2 className="text-4xl font-bold text-[#184260] mb-4">{t("clubs.exploreTitle")}</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Choose your path and join a community that matches your interests and goals
+              {t("clubs.exploreSubtitle")}
             </p>
           </div>
 
@@ -133,7 +126,7 @@ const Clubs = () => {
                   </p>
                   
                   <div className="space-y-3 mb-8">
-                    <h4 className="text-xl font-semibold text-[#184260]">What You'll Get:</h4>
+                    <h4 className="text-xl font-semibold text-[#184260]">{t("clubs.featuresHeading")}</h4>
                     <ul className="space-y-2">
                       {club.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-gray-600">
@@ -149,7 +142,7 @@ const Clubs = () => {
                     className="bg-[#fd2929] hover:bg-[#cf1919] text-white px-8 py-3 rounded-lg transition-all duration-300 hover:scale-105"
                     asChild
                   >
-                    <Link to={club.link}>Learn More</Link>
+                    <Link to={club.link}>{t("common.learnMore")}</Link>
                   </Button>
                 </div>
                 
@@ -173,28 +166,28 @@ const Clubs = () => {
       <section className="py-20 bg-[#184260] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Our Impact</h2>
+            <h2 className="text-4xl font-bold mb-4">{t("clubs.impactTitle")}</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See how our clubs are making a difference in the lives of our members
+              {t("clubs.impactSubtitle")}
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-4xl font-bold text-[#fd2929] mb-2">150+</div>
-              <p className="text-lg">Active Members</p>
+              <p className="text-lg">{t("clubs.stats.members")}</p>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-[#fd2929] mb-2">50+</div>
-              <p className="text-lg">Projects Completed</p>
+              <p className="text-lg">{t("clubs.stats.projects")}</p>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-[#fd2929] mb-2">25+</div>
-              <p className="text-lg">Workshops Held</p>
+              <p className="text-lg">{t("clubs.stats.workshops")}</p>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-[#fd2929] mb-2">10+</div>
-              <p className="text-lg">Industry Partners</p>
+              <p className="text-lg">{t("clubs.stats.partners")}</p>
             </div>
           </div>
         </div>
@@ -203,10 +196,9 @@ const Clubs = () => {
       {/* Call to Action */}
       <section className="py-20 bg-gradient-to-r from-[#fd2929] to-[#cf1919] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Get Started?</h2>
+          <h2 className="text-4xl font-bold mb-6">{t("clubs.readyTitle")}</h2>
           <p className="text-xl mb-12 max-w-3xl mx-auto leading-relaxed">
-            Choose your club and start your journey with AJIZ. Whether you're interested in 
-            coding, robotics, or art, we have a community waiting for you.
+            {t("clubs.readyDescription")}
           </p>
           
           <div className="space-y-4 md:space-y-0 md:space-x-6 md:flex md:justify-center">
@@ -215,7 +207,7 @@ const Clubs = () => {
               className="bg-white text-[#fd2929] hover:bg-gray-100 px-8 py-4 text-lg rounded-lg transition-all duration-300 hover:scale-105"
               asChild
             >
-              <Link to="/activities">Join an Event</Link>
+              <Link to="/activities">{t("clubs.readyPrimary")}</Link>
             </Button>
             <Button 
               size="lg" 
@@ -223,7 +215,7 @@ const Clubs = () => {
               className="border-white text-white hover:bg-white hover:text-[#fd2929] px-8 py-4 text-lg rounded-lg transition-all duration-300 bg-transparent"
               asChild
             >
-              <Link to="#contact">Contact Us</Link>
+              <Link to="#contact">{t("clubs.readySecondary")}</Link>
             </Button>
           </div>
         </div>
@@ -233,46 +225,46 @@ const Clubs = () => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#184260] mb-4">Get In Touch</h2>
+            <h2 className="text-4xl font-bold text-[#184260] mb-4">{t("clubs.contactTitle")}</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Have questions about our clubs? Want to know more about joining? Contact us!
+              {t("clubs.contactSubtitle")}
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card className="text-center p-8 hover:shadow-xl transition-all duration-300">
               <div className="text-4xl mb-4">💻</div>
-              <h3 className="text-xl font-bold text-[#184260] mb-2">Coding Club</h3>
+              <h3 className="text-xl font-bold text-[#184260] mb-2">{t("clubs.codingClub.name")}</h3>
               <p className="text-gray-600 mb-4">coding@ajiz.org</p>
               <Button 
                 className="bg-[#fd2929] hover:bg-[#cf1919] text-white"
                 asChild
               >
-                <Link to="/clubs/coding">Learn More</Link>
+                <Link to="/clubs/coding">{t("common.learnMore")}</Link>
               </Button>
             </Card>
 
             <Card className="text-center p-8 hover:shadow-xl transition-all duration-300">
               <div className="text-4xl mb-4">🤖</div>
-              <h3 className="text-xl font-bold text-[#184260] mb-2">Robotics Club</h3>
+              <h3 className="text-xl font-bold text-[#184260] mb-2">{t("clubs.roboticsClub.name")}</h3>
               <p className="text-gray-600 mb-4">robotics@ajiz.org</p>
               <Button 
                 className="bg-[#fd2929] hover:bg-[#cf1919] text-white"
                 asChild
               >
-                <Link to="/clubs/robotics">Learn More</Link>
+                <Link to="/clubs/robotics">{t("common.learnMore")}</Link>
               </Button>
             </Card>
 
             <Card className="text-center p-8 hover:shadow-xl transition-all duration-300">
               <div className="text-4xl mb-4">🎨</div>
-              <h3 className="text-xl font-bold text-[#184260] mb-2">Art Club</h3>
+              <h3 className="text-xl font-bold text-[#184260] mb-2">{t("clubs.artClub.name")}</h3>
               <p className="text-gray-600 mb-4">art@ajiz.org</p>
               <Button 
                 className="bg-[#fd2929] hover:bg-[#cf1919] text-white"
                 asChild
               >
-                <Link to="/clubs/art">Learn More</Link>
+                <Link to="/clubs/art">{t("common.learnMore")}</Link>
               </Button>
             </Card>
           </div>

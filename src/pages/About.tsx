@@ -2,14 +2,16 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const About = () => {
+  const { t } = useTranslation();
   const milestones = [
-    { year: "2020", event: "AJIZ Foundation", description: "Established as a student-led initiative" },
-    { year: "2021", event: "First Tech Workshop", description: "Organized our inaugural coding workshop" },
-    { year: "2022", event: "Robotics Club Launch", description: "Expanded with specialized robotics programs" },
-    { year: "2023", event: "Community Partnership", description: "Formed partnerships with local tech companies" },
-    { year: "2024", event: "Innovation Hub", description: "Opened our dedicated innovation workspace" },
+    { year: "2020", event: t("about.milestones.2020.event"), description: t("about.milestones.2020.description") },
+    { year: "2021", event: t("about.milestones.2021.event"), description: t("about.milestones.2021.description") },
+    { year: "2022", event: t("about.milestones.2022.event"), description: t("about.milestones.2022.description") },
+    { year: "2023", event: t("about.milestones.2023.event"), description: t("about.milestones.2023.description") },
+    { year: "2024", event: t("about.milestones.2024.event"), description: t("about.milestones.2024.description") },
   ];
 
   const teamMembers = [
@@ -52,10 +54,9 @@ const About = () => {
       <section className="py-20 bg-gradient-to-br from-[#184260] to-[#fd2929] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in">About AJIZ</h1>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in">{t("about.header.title")}</h1>
             <p className="text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed animate-fade-in">
-              Empowering the next generation of engineers through innovation, 
-              collaboration, and technological excellence in Zarzis, Tunisia.
+              {t("about.header.subtitle")}
             </p>
           </div>
         </div>
@@ -68,11 +69,9 @@ const About = () => {
             <Card className="text-center hover:shadow-xl transition-all duration-300 hover:scale-105 border-t-4 border-t-[#fd2929]">
               <CardContent className="p-8">
                 <div className="text-5xl mb-6">🎯</div>
-                <h3 className="text-2xl font-bold text-[#184260] mb-4">Our Mission</h3>
+                <h3 className="text-2xl font-bold text-[#184260] mb-4">{t("about.mission.title")}</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  To foster innovation, technological advancement, and entrepreneurial 
-                  spirit among young engineers while building a strong professional 
-                  community that contributes to Tunisia's technological development.
+                  {t("about.mission.description")}
                 </p>
               </CardContent>
             </Card>
@@ -80,11 +79,9 @@ const About = () => {
             <Card className="text-center hover:shadow-xl transition-all duration-300 hover:scale-105 border-t-4 border-t-[#fd2929]">
               <CardContent className="p-8">
                 <div className="text-5xl mb-6">👁️</div>
-                <h3 className="text-2xl font-bold text-[#184260] mb-4">Our Vision</h3>
+                <h3 className="text-2xl font-bold text-[#184260] mb-4">{t("about.vision.title")}</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  To become the leading engineering association in Tunisia, 
-                  recognized for excellence in education, innovation, and 
-                  community impact while preparing future leaders in technology.
+                  {t("about.vision.description")}
                 </p>
               </CardContent>
             </Card>
@@ -92,11 +89,9 @@ const About = () => {
             <Card className="text-center hover:shadow-xl transition-all duration-300 hover:scale-105 border-t-4 border-t-[#fd2929]">
               <CardContent className="p-8">
                 <div className="text-5xl mb-6">📚</div>
-                <h3 className="text-2xl font-bold text-[#184260] mb-4">Our History</h3>
+                <h3 className="text-2xl font-bold text-[#184260] mb-4">{t("about.history.title")}</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Founded in 2020 by passionate engineering students, AJIZ has 
-                  grown from a small study group to a vibrant community of 
-                  hundreds of members driving technological innovation in Zarzis.
+                  {t("about.history.description")}
                 </p>
               </CardContent>
             </Card>
@@ -108,9 +103,9 @@ const About = () => {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#184260] mb-4">Our Thematic Axes</h2>
+            <h2 className="text-4xl font-bold text-[#184260] mb-4">{t("about.axesTitle")}</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Three pillars that guide everything we do at AJIZ
+              {t("about.axesSubtitle")}
             </p>
           </div>
 
@@ -120,17 +115,15 @@ const About = () => {
               <div>
                 <div className="flex items-center mb-6">
                   <div className="text-6xl mr-4">👥</div>
-                  <h3 className="text-3xl font-bold text-[#184260]">Youth</h3>
+                  <h3 className="text-3xl font-bold text-[#184260]">{t("about.youth.title")}</h3>
                 </div>
                 <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                  We believe in the power of young minds to drive change and innovation. 
-                  Our youth-focused initiatives provide mentorship, leadership opportunities, 
-                  and platforms for creative expression.
+                  {t("about.youth.description")}
                 </p>
                 <ul className="space-y-2 text-gray-600">
-                  <li className="flex items-center"><span className="text-[#fd2929] mr-2">✓</span> Leadership development programs</li>
-                  <li className="flex items-center"><span className="text-[#fd2929] mr-2">✓</span> Peer-to-peer learning networks</li>
-                  <li className="flex items-center"><span className="text-[#fd2929] mr-2">✓</span> Youth entrepreneurship support</li>
+                  <li className="flex items-center"><span className="text-[#fd2929] mr-2">✓</span> {t("about.youth.benefits.0")}</li>
+                  <li className="flex items-center"><span className="text-[#fd2929] mr-2">✓</span> {t("about.youth.benefits.1")}</li>
+                  <li className="flex items-center"><span className="text-[#fd2929] mr-2">✓</span> {t("about.youth.benefits.2")}</li>
                 </ul>
               </div>
               <div>
@@ -154,17 +147,21 @@ const About = () => {
               <div className="order-1 lg:order-2">
                 <div className="flex items-center mb-6">
                   <div className="text-6xl mr-4">💻</div>
-                  <h3 className="text-3xl font-bold text-[#184260]">Technology</h3>
+                  <h3 className="text-3xl font-bold text-[#184260]">{t("about.technology.title")}</h3>
                 </div>
                 <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                  Technology is at the heart of everything we do. We provide hands-on 
-                  experience with cutting-edge tools and technologies, preparing members 
+                  {t("about.technology.description")} 
                   for the digital future.
                 </p>
                 <ul className="space-y-2 text-gray-600">
                   <li className="flex items-center"><span className="text-[#fd2929] mr-2">✓</span> Advanced programming workshops</li>
                   <li className="flex items-center"><span className="text-[#fd2929] mr-2">✓</span> AI and machine learning projects</li>
                   <li className="flex items-center"><span className="text-[#fd2929] mr-2">✓</span> IoT and robotics development</li>
+                </ul>
+                <ul className="space-y-2 text-gray-600">
+                  <li className="flex items-center"><span className="text-[#fd2929] mr-2">✓</span> {t("about.technology.benefits.0")}</li>
+                  <li className="flex items-center"><span className="text-[#fd2929] mr-2">✓</span> {t("about.technology.benefits.1")}</li>
+                  <li className="flex items-center"><span className="text-[#fd2929] mr-2">✓</span> {t("about.technology.benefits.2")}</li>
                 </ul>
               </div>
             </div>
@@ -174,17 +171,15 @@ const About = () => {
               <div>
                 <div className="flex items-center mb-6">
                   <div className="text-6xl mr-4">🚀</div>
-                  <h3 className="text-3xl font-bold text-[#184260]">Entrepreneurship</h3>
+                  <h3 className="text-3xl font-bold text-[#184260]">{t("about.entrepreneurship.title")}</h3>
                 </div>
                 <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                  We foster entrepreneurial thinking and support startup initiatives. 
-                  From idea validation to business development, we guide members 
-                  through their entrepreneurial journey.
+                  {t("about.entrepreneurship.description")}
                 </p>
                 <ul className="space-y-2 text-gray-600">
-                  <li className="flex items-center"><span className="text-[#fd2929] mr-2">✓</span> Business model development</li>
-                  <li className="flex items-center"><span className="text-[#fd2929] mr-2">✓</span> Investor pitch preparation</li>
-                  <li className="flex items-center"><span className="text-[#fd2929] mr-2">✓</span> Startup incubation support</li>
+                  <li className="flex items-center"><span className="text-[#fd2929] mr-2">✓</span> {t("about.entrepreneurship.benefits.0")}</li>
+                  <li className="flex items-center"><span className="text-[#fd2929] mr-2">✓</span> {t("about.entrepreneurship.benefits.1")}</li>
+                  <li className="flex items-center"><span className="text-[#fd2929] mr-2">✓</span> {t("about.entrepreneurship.benefits.2")}</li>
                 </ul>
               </div>
               <div>
@@ -203,9 +198,9 @@ const About = () => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#184260] mb-4">Our Journey</h2>
+            <h2 className="text-4xl font-bold text-[#184260] mb-4">{t("about.journeyTitle")}</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Key milestones in AJIZ's growth and development
+              {t("about.journeySubtitle")}
             </p>
           </div>
           
@@ -233,9 +228,9 @@ const About = () => {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#184260] mb-4">Meet Our Team</h2>
+            <h2 className="text-4xl font-bold text-[#184260] mb-4">{t("about.teamTitle")}</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              The passionate leaders driving AJIZ forward
+              {t("about.teamSubtitle")}
             </p>
           </div>
           
@@ -262,9 +257,9 @@ const About = () => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#184260] mb-4">Our Partners</h2>
+            <h2 className="text-4xl font-bold text-[#184260] mb-4">{t("about.partnersTitle")}</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Working together to create opportunities and drive innovation
+              {t("about.partnersSubtitle")}
             </p>
           </div>
           
@@ -282,11 +277,9 @@ const About = () => {
       {/* Call to Action */}
       <section className="py-20 bg-gradient-to-r from-[#fd2929] to-[#cf1919] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold mb-6">Join Our Mission</h2>
+          <h2 className="text-4xl font-bold mb-6">{t("about.ctaTitle")}</h2>
           <p className="text-xl mb-12 max-w-3xl mx-auto leading-relaxed">
-            Be part of a community that's shaping the future of technology and 
-            engineering in Tunisia. Whether as a member, partner, or supporter, 
-            there are many ways to get involved with AJIZ.
+            {t("about.ctaDescription")}
           </p>
           <div className="space-y-4 md:space-y-0 md:space-x-6 md:flex md:justify-center">
             <Button 
@@ -294,7 +287,7 @@ const About = () => {
               className="bg-white text-[#fd2929] hover:bg-gray-100 px-8 py-4 text-lg rounded-lg transition-all duration-300 hover:scale-105"
               asChild
             >
-              <Link to="/activities">Get Involved</Link>
+              <Link to="/activities">{t("about.ctaPrimary")}</Link>
             </Button>
             <Button 
               size="lg" 
@@ -302,7 +295,7 @@ const About = () => {
               className="border-white text-white hover:bg-white hover:text-[#fd2929] px-8 py-4 text-lg rounded-lg transition-all duration-300 bg-transparent"
               asChild
             >
-              <Link to="#contact">Contact Us</Link>
+              <Link to="#contact">{t("about.ctaSecondary")}</Link>
             </Button>
           </div>
         </div>

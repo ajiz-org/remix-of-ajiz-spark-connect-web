@@ -201,7 +201,7 @@ const Clubs = () => {
             {t("clubs.readyDescription")}
           </p>
           
-          <div className="space-y-4 md:space-y-0 md:space-x-6 md:flex md:justify-center">
+          <div className="flex flex-col gap-4 md:flex-row md:gap-6 md:justify-center">
             <Button 
               size="lg" 
               className="bg-white text-[#fd2929] hover:bg-gray-100 px-8 py-4 text-lg rounded-lg transition-all duration-300 hover:scale-105"

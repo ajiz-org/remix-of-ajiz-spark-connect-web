@@ -278,6 +278,619 @@ const fr = {
     contactTitle: "Contactez-nous",
     contactSubtitle: "Vous avez des questions sur nos clubs ? Vous voulez en savoir plus sur l'adhésion ? Contactez-nous !",
   },
+  activities: {
+    header: {
+      title: "Nos activités",
+      subtitle:
+        "Découvrez un monde d'opportunités d'apprentissage grâce à nos programmes complets conçus pour développer vos compétences techniques et faire évoluer votre carrière.",
+    },
+    intro: {
+      title: "Apprendre, grandir, innover",
+      description:
+        "Chez AJIZ, nous croyons à l'apprentissage par la pratique. Nos activités offrent des expériences concrètes, des compétences pratiques et des applications réelles qui vous préparent à réussir dans un paysage technologique en constante évolution.",
+    },
+    overview: {
+      title: "Ce que nous proposons",
+      subtitle:
+        "Choisissez parmi notre large éventail de formats d'apprentissage et trouvez la formule idéale pour votre emploi du temps et votre style d'apprentissage.",
+    },
+    types: {
+      workshops: {
+        title: "Ateliers",
+        description:
+          "Sessions interactives couvrant des compétences techniques, des bases de la programmation aux sujets avancés comme l'IA et la blockchain.",
+        features: [
+          "Apprentissage pratique",
+          "Formateurs experts",
+          "Petits groupes",
+          "Attestation de participation",
+        ],
+      },
+      trainings: {
+        title: "Formations",
+        description:
+          "Programmes complets conçus pour développer des compétences professionnelles et vous préparer aux défis du marché.",
+        features: [
+          "Programme aligné sur l'industrie",
+          "Projets pratiques",
+          "Mentorat personnalisé",
+          "Aide à l'insertion professionnelle",
+        ],
+      },
+      courses: {
+        title: "Parcours",
+        description:
+          "Chemins d'apprentissage structurés couvrant des thématiques complètes sur plusieurs sessions avec une progression continue.",
+        features: [
+          "Programme structuré",
+          "Suivi des progrès",
+          "Collaboration entre pairs",
+          "Projets réels",
+        ],
+      },
+      events: {
+        title: "Événements innovants",
+        description:
+          "Événements uniques tels que hackathons, challenges d'innovation et conférences tech avec des leaders du secteur.",
+        features: [
+          "Opportunités de réseautage",
+          "Défis d'innovation",
+          "Intervenants de l'industrie",
+          "Concours avec prix",
+        ],
+      },
+    },
+    upcoming: {
+      title: "Événements à venir",
+      subtitle: "Ne manquez pas nos prochaines activités. Inscrivez-vous dès maintenant pour réserver votre place !",
+      registerCta: "S'inscrire",
+      items: [
+        {
+          title: "Atelier IA & Machine Learning",
+          date: "15 mars 2024",
+          time: "14h00 - 18h00",
+          location: "AJIZ Tech Lab",
+          type: "Atelier",
+          spots: "15 places disponibles",
+        },
+        {
+          title: "Bootcamp Full Stack",
+          date: "20-22 mars 2024",
+          time: "09h00 - 17h00",
+          location: "AJIZ Innovation Center",
+          type: "Formation",
+          spots: "8 places disponibles",
+        },
+        {
+          title: "Préparation compétition robotique",
+          date: "25 mars 2024",
+          time: "16h00 - 20h00",
+          location: "Laboratoire de robotique",
+          type: "Événement spécial",
+          spots: "20 places disponibles",
+        },
+        {
+          title: "Masterclass UI/UX",
+          date: "28 mars 2024",
+          time: "18h00 - 21h00",
+          location: "Design Studio",
+          type: "Atelier",
+          spots: "12 places disponibles",
+        },
+      ],
+    },
+    gallery: {
+      title: "Des activités en action",
+      subtitle: "Découvrez notre communauté à travers des photos de nos derniers ateliers, formations et événements",
+      items: {
+        programming: {
+          title: "Atelier programmation",
+          description: "Étudiants apprenant les bases de Python",
+        },
+        robotics: {
+          title: "Session robotique",
+          description: "Construction et programmation de robots autonomes",
+        },
+        collaboration: {
+          title: "Travail d'équipe",
+          description: "Collaboration sur des projets innovants",
+        },
+        design: {
+          title: "Atelier design",
+          description: "Création d'interfaces et d'art numérique",
+        },
+        innovation: {
+          title: "Innovation Lab",
+          description: "Expérimentation de technologies de pointe",
+        },
+        presentation: {
+          title: "Jour de présentation",
+          description: "Présentation des résultats de projets",
+        },
+      },
+    },
+    form: {
+      title: "Inscription à un événement",
+      subtitle: "Prêt à nous rejoindre ? Remplissez le formulaire ci-dessous pour vous inscrire à l'une de nos activités à venir.",
+      nameLabel: "Nom complet",
+      emailLabel: "Adresse e-mail",
+      activityLabel: "Activité choisie",
+      activityPlaceholder: "Sélectionnez une activité...",
+      messageLabel: "Informations supplémentaires",
+      messagePlaceholder: "Parlez-nous de votre parcours, de votre expérience ou des questions que vous avez...",
+      submit: "S'inscrire",
+    },
+    cta: {
+      title: "Commencez votre parcours dès aujourd'hui",
+      description:
+        "Rejoignez des milliers d'étudiants qui ont transformé leur carrière grâce à nos programmes d'apprentissage complets. La prochaine success story, c'est peut-être vous !",
+      primary: "Voir les ateliers",
+      secondary: "Découvrir les formations",
+    },
+    earlyAccess: {
+      title: "Accès anticipé",
+      description: "Soyez informé en premier des nouvelles activités, des événements spéciaux et des opportunités exclusives",
+      placeholder: "Entrez votre e-mail",
+      button: "S'abonner",
+    },
+  },
+  workshops: {
+    header: {
+      title: "Ateliers",
+      subtitle: "Expériences d'apprentissage pratiques pour tous les niveaux",
+    },
+    intro: {
+      title: "Pourquoi choisir nos ateliers ?",
+      description:
+        "Nos ateliers offrent des expériences intensives et pratiques que vous pouvez appliquer immédiatement dans vos projets et votre carrière. Animées par des experts du secteur, chaque session allie théorie et application concrète.",
+      highlights: [
+        {
+          icon: "⚡",
+          title: "Apprentissage intensif",
+          description: "Des sessions ciblées pour progresser rapidement",
+        },
+        {
+          icon: "👨‍🏫",
+          title: "Formateurs experts",
+          description: "Apprenez auprès de professionnels et praticiens expérimentés",
+        },
+        {
+          icon: "🛠️",
+          title: "Pratique concrète",
+          description: "Exercices pratiques et projets appliqués",
+        },
+      ],
+    },
+    categories: {
+      title: "Catégories d'ateliers",
+      subtitle: "Nous proposons des catégories variées adaptées à vos objectifs d'apprentissage et ambitions professionnelles",
+      items: [
+        {
+          icon: "💻",
+          category: "Compétences techniques",
+          description:
+            "Ateliers pratiques couvrant la programmation, le développement web, la data science et les technologies émergentes",
+          workshops: [
+            "Bases de la programmation Python",
+            "Développement web avec React",
+            "Data science et analytique",
+            "Développement d'applications mobiles",
+            "Initiation au cloud computing",
+          ],
+        },
+        {
+          icon: "🎯",
+          category: "Compétences transversales",
+          description:
+            "Ateliers de développement professionnel axés sur la communication, le leadership et la gestion de projet",
+          workshops: [
+            "Communication efficace",
+            "Développement du leadership",
+            "Gestion de projet",
+            "Collaboration d'équipe",
+            "Prise de parole en public",
+          ],
+        },
+        {
+          icon: "🚀",
+          category: "Focus industrie",
+          description:
+            "Ateliers spécialisés dédiés à des secteurs spécifiques et aux technologies de pointe",
+          workshops: [
+            "IA et machine learning",
+            "Fondamentaux cybersécurité",
+            "Développement IoT",
+            "Technologie blockchain",
+            "Marketing digital",
+          ],
+        },
+      ],
+    },
+    upcoming: {
+      title: "Ateliers à venir",
+      subtitle: "Inscrivez-vous dès maintenant et réservez votre place pour nos prochaines sessions",
+      registerCta: "S'inscrire",
+      items: [
+        {
+          title: "Introduction à l'intelligence artificielle",
+          date: "15 mars 2024",
+          time: "14h00 - 18h00",
+          duration: "4 heures",
+          level: "Débutant",
+          instructor: "Dr Ahmed Mansouri",
+          spots: "15 places restantes",
+          price: "Gratuit pour les membres AJIZ",
+        },
+        {
+          title: "Atelier complet React.js",
+          date: "22 mars 2024",
+          time: "09h00 - 17h00",
+          duration: "8 heures",
+          level: "Intermédiaire",
+          instructor: "Sarah Ben Ali",
+          spots: "20 places restantes",
+          price: "50 TND",
+        },
+        {
+          title: "Sensibilisation à la cybersécurité",
+          date: "29 mars 2024",
+          time: "16h00 - 20h00",
+          duration: "4 heures",
+          level: "Tous niveaux",
+          instructor: "Mohamed Khelil",
+          spots: "25 places restantes",
+          price: "Gratuit",
+        },
+      ],
+    },
+    spotlight: {
+      title: "Atelier à la une",
+      subtitle: "Découvrez l'impact de nos derniers ateliers et la réussite de nos participants",
+      highlightsTitle: "Points forts de l'atelier :",
+      workshop: {
+        title: "Développement mobile avec Flutter",
+        date: "20 février 2024",
+        description:
+          "Notre atelier Flutter a rencontré un immense succès avec 30 participants ayant créé leur première application mobile. Le programme couvrait tout, de l'installation au déploiement, avec des projets concrets à intégrer au portfolio.",
+        highlights: [
+          "30 participants ont terminé l'atelier",
+          "5 applications publiées sur les stores",
+          "98 % de taux de satisfaction",
+          "Mentorat de suivi planifié",
+        ],
+      },
+    },
+    faq: {
+      title: "Questions fréquentes",
+      subtitle: "Trouvez les réponses aux questions les plus courantes sur nos ateliers",
+      items: [
+        {
+          question: "Dois-je avoir de l'expérience avant de participer ?",
+          answer:
+            "Pas du tout ! Nous proposons des ateliers pour tous les niveaux, des débutants complets aux profils avancés. Chaque atelier précise clairement les prérequis.",
+        },
+        {
+          question: "Que dois-je apporter ?",
+          answer:
+            "Apportez simplement votre ordinateur portable et votre motivation ! Nous fournissons les logiciels, supports et ressources nécessaires. Certains ateliers peuvent nécessiter du matériel spécifique communiqué à l'avance.",
+        },
+        {
+          question: "Les ateliers sont-ils gratuits ?",
+          answer:
+            "Beaucoup d'ateliers sont gratuits pour les membres AJIZ. Certains formats spécialisés peuvent inclure un petit frais pour couvrir le matériel et l'encadrement.",
+        },
+        {
+          question: "Recevrai-je un certificat ?",
+          answer:
+            "Oui ! Tous les participants qui terminent un atelier reçoivent un certificat à ajouter à leur portfolio professionnel ou à LinkedIn.",
+        },
+        {
+          question: "Puis-je suggérer un sujet ?",
+          answer:
+            "Absolument ! Nous sommes toujours à l'écoute de nouvelles idées. Contactez-nous et si la demande est suffisante, nous organiserons l'atelier.",
+        },
+      ],
+    },
+    form: {
+      title: "Inscription à un atelier",
+      subtitle: "Prêt à apprendre ? Remplissez le formulaire ci-dessous pour réserver votre atelier.",
+      nameLabel: "Nom complet",
+      emailLabel: "Adresse e-mail",
+      workshopLabel: "Atelier choisi",
+      workshopPlaceholder: "Sélectionnez un atelier...",
+      experienceLabel: "Niveau d'expérience",
+      experiencePlaceholder: "Choisissez votre niveau...",
+      experienceOptions: {
+        beginner: "Débutant",
+        intermediate: "Intermédiaire",
+        advanced: "Avancé",
+      },
+      messageLabel: "Informations supplémentaires",
+      messagePlaceholder: "Parlez-nous de vos objectifs ou des questions spécifiques que vous avez...",
+      submit: "Valider l'inscription",
+    },
+    gallery: {
+      title: "Galerie d'ateliers",
+      subtitle: "Un aperçu de nos ateliers en action",
+      items: [
+        { title: "Atelier Python", participants: "25 participants" },
+        { title: "Collaboration d'équipe", participants: "Session interactive" },
+        { title: "Atelier UI/UX", participants: "Design thinking" },
+        { title: "Session hardware", participants: "Apprentissage pratique" },
+      ],
+    },
+    testimonials: {
+      title: "Ils témoignent",
+      subtitle: "Découvrez l'expérience de nos participants",
+      items: [
+        {
+          name: "Amira Saidi",
+          workshop: "Atelier data science",
+          content:
+            "L'atelier data science a changé ma trajectoire professionnelle. L'approche pratique et les jeux de données réels ont simplifié des notions complexes.",
+        },
+        {
+          name: "Karim Bouslama",
+          workshop: "Atelier développement web",
+          content:
+            "Je suis passé de zéro à la création de mon site en un week-end. Les formateurs étaient incroyables et très disponibles.",
+        },
+      ],
+    },
+    cta: {
+      title: "Prêt à apprendre ?",
+      description:
+        "Rejoignez notre prochain atelier et faites le premier pas pour maîtriser de nouvelles compétences qui boosteront votre carrière.",
+      primary: "S'inscrire",
+      secondary: "Nous contacter",
+    },
+  },
+  trainings: {
+    header: {
+      title: "Programmes de formation",
+      subtitle: "Développement professionnel complet pour faire évoluer votre carrière",
+    },
+    intro: {
+      title: "Transformez votre carrière",
+      description:
+        "Nos programmes de formation offrent des connaissances approfondies et des compétences pratiques directement applicables. Grâce à des cursus structurés, des experts et des projets concrets, vous acquérez l'expertise nécessaire pour exceller dans votre domaine.",
+      highlights: [
+        {
+          icon: "📚",
+          title: "Parcours structuré",
+          description: "Curriculum progressif pensé pour maximiser la montée en compétences",
+        },
+        {
+          icon: "🏆",
+          title: "Reconnaissance",
+          description: "Certificats et compétences reconnus par les employeurs",
+        },
+        {
+          icon: "💼",
+          title: "Accompagnement carrière",
+          description: "Aide à l'insertion, coaching et préparation aux entretiens",
+        },
+      ],
+    },
+    categories: {
+      title: "Catégories de formation",
+      subtitle: "Choisissez le parcours adapté à vos objectifs et à votre niveau",
+      durationLabel: "Durée :",
+      formatLabel: "Format :",
+      items: [
+        {
+          icon: "⚙️",
+          category: "Formation technique",
+          description:
+            "Programmes techniques couvrant la programmation, l'administration système et les technologies émergentes",
+          duration: "4-12 semaines",
+          format: "Format bootcamp intensif",
+        },
+        {
+          icon: "🗣️",
+          category: "Compétences comportementales",
+          description:
+            "Programmes axés sur la communication, le leadership et les compétences interpersonnelles",
+          duration: "6-8 semaines",
+          format: "Ateliers interactifs",
+        },
+        {
+          icon: "👑",
+          category: "Leadership",
+          description:
+            "Programmes avancés pour développer les capacités de gestion et de pilotage",
+          duration: "8-10 semaines",
+          format: "Mentorat et pratique",
+        },
+        {
+          icon: "💡",
+          category: "Innovation & entrepreneuriat",
+          description:
+            "Formations dédiées au lancement de startups, aux processus d'innovation et aux compétences business",
+          duration: "6-12 semaines",
+          format: "Apprentissage par projet",
+        },
+      ],
+    },
+    programs: {
+      title: "Formations phares",
+      subtitle: "Plongez dans nos programmes les plus demandés avec un aperçu complet du contenu",
+      priceNote: "Programme complet",
+      instructorLabel: "Formateur :",
+      objectivesLabel: "Objectifs d'apprentissage :",
+      nextStartLabel: "Prochaine session",
+      spotsLabel: "Places disponibles",
+      enrollCta: "S'inscrire",
+      items: [
+        {
+          title: "Bootcamp développement web full stack",
+          duration: "12 semaines",
+          level: "Débutant à avancé",
+          instructor: "Dr Sarah Mansouri & équipe",
+          objectives: [
+            "Maîtriser HTML, CSS et JavaScript",
+            "Créer des applications avec React et Node.js",
+            "Travailler avec bases de données et APIs",
+            "Déployer en production",
+            "Collaborer avec Git",
+          ],
+          nextStart: "1er avril 2024",
+          spots: "15 restantes",
+          price: "800 TND",
+        },
+        {
+          title: "Programme data science & analytics",
+          duration: "10 semaines",
+          level: "Intermédiaire",
+          instructor: "Pr Ahmed Khelil",
+          objectives: [
+            "Analyse statistique et data viz",
+            "Python pour la data science",
+            "Fondamentaux du machine learning",
+            "Projets sur données réelles",
+            "Outils et bonnes pratiques",
+          ],
+          nextStart: "8 avril 2024",
+          spots: "12 restantes",
+          price: "600 TND",
+        },
+        {
+          title: "Parcours spécialiste cybersécurité",
+          duration: "8 semaines",
+          level: "Intermédiaire à avancé",
+          instructor: "Ing. Mohamed Zahra",
+          objectives: [
+            "Fondamentaux de la sécurité réseau",
+            "Ethical hacking et pentest",
+            "Cadres et conformité",
+            "Réponse aux incidents",
+            "Laboratoires pratiques",
+          ],
+          nextStart: "15 avril 2024",
+          spots: "10 restantes",
+          price: "700 TND",
+        },
+      ],
+    },
+    timeline: {
+      title: "Parcours de formation",
+      subtitle: "Découvrez comment notre approche structurée vous guide de débutant à professionnel",
+      items: [
+        {
+          phase: "Semaines 1-2",
+          title: "Fondations",
+          description: "Introduction aux concepts clés et compétences essentielles",
+        },
+        {
+          phase: "Semaines 3-6",
+          title: "Montée en compétences",
+          description: "Pratique intensive et projets accompagnés",
+        },
+        {
+          phase: "Semaines 7-10",
+          title: "Applications avancées",
+          description: "Projets complexes et cas réels",
+        },
+        {
+          phase: "Semaines 11-12",
+          title: "Capstone & certification",
+          description: "Projet final, soutenance et évaluation",
+        },
+      ],
+    },
+    instructors: {
+      title: "Nos formateurs",
+      subtitle: "Apprenez auprès de professionnels expérimentés",
+      items: [
+        {
+          name: "Dr Sarah Mansouri",
+          specialization: "Développement full stack",
+          experience: "10+ ans en développement web",
+        },
+        {
+          name: "Pr Ahmed Khelil",
+          specialization: "Data science & IA",
+          experience: "12+ ans en recherche et industrie",
+        },
+        {
+          name: "Ing. Mohamed Zahra",
+          specialization: "Cybersécurité",
+          experience: "8+ ans en consulting sécurité",
+        },
+      ],
+    },
+    faq: {
+      title: "Questions fréquentes",
+      subtitle: "Trouvez les réponses concernant nos programmes",
+      items: [
+        {
+          question: "Quelle différence entre atelier et formation ?",
+          answer:
+            "Les ateliers sont des sessions courtes et ciblées. Les formations sont des parcours multi-semaines offrant un apprentissage approfondi et des mises en pratique.",
+        },
+        {
+          question: "Faut-il savoir programmer ?",
+          answer:
+            "Cela dépend du programme. Nous avons des parcours pour tous les niveaux et chaque fiche précise les prérequis.",
+        },
+        {
+          question: "Quel certificat est délivré ?",
+          answer:
+            "À la fin, vous recevez un certificat AJIZ détaillant les compétences acquises et le volume horaire, reconnu par de nombreux employeurs.",
+        },
+        {
+          question: "Proposez-vous une aide à l'emploi ?",
+          answer:
+            "Oui, nous offrons coaching carrière, relecture de CV, préparation aux entretiens et mises en relation avec nos partenaires.",
+        },
+        {
+          question: "Paiement en plusieurs fois ?",
+          answer:
+            "Oui, des plans flexibles sont disponibles (2-3 échéances selon la durée). Contactez-nous pour en discuter.",
+        },
+      ],
+    },
+    form: {
+      title: "Postuler à une formation",
+      subtitle: "Prêt à évoluer ? Postulez à l'un de nos programmes et franchissez la prochaine étape.",
+      nameLabel: "Nom complet",
+      emailLabel: "Adresse e-mail",
+      trainingLabel: "Programme choisi",
+      trainingPlaceholder: "Sélectionnez un programme...",
+      backgroundLabel: "Parcours professionnel",
+      backgroundPlaceholder: "Parlez-nous de votre rôle actuel, de vos études et de vos expériences...",
+      goalsLabel: "Objectifs de carrière",
+      goalsPlaceholder: "Quels sont vos objectifs et comment cette formation vous aidera-t-elle ?",
+      submit: "Envoyer la candidature",
+    },
+    testimonials: {
+      title: "Histoires de réussite",
+      subtitle: "Découvrez comment nos formations ont changé des carrières",
+      items: [
+        {
+          name: "Youssef Bouazizi",
+          program: "Bootcamp full stack",
+          outcome: "Embauché comme développeur junior",
+          content:
+            "Le programme était intense mais extrêmement enrichissant. Les projets pratiques et le mentorat m'ont permis de passer du marketing à la tech et d'obtenir un poste en 2 mois.",
+        },
+        {
+          name: "Nour Gharbi",
+          program: "Programme data science",
+          outcome: "Promue data analyst",
+          content:
+            "La formation m'a apporté les compétences concrètes pour évoluer. Les projets réels et l'encadrement ont rendu les sujets complexes accessibles.",
+        },
+      ],
+    },
+    cta: {
+      title: "Investissez dans votre avenir",
+      description:
+        "N'attendez plus pour faire avancer votre carrière. Nos programmes fournissent les compétences et le soutien nécessaires pour atteindre vos objectifs.",
+      primary: "Postuler",
+      secondary: "Plus d'infos",
+    },
+  },
 } as const;
 
 export default fr;

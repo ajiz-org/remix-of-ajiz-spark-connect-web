@@ -4,8 +4,130 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { useTranslation } from "react-i18next";
+
+type TrainingHighlight = {
+  icon: string;
+  title: string;
+  description: string;
+};
+
+type TrainingIntroContent = {
+  title: string;
+  description: string;
+  highlights: TrainingHighlight[];
+};
+
+type TrainingCategory = {
+  icon: string;
+  category: string;
+  description: string;
+  duration: string;
+  format: string;
+};
+
+type TrainingCategoriesContent = {
+  title: string;
+  subtitle: string;
+  items: TrainingCategory[];
+};
+
+type TrainingProgram = {
+  title: string;
+  duration: string;
+  level: string;
+  instructor: string;
+  objectives: string[];
+  nextStart: string;
+  spots: string;
+  price: string;
+};
+
+type TrainingProgramsContent = {
+  title: string;
+  subtitle: string;
+  priceNote: string;
+  nextStartLabel: string;
+  spotsLabel: string;
+  enrollCta: string;
+  items: TrainingProgram[];
+};
+
+type TrainingTimelineItem = {
+  phase: string;
+  title: string;
+  description: string;
+};
+
+type TrainingTimelineContent = {
+  title: string;
+  subtitle: string;
+  items: TrainingTimelineItem[];
+};
+
+type TrainingInstructor = {
+  name: string;
+  specialization: string;
+  experience: string;
+};
+
+type TrainingInstructorsContent = {
+  title: string;
+  subtitle: string;
+  items: TrainingInstructor[];
+};
+
+type TrainingFaqContent = {
+  title: string;
+  subtitle: string;
+  items: { question: string; answer: string }[];
+};
+
+type TrainingFormContent = {
+  title: string;
+  subtitle: string;
+  nameLabel: string;
+  emailLabel: string;
+  trainingLabel: string;
+  trainingPlaceholder: string;
+  backgroundLabel: string;
+  backgroundPlaceholder: string;
+  goalsLabel: string;
+  goalsPlaceholder: string;
+  submit: string;
+};
+
+type TrainingTestimonialsContent = {
+  title: string;
+  subtitle: string;
+  items: { name: string; program: string; outcome: string; content: string }[];
+};
+
+type TrainingCTAContent = {
+  title: string;
+  description: string;
+  primary: string;
+  secondary: string;
+};
+
+type TrainingHeaderContent = {
+  title: string;
+  subtitle: string;
+};
+
+const instructorImages = [
+  "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=200&h=200&fit=crop&crop=face",
+  "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=200&h=200&fit=crop&crop=face",
+  "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=200&h=200&fit=crop&crop=face",
+];
+
+const testimonialAvatars = [
+  "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=100&h=100&fit=crop&crop=face",
+  "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=100&h=100&fit=crop&crop=face",
+];
 
 const Trainings = () => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -14,171 +136,30 @@ const Trainings = () => {
     goals: ""
   });
 
-  const trainingTypes = [
-    {
-      category: "Technical Training",
-      description: "Comprehensive technical programs covering programming, system administration, and emerging technologies",
-      duration: "4-12 weeks",
-      format: "Intensive bootcamp style",
-      icon: "⚙️"
-    },
-    {
-      category: "Soft Skills Development",
-      description: "Professional development programs focusing on communication, leadership, and interpersonal skills",
-      duration: "6-8 weeks",
-      format: "Interactive workshops",
-      icon: "🗣️"
-    },
-    {
-      category: "Leadership Training",
-      description: "Advanced programs designed to develop leadership capabilities and management skills",
-      duration: "8-10 weeks",
-      format: "Mentorship & practice",
-      icon: "👑"
-    },
-    {
-      category: "Innovation & Entrepreneurship",
-      description: "Training programs focused on startup development, innovation processes, and business skills",
-      duration: "6-12 weeks",
-      format: "Project-based learning",
-      icon: "💡"
-    }
-  ];
+  const header = t("trainings.header", { returnObjects: true }) as TrainingHeaderContent;
+  const intro = t("trainings.intro", { returnObjects: true }) as TrainingIntroContent;
+  const categories = t("trainings.categories", { returnObjects: true }) as TrainingCategoriesContent;
+  const durationLabel = t("trainings.categories.durationLabel");
+  const formatLabel = t("trainings.categories.formatLabel");
+  const programs = t("trainings.programs", { returnObjects: true }) as TrainingProgramsContent;
+  const instructorLabel = t("trainings.programs.instructorLabel");
+  const objectivesLabel = t("trainings.programs.objectivesLabel");
+  const timelineContent = t("trainings.timeline", { returnObjects: true }) as TrainingTimelineContent;
+  const instructorsContent = t("trainings.instructors", { returnObjects: true }) as TrainingInstructorsContent;
+  const faq = t("trainings.faq", { returnObjects: true }) as TrainingFaqContent;
+  const formContent = t("trainings.form", { returnObjects: true }) as TrainingFormContent;
+  const testimonialsContent = t("trainings.testimonials", { returnObjects: true }) as TrainingTestimonialsContent;
+  const ctaContent = t("trainings.cta", { returnObjects: true }) as TrainingCTAContent;
 
-  const courses = [
-    {
-      title: "Full Stack Web Development Bootcamp",
-      duration: "12 weeks",
-      level: "Beginner to Advanced",
-      instructor: "Dr. Sarah Mansouri & Team",
-      objectives: [
-        "Master HTML, CSS, and JavaScript fundamentals",
-        "Build applications with React and Node.js",
-        "Work with databases and APIs",
-        "Deploy applications to production",
-        "Collaborative development with Git"
-      ],
-      nextStart: "April 1, 2024",
-      spots: 15,
-      price: "800 TND"
-    },
-    {
-      title: "Data Science & Analytics Program",
-      duration: "10 weeks",
-      level: "Intermediate",
-      instructor: "Prof. Ahmed Khelil",
-      objectives: [
-        "Statistical analysis and data visualization",
-        "Python programming for data science",
-        "Machine learning fundamentals",
-        "Real-world data projects",
-        "Industry tools and best practices"
-      ],
-      nextStart: "April 8, 2024",
-      spots: 12,
-      price: "600 TND"
-    },
-    {
-      title: "Cybersecurity Specialist Track",
-      duration: "8 weeks",
-      level: "Intermediate to Advanced",
-      instructor: "Eng. Mohamed Zahra",
-      objectives: [
-        "Network security fundamentals",
-        "Ethical hacking and penetration testing",
-        "Security frameworks and compliance",
-        "Incident response and forensics",
-        "Hands-on lab exercises"
-      ],
-      nextStart: "April 15, 2024",
-      spots: 10,
-      price: "700 TND"
-    }
-  ];
+  const instructorCards = instructorsContent.items.map((instructor, index) => ({
+    ...instructor,
+    image: instructorImages[index % instructorImages.length],
+  }));
 
-  const timeline = [
-    {
-      phase: "Week 1-2",
-      title: "Foundation Building",
-      description: "Introduction to core concepts and fundamental skills"
-    },
-    {
-      phase: "Week 3-6",
-      title: "Skill Development",
-      description: "Intensive hands-on practice and project work"
-    },
-    {
-      phase: "Week 7-10",
-      title: "Advanced Applications",
-      description: "Complex projects and real-world scenario practice"
-    },
-    {
-      phase: "Week 11-12",
-      title: "Capstone & Certification",
-      description: "Final projects, presentations, and certification assessment"
-    }
-  ];
-
-  const instructors = [
-    {
-      name: "Dr. Sarah Mansouri",
-      specialization: "Full Stack Development",
-      experience: "10+ years in web development",
-      image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=200&h=200&fit=crop&crop=face"
-    },
-    {
-      name: "Prof. Ahmed Khelil",
-      specialization: "Data Science & AI",
-      experience: "12+ years in academia and industry",
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=200&h=200&fit=crop&crop=face"
-    },
-    {
-      name: "Eng. Mohamed Zahra",
-      specialization: "Cybersecurity",
-      experience: "8+ years in security consulting",
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=200&h=200&fit=crop&crop=face"
-    }
-  ];
-
-  const faqs = [
-    {
-      question: "What's the difference between workshops and training programs?",
-      answer: "Workshops are short, intensive sessions (typically 1-2 days) focused on specific skills. Training programs are comprehensive, multi-week programs that provide in-depth knowledge and practical experience in a field."
-    },
-    {
-      question: "Do I need to have programming experience?",
-      answer: "It depends on the specific training program. We offer programs for all levels, from complete beginners to advanced practitioners. Each program clearly states its prerequisites."
-    },
-    {
-      question: "What kind of certificate will I receive?",
-      answer: "Upon successful completion, you'll receive an AJIZ certificate of completion that includes the skills covered and hours completed. Our certificates are recognized by many local employers."
-    },
-    {
-      question: "Is job placement assistance provided?",
-      answer: "Yes! We provide career guidance, resume review, interview preparation, and connections with our partner companies for internship and job opportunities."
-    },
-    {
-      question: "Can I pay in installments?",
-      answer: "Yes, we offer flexible payment plans. You can pay in 2-3 installments depending on the program duration. Contact us to discuss payment options."
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: "Youssef Bouazizi",
-      program: "Full Stack Development Bootcamp",
-      outcome: "Landed a job as Junior Developer",
-      content: "The training program was intensive but incredibly rewarding. The hands-on projects and mentorship helped me transition from marketing to tech. I got my first developer job within 2 months of graduation.",
-      avatar: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=100&h=100&fit=crop&crop=face"
-    },
-    {
-      name: "Nour Gharbi",
-      program: "Data Science Program",
-      outcome: "Promoted to Data Analyst",
-      content: "This program gave me the practical skills I needed to advance in my career. The real-world projects and expert instruction made complex topics accessible and applicable to my work.",
-      avatar: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=100&h=100&fit=crop&crop=face"
-    }
-  ];
+  const testimonialCards = testimonialsContent.items.map((item, index) => ({
+    ...item,
+    avatar: testimonialAvatars[index % testimonialAvatars.length],
+  }));
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -195,9 +176,9 @@ const Trainings = () => {
         }}
       >
         <div className="text-center text-white px-4 max-w-4xl">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in">Training Programs</h1>
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in">{header.title}</h1>
           <p className="text-xl md:text-2xl animate-fade-in">
-            Comprehensive Professional Development for Career Advancement
+            {header.subtitle}
           </p>
         </div>
       </section>
@@ -206,39 +187,22 @@ const Trainings = () => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#184260] mb-6">Transform Your Career with Professional Training</h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Our comprehensive training programs are designed to provide in-depth knowledge 
-              and practical skills that directly translate to career advancement. With structured 
-              curricula, expert instruction, and hands-on projects, you'll gain the expertise 
-              needed to excel in your chosen field.
+            <h2 className="text-4xl font-bold text-[#184260] mb-4">{intro.title}</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              {intro.description}
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="text-center hover:shadow-xl transition-all duration-300 hover:scale-105 border-t-4 border-t-[#fd2929]">
-              <CardContent className="p-8">
-                <div className="text-4xl mb-4">📚</div>
-                <h3 className="text-xl font-bold text-[#184260] mb-3">Structured Learning</h3>
-                <p className="text-gray-600">Progressive curriculum designed for optimal skill development</p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center hover:shadow-xl transition-all duration-300 hover:scale-105 border-t-4 border-t-[#fd2929]">
-              <CardContent className="p-8">
-                <div className="text-4xl mb-4">🏆</div>
-                <h3 className="text-xl font-bold text-[#184260] mb-3">Industry Recognition</h3>
-                <p className="text-gray-600">Certificates and skills recognized by leading employers</p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center hover:shadow-xl transition-all duration-300 hover:scale-105 border-t-4 border-t-[#fd2929]">
-              <CardContent className="p-8">
-                <div className="text-4xl mb-4">💼</div>
-                <h3 className="text-xl font-bold text-[#184260] mb-3">Career Support</h3>
-                <p className="text-gray-600">Job placement assistance and career guidance included</p>
-              </CardContent>
-            </Card>
+            {intro.highlights.map((highlight, index) => (
+              <Card key={index} className="text-center hover:shadow-xl transition-all duration-300 hover:scale-105 border-t-4 border-t-[#fd2929]">
+                <CardContent className="p-8">
+                  <div className="text-4xl mb-4">{highlight.icon}</div>
+                  <h3 className="text-xl font-bold text-[#184260] mb-3">{highlight.title}</h3>
+                  <p className="text-gray-600">{highlight.description}</p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
@@ -247,28 +211,28 @@ const Trainings = () => {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#184260] mb-4">Training Categories</h2>
+            <h2 className="text-4xl font-bold text-[#184260] mb-4">{categories.title}</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Choose from our specialized training tracks designed to meet different career goals and skill levels
+              {categories.subtitle}
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {trainingTypes.map((type, index) => (
+            {categories.items.map((type, index) => (
               <Card key={index} className="hover:shadow-xl transition-all duration-300 hover:scale-105 border-l-4 border-l-[#fd2929]">
                 <CardContent className="p-8">
-                  <div className="flex items-start space-x-4">
+                  <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
                     <div className="text-4xl">{type.icon}</div>
                     <div className="flex-1">
                       <h3 className="text-2xl font-bold text-[#184260] mb-3">{type.category}</h3>
                       <p className="text-gray-600 mb-4 leading-relaxed">{type.description}</p>
                       <div className="grid grid-cols-2 gap-4 text-sm">
                         <div>
-                          <span className="font-semibold text-[#184260]">Duration:</span>
+                          <span className="font-semibold text-[#184260]">{durationLabel}</span>
                           <p className="text-gray-600">{type.duration}</p>
                         </div>
                         <div>
-                          <span className="font-semibold text-[#184260]">Format:</span>
+                          <span className="font-semibold text-[#184260]">{formatLabel}</span>
                           <p className="text-gray-600">{type.format}</p>
                         </div>
                       </div>
@@ -285,14 +249,14 @@ const Trainings = () => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#184260] mb-4">Featured Training Programs</h2>
+            <h2 className="text-4xl font-bold text-[#184260] mb-4">{programs.title}</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Dive deep into our most popular training programs with detailed curriculum and objectives
+              {programs.subtitle}
             </p>
           </div>
 
           <div className="space-y-12">
-            {courses.map((course, index) => (
+            {programs.items.map((course, index) => (
               <Card key={index} className="overflow-hidden hover:shadow-xl transition-all duration-300">
                 <CardContent className="p-8">
                   <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -306,21 +270,21 @@ const Trainings = () => {
                       
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6 text-sm">
                         <div>
-                          <span className="font-semibold text-[#184260]">Duration:</span>
-                          <span className="text-gray-600 ml-2">{course.duration}</span>
+                          <span className="font-semibold text-[#184260]">{durationLabel}</span>
+                          <span className="text-gray-600 ms-2">{course.duration}</span>
                         </div>
                         <div>
-                          <span className="font-semibold text-[#184260]">Instructor:</span>
-                          <span className="text-gray-600 ml-2">{course.instructor}</span>
+                          <span className="font-semibold text-[#184260]">{instructorLabel}</span>
+                          <span className="text-gray-600 ms-2">{course.instructor}</span>
                         </div>
                       </div>
                       
                       <div>
-                        <h4 className="font-semibold text-[#184260] mb-3">Learning Objectives:</h4>
+                        <h4 className="font-semibold text-[#184260] mb-3">{objectivesLabel}</h4>
                         <div className="space-y-2">
                           {course.objectives.map((objective, objIndex) => (
                             <div key={objIndex} className="flex items-center">
-                              <span className="text-[#fd2929] mr-2">✓</span>
+                              <span className="text-[#fd2929] me-2">✓</span>
                               <span className="text-gray-600">{objective}</span>
                             </div>
                           ))}
@@ -331,17 +295,17 @@ const Trainings = () => {
                     <div className="bg-gray-50 p-6 rounded-lg">
                       <div className="text-center mb-6">
                         <div className="text-3xl font-bold text-[#fd2929] mb-2">{course.price}</div>
-                        <p className="text-gray-600">Full program</p>
+                        <p className="text-gray-600">{programs.priceNote}</p>
                       </div>
                       
                       <div className="space-y-3 mb-6">
                         <div className="flex justify-between">
-                          <span className="font-semibold text-[#184260]">Next Start:</span>
+                          <span className="font-semibold text-[#184260]">{programs.nextStartLabel}</span>
                           <span className="text-gray-600">{course.nextStart}</span>
                         </div>
                         <div className="flex justify-between">
-                          <span className="font-semibold text-[#184260]">Available Spots:</span>
-                          <span className="text-green-600 font-semibold">{course.spots} remaining</span>
+                          <span className="font-semibold text-[#184260]">{programs.spotsLabel}</span>
+                          <span className="text-green-600 font-semibold">{course.spots}</span>
                         </div>
                       </div>
                       
@@ -349,7 +313,7 @@ const Trainings = () => {
                         className="w-full bg-[#fd2929] hover:bg-[#cf1919] text-white transition-colors duration-200"
                         asChild
                       >
-                        <a href="#register">Enroll Now</a>
+                        <a href="#register">{programs.enrollCta}</a>
                       </Button>
                     </div>
                   </div>
@@ -364,17 +328,17 @@ const Trainings = () => {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#184260] mb-4">Training Journey Timeline</h2>
+            <h2 className="text-4xl font-bold text-[#184260] mb-4">{timelineContent.title}</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              See how our structured approach guides you from beginner to professional
+              {timelineContent.subtitle}
             </p>
           </div>
 
           <div className="relative">
             <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-[#fd2929] hidden md:block"></div>
-            {timeline.map((phase, index) => (
+            {timelineContent.items.map((phase, index) => (
               <div key={index} className={`relative flex items-center mb-12 ${index % 2 === 0 ? 'md:justify-start' : 'md:justify-end'}`}>
-                <div className={`w-full md:w-1/2 ${index % 2 === 0 ? 'md:pr-8 md:text-right' : 'md:pl-8 md:text-left'}`}>
+                <div className={`w-full md:w-1/2 ${index % 2 === 0 ? 'md:pe-8 md:text-end' : 'md:ps-8 md:text-start'}`}>
                   <Card className="hover:shadow-xl transition-all duration-300">
                     <CardContent className="p-6">
                       <div className="text-lg font-bold text-[#fd2929] mb-2">{phase.phase}</div>
@@ -394,14 +358,14 @@ const Trainings = () => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#184260] mb-4">Meet Our Expert Instructors</h2>
+            <h2 className="text-4xl font-bold text-[#184260] mb-4">{instructorsContent.title}</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Learn from industry professionals with years of practical experience
+              {instructorsContent.subtitle}
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {instructors.map((instructor, index) => (
+            {instructorCards.map((instructor, index) => (
               <Card key={index} className="text-center hover:shadow-xl transition-all duration-300 hover:scale-105">
                 <CardContent className="p-8">
                   <img 
@@ -423,18 +387,18 @@ const Trainings = () => {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#184260] mb-4">Frequently Asked Questions</h2>
+            <h2 className="text-4xl font-bold text-[#184260] mb-4">{faq.title}</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Get answers to common questions about our training programs
+              {faq.subtitle}
             </p>
           </div>
 
           <div className="max-w-4xl mx-auto space-y-6">
-            {faqs.map((faq, index) => (
+            {faq.items.map((item, index) => (
               <Card key={index} className="hover:shadow-lg transition-all duration-300">
                 <CardContent className="p-6">
-                  <h3 className="text-lg font-bold text-[#184260] mb-3">{faq.question}</h3>
-                  <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+                  <h3 className="text-lg font-bold text-[#184260] mb-3">{item.question}</h3>
+                  <p className="text-gray-600 leading-relaxed">{item.answer}</p>
                 </CardContent>
               </Card>
             ))}
@@ -446,9 +410,9 @@ const Trainings = () => {
       <section id="register" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#184260] mb-4">Apply for a Training Program</h2>
+            <h2 className="text-4xl font-bold text-[#184260] mb-4">{formContent.title}</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Ready to advance your career? Apply for one of our training programs and take the next step
+              {formContent.subtitle}
             </p>
           </div>
 
@@ -459,7 +423,7 @@ const Trainings = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                        Full Name
+                        {formContent.nameLabel}
                       </label>
                       <Input
                         id="name"
@@ -473,7 +437,7 @@ const Trainings = () => {
                     
                     <div>
                       <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                        Email Address
+                        {formContent.emailLabel}
                       </label>
                       <Input
                         id="email"
@@ -488,7 +452,7 @@ const Trainings = () => {
                   
                   <div>
                     <label htmlFor="training" className="block text-sm font-medium text-gray-700 mb-2">
-                      Training Program
+                      {formContent.trainingLabel}
                     </label>
                     <select
                       id="training"
@@ -497,8 +461,8 @@ const Trainings = () => {
                       className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#fd2929] focus:border-transparent"
                       required
                     >
-                      <option value="">Select a training program...</option>
-                      {courses.map((course, index) => (
+                      <option value="">{formContent.trainingPlaceholder}</option>
+                      {programs.items.map((course, index) => (
                         <option key={index} value={course.title}>{course.title}</option>
                       ))}
                     </select>
@@ -506,28 +470,28 @@ const Trainings = () => {
                   
                   <div>
                     <label htmlFor="background" className="block text-sm font-medium text-gray-700 mb-2">
-                      Professional Background
+                      {formContent.backgroundLabel}
                     </label>
                     <Textarea
                       id="background"
                       value={formData.background}
                       onChange={(e) => setFormData({...formData, background: e.target.value})}
                       className="w-full h-24"
-                      placeholder="Tell us about your current role, education, and relevant experience..."
+                      placeholder={formContent.backgroundPlaceholder}
                       required
                     />
                   </div>
                   
                   <div>
                     <label htmlFor="goals" className="block text-sm font-medium text-gray-700 mb-2">
-                      Career Goals
+                      {formContent.goalsLabel}
                     </label>
                     <Textarea
                       id="goals"
                       value={formData.goals}
                       onChange={(e) => setFormData({...formData, goals: e.target.value})}
                       className="w-full h-24"
-                      placeholder="What are your career goals and how will this training help you achieve them?"
+                      placeholder={formContent.goalsPlaceholder}
                       required
                     />
                   </div>
@@ -536,7 +500,7 @@ const Trainings = () => {
                     type="submit"
                     className="w-full bg-[#fd2929] hover:bg-[#cf1919] text-white py-3 text-lg rounded-lg transition-colors duration-200"
                   >
-                    Submit Application
+                    {formContent.submit}
                   </Button>
                 </form>
               </CardContent>
@@ -549,14 +513,14 @@ const Trainings = () => {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#184260] mb-4">Success Stories</h2>
+            <h2 className="text-4xl font-bold text-[#184260] mb-4">{testimonialsContent.title}</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              See how our training programs have transformed careers
+              {testimonialsContent.subtitle}
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {testimonials.map((testimonial, index) => (
+            {testimonialCards.map((testimonial, index) => (
               <Card key={index} className="hover:shadow-xl transition-all duration-300">
                 <CardContent className="p-8">
                   <div className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold mb-4 inline-block">
@@ -569,7 +533,7 @@ const Trainings = () => {
                     <img 
                       src={testimonial.avatar} 
                       alt={testimonial.name}
-                      className="w-12 h-12 rounded-full mr-4 object-cover"
+                      className="w-12 h-12 rounded-full me-4 object-cover"
                     />
                     <div>
                       <h4 className="font-bold text-[#184260]">{testimonial.name}</h4>
@@ -586,19 +550,18 @@ const Trainings = () => {
       {/* Call to Action */}
       <section className="py-20 bg-gradient-to-r from-[#fd2929] to-[#cf1919] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold mb-6">Invest in Your Future Today</h2>
+          <h2 className="text-4xl font-bold mb-6">{ctaContent.title}</h2>
           <p className="text-xl mb-12 max-w-3xl mx-auto leading-relaxed">
-            Don't wait to advance your career. Our comprehensive training programs 
-            provide the skills and support you need to achieve your professional goals.
+            {ctaContent.description}
           </p>
           
-          <div className="space-y-4 md:space-y-0 md:space-x-6 md:flex md:justify-center">
+          <div className="flex flex-col md:flex-row gap-4 md:justify-center">
             <Button 
               size="lg" 
               className="bg-white text-[#fd2929] hover:bg-gray-100 px-8 py-4 text-lg rounded-lg transition-all duration-300 hover:scale-105"
               asChild
             >
-              <a href="#register">Apply Now</a>
+              <a href="#register">{ctaContent.primary}</a>
             </Button>
             <Button 
               size="lg" 
@@ -606,7 +569,7 @@ const Trainings = () => {
               className="border-white text-white hover:bg-white hover:text-[#fd2929] px-8 py-4 text-lg rounded-lg bg-transparent transition-all duration-300"
               asChild
             >
-              <a href="#contact">Get More Info</a>
+              <a href="#contact">{ctaContent.secondary}</a>
             </Button>
           </div>
         </div>

@@ -148,7 +148,7 @@ const CodingClub = () => {
             {activities.map((activity, index) => (
               <Card key={index} className="hover:shadow-xl transition-all duration-300 hover:scale-105 border-l-4 border-l-[#fd2929]">
                 <CardContent className="p-8">
-                  <div className="flex items-start space-x-4">
+                  <div className="flex items-start gap-4">
                     <div className="text-4xl">{activity.icon}</div>
                     <div>
                       <h3 className="text-2xl font-bold text-[#184260] mb-3">{activity.title}</h3>
@@ -225,7 +225,7 @@ const CodingClub = () => {
 
           <div className="space-y-8">
             {timeline.map((item, index) => (
-              <div key={index} className="flex items-start space-x-6">
+              <div key={index} className="flex items-start gap-6">
                 <div className="flex-shrink-0 w-16 h-16 bg-[#fd2929] rounded-full flex items-center justify-center text-white font-bold">
                   {item.year}
                 </div>
@@ -285,7 +285,7 @@ const CodingClub = () => {
             Whether you're a beginner or an experienced developer, we have something for everyone.
           </p>
           
-          <div className="space-y-4 md:space-y-0 md:space-x-6 md:flex md:justify-center">
+          <div className="flex flex-col gap-4 md:flex-row md:gap-6 md:justify-center">
             <Button 
               size="lg" 
               className="bg-white text-[#fd2929] hover:bg-gray-100 px-8 py-4 text-lg rounded-lg transition-all duration-300 hover:scale-105"

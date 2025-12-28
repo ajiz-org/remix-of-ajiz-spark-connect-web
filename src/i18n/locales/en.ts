@@ -275,6 +275,619 @@ const en = {
     contactTitle: "Get In Touch",
     contactSubtitle: "Have questions about our clubs? Want to know more about joining? Contact us!",
   },
+  activities: {
+    header: {
+      title: "Our Activities",
+      subtitle:
+        "Discover a world of learning opportunities through our comprehensive programs designed to develop your technical skills and advance your career.",
+    },
+    intro: {
+      title: "Learn, Grow, Innovate",
+      description:
+        "At AJIZ, we believe in learning by doing. Our activities provide hands-on experience, practical skills, and real-world applications that prepare you for success in the rapidly evolving technology landscape.",
+    },
+    overview: {
+      title: "What We Offer",
+      subtitle:
+        "Choose from our diverse range of learning formats and find the perfect fit for your schedule and learning style.",
+    },
+    types: {
+      workshops: {
+        title: "Workshops",
+        description:
+          "Interactive sessions covering technical skills, from programming basics to advanced topics like AI and blockchain.",
+        features: [
+          "Hands-on learning",
+          "Expert instructors",
+          "Small group sessions",
+          "Certificate of completion",
+        ],
+      },
+      trainings: {
+        title: "Trainings",
+        description:
+          "Comprehensive programs designed to build professional skills and prepare you for industry challenges.",
+        features: [
+          "Industry-relevant curriculum",
+          "Practical projects",
+          "Mentorship support",
+          "Job placement assistance",
+        ],
+      },
+      courses: {
+        title: "Courses",
+        description:
+          "Structured learning paths covering complete topics over multiple sessions with progressive skill building.",
+        features: [
+          "Structured curriculum",
+          "Progress tracking",
+          "Peer collaboration",
+          "Real-world projects",
+        ],
+      },
+      events: {
+        title: "Innovative Events",
+        description:
+          "Unique events like hackathons, innovation challenges, and tech talks featuring industry leaders.",
+        features: [
+          "Networking opportunities",
+          "Innovation challenges",
+          "Industry speakers",
+          "Prize competitions",
+        ],
+      },
+    },
+    upcoming: {
+      title: "Upcoming Events",
+      subtitle: "Don't miss out on our upcoming activities. Register now to secure your spot!",
+      registerCta: "Register Now",
+      items: [
+        {
+          title: "AI & Machine Learning Workshop",
+          date: "March 15, 2024",
+          time: "14:00 - 18:00",
+          location: "AJIZ Tech Lab",
+          type: "Workshop",
+          spots: "15 spots available",
+        },
+        {
+          title: "Full Stack Development Bootcamp",
+          date: "March 20-22, 2024",
+          time: "09:00 - 17:00",
+          location: "AJIZ Innovation Center",
+          type: "Training",
+          spots: "8 spots available",
+        },
+        {
+          title: "Robotics Competition Prep",
+          date: "March 25, 2024",
+          time: "16:00 - 20:00",
+          location: "Robotics Lab",
+          type: "Special Event",
+          spots: "20 spots available",
+        },
+        {
+          title: "UI/UX Design Masterclass",
+          date: "March 28, 2024",
+          time: "18:00 - 21:00",
+          location: "Design Studio",
+          type: "Workshop",
+          spots: "12 spots available",
+        },
+      ],
+    },
+    gallery: {
+      title: "Activities in Action",
+      subtitle: "See our community in action through photos from recent workshops, training sessions, and events",
+      items: {
+        programming: {
+          title: "Programming Workshop",
+          description: "Students learning Python programming fundamentals",
+        },
+        robotics: {
+          title: "Robotics Session",
+          description: "Building and programming autonomous robots",
+        },
+        collaboration: {
+          title: "Team Collaboration",
+          description: "Working together on innovative projects",
+        },
+        design: {
+          title: "Design Workshop",
+          description: "Creating user interfaces and digital art",
+        },
+        innovation: {
+          title: "Innovation Lab",
+          description: "Experimenting with cutting-edge technology",
+        },
+        presentation: {
+          title: "Presentation Day",
+          description: "Members presenting their project results",
+        },
+      },
+    },
+    form: {
+      title: "Register for an Event",
+      subtitle: "Ready to join us? Fill out the form below to register for any of our upcoming activities.",
+      nameLabel: "Full Name",
+      emailLabel: "Email Address",
+      activityLabel: "Activity of Interest",
+      activityPlaceholder: "Select an activity...",
+      messageLabel: "Additional Information",
+      messagePlaceholder: "Tell us about your background, experience, or any questions you have...",
+      submit: "Register Now",
+    },
+    cta: {
+      title: "Start Your Learning Journey Today",
+      description:
+        "Join thousands of students who have transformed their careers through our comprehensive learning programs. The next success story could be yours!",
+      primary: "Browse Workshops",
+      secondary: "View Training Programs",
+    },
+    earlyAccess: {
+      title: "Get Early Access",
+      description: "Be the first to know about new activities, special events, and exclusive opportunities",
+      placeholder: "Enter your email",
+      button: "Subscribe",
+    },
+  },
+  workshops: {
+    header: {
+      title: "Workshops",
+      subtitle: "Hands-on Learning Experiences for Every Skill Level",
+    },
+    intro: {
+      title: "Why Choose Our Workshops?",
+      description:
+        "Our workshops provide intensive, hands-on learning experiences that you can immediately apply in your projects and career. Led by industry experts, each session combines theory with practical application.",
+      highlights: [
+        {
+          icon: "⚡",
+          title: "Intensive Learning",
+          description: "Focused sessions that maximize learning in minimal time",
+        },
+        {
+          icon: "👨‍🏫",
+          title: "Expert Instructors",
+          description: "Learn from industry professionals and experienced practitioners",
+        },
+        {
+          icon: "🛠️",
+          title: "Hands-on Practice",
+          description: "Practical exercises and real-world project applications",
+        },
+      ],
+    },
+    categories: {
+      title: "Workshop Categories",
+      subtitle: "We offer diverse workshop categories to match your learning goals and career aspirations",
+      items: [
+        {
+          icon: "💻",
+          category: "Technical Skills",
+          description:
+            "Hands-on workshops covering programming, web development, data science, and emerging technologies",
+          workshops: [
+            "Python Programming Fundamentals",
+            "Web Development with React",
+            "Data Science & Analytics",
+            "Mobile App Development",
+            "Cloud Computing Basics",
+          ],
+        },
+        {
+          icon: "🎯",
+          category: "Soft Skills",
+          description:
+            "Professional development workshops focusing on communication, leadership, and project management",
+          workshops: [
+            "Effective Communication",
+            "Leadership Development",
+            "Project Management",
+            "Team Collaboration",
+            "Public Speaking",
+          ],
+        },
+        {
+          icon: "🚀",
+          category: "Industry Focus",
+          description:
+            "Specialized workshops tailored to specific industries and cutting-edge technologies",
+          workshops: [
+            "AI & Machine Learning",
+            "Cybersecurity Fundamentals",
+            "IoT Development",
+            "Blockchain Technology",
+            "Digital Marketing",
+          ],
+        },
+      ],
+    },
+    upcoming: {
+      title: "Upcoming Workshops",
+      subtitle: "Register now for our upcoming workshops and secure your spot in these popular sessions",
+      registerCta: "Register Now",
+      items: [
+        {
+          title: "Introduction to Artificial Intelligence",
+          date: "March 15, 2024",
+          time: "14:00 - 18:00",
+          duration: "4 hours",
+          level: "Beginner",
+          instructor: "Dr. Ahmed Mansouri",
+          spots: "15 spots left",
+          price: "Free for AJIZ members",
+        },
+        {
+          title: "React.js Complete Workshop",
+          date: "March 22, 2024",
+          time: "09:00 - 17:00",
+          duration: "8 hours",
+          level: "Intermediate",
+          instructor: "Sarah Ben Ali",
+          spots: "20 spots left",
+          price: "50 TND",
+        },
+        {
+          title: "Cybersecurity Awareness",
+          date: "March 29, 2024",
+          time: "16:00 - 20:00",
+          duration: "4 hours",
+          level: "All levels",
+          instructor: "Mohamed Khelil",
+          spots: "25 spots left",
+          price: "Free",
+        },
+      ],
+    },
+    spotlight: {
+      title: "Recent Workshop Spotlight",
+      subtitle: "See the impact of our recent workshops and the success of our participants",
+      highlightsTitle: "Workshop Highlights:",
+      workshop: {
+        title: "Mobile App Development with Flutter",
+        date: "February 20, 2024",
+        description:
+          "Our recent Flutter workshop was a huge success with 30 participants building their first mobile applications. The workshop covered everything from setup to deployment, with hands-on projects that participants could add to their portfolios.",
+        highlights: [
+          "30 participants completed the workshop",
+          "5 mobile apps published to app stores",
+          "98% satisfaction rate from participants",
+          "Follow-up mentorship sessions scheduled",
+        ],
+      },
+    },
+    faq: {
+      title: "Frequently Asked Questions",
+      subtitle: "Get answers to common questions about our workshops",
+      items: [
+        {
+          question: "Do I need prior experience to attend workshops?",
+          answer:
+            "Not at all! We offer workshops for all skill levels, from complete beginners to advanced practitioners. Each workshop clearly indicates the required experience level.",
+        },
+        {
+          question: "What should I bring to a workshop?",
+          answer:
+            "Just bring your laptop and enthusiasm to learn! We'll provide all necessary software, materials, and resources. Some workshops may have specific requirements that will be communicated beforehand.",
+        },
+        {
+          question: "Are the workshops free?",
+          answer:
+            "Many of our workshops are free for AJIZ members. Some specialized workshops may have a small fee to cover materials and instructor costs. Pricing is always clearly indicated.",
+        },
+        {
+          question: "Will I receive a certificate?",
+          answer:
+            "Yes! All participants who complete a workshop receive a certificate of completion that you can add to your professional portfolio or LinkedIn profile.",
+        },
+        {
+          question: "Can I suggest a workshop topic?",
+          answer:
+            "Absolutely! We're always looking for new ideas. Contact us with your suggestions, and if there's enough interest, we'll organize it.",
+        },
+      ],
+    },
+    form: {
+      title: "Register for a Workshop",
+      subtitle: "Ready to start learning? Fill out the form below to register for your chosen workshop.",
+      nameLabel: "Full Name",
+      emailLabel: "Email Address",
+      workshopLabel: "Workshop Selection",
+      workshopPlaceholder: "Select a workshop...",
+      experienceLabel: "Experience Level",
+      experiencePlaceholder: "Select your level...",
+      experienceOptions: {
+        beginner: "Beginner",
+        intermediate: "Intermediate",
+        advanced: "Advanced",
+      },
+      messageLabel: "Additional Information",
+      messagePlaceholder: "Tell us about your goals for this workshop or any specific questions you have...",
+      submit: "Register for Workshop",
+    },
+    gallery: {
+      title: "Workshop Gallery",
+      subtitle: "Take a look at our workshops in action",
+      items: [
+        { title: "Python Workshop", participants: "25 participants" },
+        { title: "Team Collaboration", participants: "Interactive session" },
+        { title: "UI/UX Workshop", participants: "Design thinking" },
+        { title: "Hardware Session", participants: "Hands-on learning" },
+      ],
+    },
+    testimonials: {
+      title: "What Participants Say",
+      subtitle: "Hear from our workshop participants about their learning experience",
+      items: [
+        {
+          name: "Amira Saidi",
+          workshop: "Data Science Workshop",
+          content:
+            "The data science workshop completely changed my career path. The practical approach and real datasets made complex concepts easy to understand.",
+        },
+        {
+          name: "Karim Bouslama",
+          workshop: "Web Development Workshop",
+          content:
+            "I went from zero programming knowledge to building my own website in just one weekend. The instructors were amazing and very supportive.",
+        },
+      ],
+    },
+    cta: {
+      title: "Ready to Start Learning?",
+      description:
+        "Join our next workshop and take the first step towards mastering new skills that will advance your career and expand your opportunities.",
+      primary: "Register Now",
+      secondary: "Contact Us",
+    },
+  },
+  trainings: {
+    header: {
+      title: "Training Programs",
+      subtitle: "Comprehensive Professional Development for Career Advancement",
+    },
+    intro: {
+      title: "Transform Your Career with Professional Training",
+      description:
+        "Our comprehensive training programs are designed to provide in-depth knowledge and practical skills that directly translate to career advancement. With structured curricula, expert instruction, and hands-on projects, you'll gain the expertise needed to excel in your chosen field.",
+      highlights: [
+        {
+          icon: "📚",
+          title: "Structured Learning",
+          description: "Progressive curriculum designed for optimal skill development",
+        },
+        {
+          icon: "🏆",
+          title: "Industry Recognition",
+          description: "Certificates and skills recognized by leading employers",
+        },
+        {
+          icon: "💼",
+          title: "Career Support",
+          description: "Job placement assistance and career guidance included",
+        },
+      ],
+    },
+    categories: {
+      title: "Training Categories",
+      subtitle: "Choose from our specialized training tracks designed to meet different career goals and skill levels",
+      durationLabel: "Duration:",
+      formatLabel: "Format:",
+      items: [
+        {
+          icon: "⚙️",
+          category: "Technical Training",
+          description:
+            "Comprehensive technical programs covering programming, system administration, and emerging technologies",
+          duration: "4-12 weeks",
+          format: "Intensive bootcamp style",
+        },
+        {
+          icon: "🗣️",
+          category: "Soft Skills Development",
+          description:
+            "Professional development programs focusing on communication, leadership, and interpersonal skills",
+          duration: "6-8 weeks",
+          format: "Interactive workshops",
+        },
+        {
+          icon: "👑",
+          category: "Leadership Training",
+          description:
+            "Advanced programs designed to develop leadership capabilities and management skills",
+          duration: "8-10 weeks",
+          format: "Mentorship & practice",
+        },
+        {
+          icon: "💡",
+          category: "Innovation & Entrepreneurship",
+          description:
+            "Training programs focused on startup development, innovation processes, and business skills",
+          duration: "6-12 weeks",
+          format: "Project-based learning",
+        },
+      ],
+    },
+    programs: {
+      title: "Featured Training Programs",
+      subtitle: "Dive deep into our most popular training programs with detailed curriculum and objectives",
+      priceNote: "Full program",
+      instructorLabel: "Instructor:",
+      objectivesLabel: "Learning Objectives:",
+      nextStartLabel: "Next Start",
+      spotsLabel: "Available Spots",
+      enrollCta: "Enroll Now",
+      items: [
+        {
+          title: "Full Stack Web Development Bootcamp",
+          duration: "12 weeks",
+          level: "Beginner to Advanced",
+          instructor: "Dr. Sarah Mansouri & Team",
+          objectives: [
+            "Master HTML, CSS, and JavaScript fundamentals",
+            "Build applications with React and Node.js",
+            "Work with databases and APIs",
+            "Deploy applications to production",
+            "Collaborative development with Git",
+          ],
+          nextStart: "April 1, 2024",
+          spots: "15 remaining",
+          price: "800 TND",
+        },
+        {
+          title: "Data Science & Analytics Program",
+          duration: "10 weeks",
+          level: "Intermediate",
+          instructor: "Prof. Ahmed Khelil",
+          objectives: [
+            "Statistical analysis and data visualization",
+            "Python programming for data science",
+            "Machine learning fundamentals",
+            "Real-world data projects",
+            "Industry tools and best practices",
+          ],
+          nextStart: "April 8, 2024",
+          spots: "12 remaining",
+          price: "600 TND",
+        },
+        {
+          title: "Cybersecurity Specialist Track",
+          duration: "8 weeks",
+          level: "Intermediate to Advanced",
+          instructor: "Eng. Mohamed Zahra",
+          objectives: [
+            "Network security fundamentals",
+            "Ethical hacking and penetration testing",
+            "Security frameworks and compliance",
+            "Incident response and forensics",
+            "Hands-on lab exercises",
+          ],
+          nextStart: "April 15, 2024",
+          spots: "10 remaining",
+          price: "700 TND",
+        },
+      ],
+    },
+    timeline: {
+      title: "Training Journey Timeline",
+      subtitle: "See how our structured approach guides you from beginner to professional",
+      items: [
+        {
+          phase: "Week 1-2",
+          title: "Foundation Building",
+          description: "Introduction to core concepts and fundamental skills",
+        },
+        {
+          phase: "Week 3-6",
+          title: "Skill Development",
+          description: "Intensive hands-on practice and project work",
+        },
+        {
+          phase: "Week 7-10",
+          title: "Advanced Applications",
+          description: "Complex projects and real-world scenario practice",
+        },
+        {
+          phase: "Week 11-12",
+          title: "Capstone & Certification",
+          description: "Final projects, presentations, and certification assessment",
+        },
+      ],
+    },
+    instructors: {
+      title: "Meet Our Expert Instructors",
+      subtitle: "Learn from industry professionals with years of practical experience",
+      items: [
+        {
+          name: "Dr. Sarah Mansouri",
+          specialization: "Full Stack Development",
+          experience: "10+ years in web development",
+        },
+        {
+          name: "Prof. Ahmed Khelil",
+          specialization: "Data Science & AI",
+          experience: "12+ years in academia and industry",
+        },
+        {
+          name: "Eng. Mohamed Zahra",
+          specialization: "Cybersecurity",
+          experience: "8+ years in security consulting",
+        },
+      ],
+    },
+    faq: {
+      title: "Frequently Asked Questions",
+      subtitle: "Get answers to common questions about our training programs",
+      items: [
+        {
+          question: "What's the difference between workshops and training programs?",
+          answer:
+            "Workshops are short, intensive sessions focused on specific skills. Training programs are comprehensive, multi-week experiences that provide in-depth knowledge and practical application.",
+        },
+        {
+          question: "Do I need to have programming experience?",
+          answer:
+            "It depends on the specific training program. We offer programs for all levels, and each one clearly states its prerequisites.",
+        },
+        {
+          question: "What kind of certificate will I receive?",
+          answer:
+            "Upon successful completion, you'll receive an AJIZ certificate of completion that includes the skills covered and hours completed, recognized by many local employers.",
+        },
+        {
+          question: "Is job placement assistance provided?",
+          answer:
+            "Yes! We provide career guidance, resume review, interview preparation, and connections with partner companies for internship and job opportunities.",
+        },
+        {
+          question: "Can I pay in installments?",
+          answer:
+            "Yes, we offer flexible payment plans. You can pay in 2-3 installments depending on the program duration. Contact us to discuss payment options.",
+        },
+      ],
+    },
+    form: {
+      title: "Apply for a Training Program",
+      subtitle: "Ready to advance your career? Apply for one of our training programs and take the next step.",
+      nameLabel: "Full Name",
+      emailLabel: "Email Address",
+      trainingLabel: "Training Program",
+      trainingPlaceholder: "Select a training program...",
+      backgroundLabel: "Professional Background",
+      backgroundPlaceholder: "Tell us about your current role, education, and relevant experience...",
+      goalsLabel: "Career Goals",
+      goalsPlaceholder: "What are your career goals and how will this training help you achieve them?",
+      submit: "Submit Application",
+    },
+    testimonials: {
+      title: "Success Stories",
+      subtitle: "See how our training programs have transformed careers",
+      items: [
+        {
+          name: "Youssef Bouazizi",
+          program: "Full Stack Development Bootcamp",
+          outcome: "Landed a job as Junior Developer",
+          content:
+            "The training program was intensive but incredibly rewarding. The hands-on projects and mentorship helped me transition from marketing to tech. I got my first developer job within 2 months of graduation.",
+        },
+        {
+          name: "Nour Gharbi",
+          program: "Data Science Program",
+          outcome: "Promoted to Data Analyst",
+          content:
+            "This program gave me the practical skills I needed to advance in my career. The real-world projects and expert instruction made complex topics accessible and applicable to my work.",
+        },
+      ],
+    },
+    cta: {
+      title: "Invest in Your Future Today",
+      description:
+        "Don't wait to advance your career. Our comprehensive training programs provide the skills and support you need to achieve your professional goals.",
+      primary: "Apply Now",
+      secondary: "Get More Info",
+    },
+  },
 } as const;
 
 export default en;

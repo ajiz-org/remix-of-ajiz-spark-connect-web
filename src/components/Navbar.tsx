@@ -99,22 +99,22 @@ const Navbar = () => {
                   <DropdownMenuItem
                     key={opt.value}
                     onSelect={(event) => {
-                      event.preventDefault();
                       i18n.changeLanguage(opt.value);
                     }}
-                    className={`flex items-center gap-3 rounded-md cursor-pointer mb-1 ${
+                    className={`group flex items-center gap-3 rounded-md cursor-pointer mb-1 ${
                       currentLanguage === opt.value ? "bg-accent text-accent-foreground" : ""
                     }`}
                   >
                     <span
-                      className="flex items-center justify-center bg-muted text-sm font-semibold uppercase"
+                      className={`flex items-center justify-center text-sm font-semibold uppercase group-hover:bg-white transition-colors ${
+                      currentLanguage === opt.value ? "bg-white" : "bg-muted"
+                    }`}
                       style={{ width: "40px", height: "26px", borderRadius: "13px" }}
                     >
                       {opt.badge}
                     </span>
                     <div>
                       <p className="font-semibold">{opt.description}</p>
-                      <p className="text-xs text-muted-foreground">{opt.label}</p>
                     </div>
                   </DropdownMenuItem>
                 ))}

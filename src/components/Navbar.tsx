@@ -75,9 +75,9 @@ const Navbar = () => {
                 <Button
                   type="button"
                   variant="ghost"
-                  className="border border-white/40 bg-white/10 text-white hover:bg-white/20 hover:text-white px-4 py-2 rounded-full"
+                  className="border border-white/40 bg-white/10 text-white hover:bg-white/20 hover:text-white rounded-full"
                   aria-label={t("nav.language")}
-                  style={{ paddingInlineStart: "8px" }}
+                  size="none"
                 >
                   <span
                     className="flex items-center justify-center bg-white/15 text-base font-semibold uppercase"
@@ -85,15 +85,13 @@ const Navbar = () => {
                   >
                     {currentLanguageMeta.badge}
                   </span>
-                  <div className="text-left">
-                    <p className="text-xs uppercase tracking-wide text-white/70">{t("nav.language")}</p>
-                    <p className="font-semibold leading-tight">{currentLanguageMeta.description}</p>
-                  </div>
-                  <Languages className="h-4 w-4 opacity-70" />
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end">
-                <DropdownMenuLabel>{t("nav.language")}</DropdownMenuLabel>
+                <DropdownMenuLabel className="flex gap-4 justify-between">
+                  {t("nav.language")}
+                  <Languages className="h-4 w-4 opacity-70" /> 
+                </DropdownMenuLabel>
                 <DropdownMenuSeparator />
                 {languageOptions.map((opt) => (
                   <DropdownMenuItem

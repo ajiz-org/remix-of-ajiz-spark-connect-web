@@ -283,62 +283,6 @@ const fr = {
       subtitle:
         "Découvrez un monde d'opportunités d'apprentissage grâce à nos programmes complets conçus pour développer vos compétences techniques et faire évoluer votre carrière.",
     },
-    intro: {
-      title: "Apprendre, grandir, innover",
-      description:
-        "Chez AJIZ, nous croyons à l'apprentissage par la pratique. Nos activités offrent des expériences concrètes, des compétences pratiques et des applications réelles qui vous préparent à réussir dans un paysage technologique en constante évolution.",
-    },
-    overview: {
-      title: "Ce que nous proposons",
-      subtitle:
-        "Choisissez parmi notre large éventail de formats d'apprentissage et trouvez la formule idéale pour votre emploi du temps et votre style d'apprentissage.",
-    },
-    types: {
-      workshops: {
-        title: "Ateliers",
-        description:
-          "Sessions interactives couvrant des compétences techniques, des bases de la programmation aux sujets avancés comme l'IA et la blockchain.",
-        features: [
-          "Apprentissage pratique",
-          "Formateurs experts",
-          "Petits groupes",
-          "Attestation de participation",
-        ],
-      },
-      trainings: {
-        title: "Formations",
-        description:
-          "Programmes complets conçus pour développer des compétences professionnelles et vous préparer aux défis du marché.",
-        features: [
-          "Programme aligné sur l'industrie",
-          "Projets pratiques",
-          "Mentorat personnalisé",
-          "Aide à l'insertion professionnelle",
-        ],
-      },
-      courses: {
-        title: "Parcours",
-        description:
-          "Chemins d'apprentissage structurés couvrant des thématiques complètes sur plusieurs sessions avec une progression continue.",
-        features: [
-          "Programme structuré",
-          "Suivi des progrès",
-          "Collaboration entre pairs",
-          "Projets réels",
-        ],
-      },
-      events: {
-        title: "Événements innovants",
-        description:
-          "Événements uniques tels que hackathons, challenges d'innovation et conférences tech avec des leaders du secteur.",
-        features: [
-          "Opportunités de réseautage",
-          "Défis d'innovation",
-          "Intervenants de l'industrie",
-          "Concours avec prix",
-        ],
-      },
-    },
     upcoming: {
       title: "Événements à venir",
       subtitle: "Ne manquez pas nos prochaines activités. Inscrivez-vous dès maintenant pour réserver votre place !",

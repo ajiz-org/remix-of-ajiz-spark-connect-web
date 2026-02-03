@@ -280,62 +280,6 @@ const en = {
       subtitle:
         "Discover a world of learning opportunities through our comprehensive programs designed to develop your technical skills and advance your career.",
     },
-    intro: {
-      title: "Learn, Grow, Innovate",
-      description:
-        "At AJIZ, we believe in learning by doing. Our activities provide hands-on experience, practical skills, and real-world applications that prepare you for success in the rapidly evolving technology landscape.",
-    },
-    overview: {
-      title: "What We Offer",
-      subtitle:
-        "Choose from our diverse range of learning formats and find the perfect fit for your schedule and learning style.",
-    },
-    types: {
-      workshops: {
-        title: "Workshops",
-        description:
-          "Interactive sessions covering technical skills, from programming basics to advanced topics like AI and blockchain.",
-        features: [
-          "Hands-on learning",
-          "Expert instructors",
-          "Small group sessions",
-          "Certificate of completion",
-        ],
-      },
-      trainings: {
-        title: "Trainings",
-        description:
-          "Comprehensive programs designed to build professional skills and prepare you for industry challenges.",
-        features: [
-          "Industry-relevant curriculum",
-          "Practical projects",
-          "Mentorship support",
-          "Job placement assistance",
-        ],
-      },
-      courses: {
-        title: "Courses",
-        description:
-          "Structured learning paths covering complete topics over multiple sessions with progressive skill building.",
-        features: [
-          "Structured curriculum",
-          "Progress tracking",
-          "Peer collaboration",
-          "Real-world projects",
-        ],
-      },
-      events: {
-        title: "Innovative Events",
-        description:
-          "Unique events like hackathons, innovation challenges, and tech talks featuring industry leaders.",
-        features: [
-          "Networking opportunities",
-          "Innovation challenges",
-          "Industry speakers",
-          "Prize competitions",
-        ],
-      },
-    },
     upcoming: {
       title: "Upcoming Events",
       subtitle: "Don't miss out on our upcoming activities. Register now to secure your spot!",

@@ -108,12 +108,6 @@ const Activities = () => {
   const [earlyAccess, setEarlyAccess] = useState({
     email: ""
   });
-  const activityTypes = activityTypeCards.map((activity) => ({
-    ...activity,
-    title: t(`activities.types.${activity.key}.title`),
-    description: t(`activities.types.${activity.key}.description`),
-    features: t(`activities.types.${activity.key}.features`, { returnObjects: true }) as string[],
-  }));
 
   const upcomingActivities = t("activities.upcoming.items", { returnObjects: true }) as UpcomingActivity[];
   const galleryTranslations = t("activities.gallery.items", { returnObjects: true }) as GalleryTranslations;
@@ -151,60 +145,6 @@ const Activities = () => {
         </div>
       </section>
 
-      {/* Introduction */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#184260] mb-6">{t("activities.intro.title")}</h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              {t("activities.intro.description")}
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Activity Types Overview */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#184260] mb-4">{t("activities.overview.title")}</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              {t("activities.overview.subtitle")}
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            {activityTypes.map((activity, index) => (
-              <Card key={index} className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
-                <div 
-                  className="h-48 bg-cover bg-center"
-                  style={{ backgroundImage: `url(${activity.image})` }}
-                />
-                <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold text-[#184260] mb-4">{activity.title}</h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed">{activity.description}</p>
-                  
-                  <div className="space-y-2 mb-6">
-                    {activity.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center">
-                        <span className="text-[#fd2929] me-2">✓</span>
-                        <span className="text-gray-600">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-                  
-                  <Button 
-                    className="bg-[#fd2929] hover:bg-[#cf1919] text-white w-full transition-colors duration-200"
-                    asChild
-                  >
-                    <Link to={activity.link}>{t("common.learnMore")}</Link>
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Upcoming Activities */}
       <section className="py-20 bg-white">

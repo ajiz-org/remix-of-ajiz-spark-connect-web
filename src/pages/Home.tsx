@@ -257,7 +257,7 @@ const Home = () => {
             <div>
               <h3 className="text-2xl font-bold text-[#184260] mb-6">{t("home.contact.contactInfoTitle")}</h3>
               <div className="space-y-4">
-                <div className="flex items-center">
+                <a href="https://maps.app.goo.gl/81knzub1vghiivWA9" className="flex items-center">
                   <div
                     className="w-12 h-12 bg-[#fd2929] rounded-lg flex items-center justify-center"
                     style={{ marginInlineEnd: "1rem" }}
@@ -268,8 +268,8 @@ const Home = () => {
                     <h4 className="font-semibold text-[#184260]">{t("home.contact.locationLabel")}</h4>
                     <p className="text-gray-600">{t("footer.location")}</p>
                   </div>
-                </div>
-                <div className="flex items-center">
+                </a>
+                <a href={`mailto:${t("footer.email")}`} className="flex items-center">
                   <div
                     className="w-12 h-12 bg-[#fd2929] rounded-lg flex items-center justify-center"
                     style={{ marginInlineEnd: "1rem" }}
@@ -280,8 +280,8 @@ const Home = () => {
                     <h4 className="font-semibold text-[#184260]">{t("home.contact.emailLabel")}</h4>
                     <p className="text-gray-600">{t("footer.email")}</p>
                   </div>
-                </div>
-                <div className="flex items-center">
+                </a>
+                <a href={`tel:${t("footer.phone").replace(/\s/g, '')}`} className="flex items-center">
                   <div
                     className="w-12 h-12 bg-[#fd2929] rounded-lg flex items-center justify-center"
                     style={{ marginInlineEnd: "1rem" }}
@@ -294,8 +294,8 @@ const Home = () => {
                       {t("footer.phone")}
                     </p>
                   </div>
-                </div>
-                <div className="flex items-center">
+                </a>
+                <a href={`tel:${t("footer.phone2").replace(/\s/g, '')}`} className="flex items-center">
                   <div
                     className="w-12 h-12 bg-[#fd2929] rounded-lg flex items-center justify-center"
                     style={{ marginInlineEnd: "1rem" }}
@@ -308,7 +308,7 @@ const Home = () => {
                       {t("footer.phone2")}
                     </p>
                   </div>
-                </div>
+                </a>
               </div>
             </div>
             <div className="bg-gray-100 p-8 rounded-lg">

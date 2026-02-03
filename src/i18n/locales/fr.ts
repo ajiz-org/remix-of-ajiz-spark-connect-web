@@ -3,7 +3,7 @@ const fr = {
     home: "Accueil",
     about: "À propos",
     clubs: "Clubs",
-    activities: "Activités",
+    activities: "Événements",
     workshops: "Ateliers",
     trainings: "Formations",
     joinUs: "Rejoignez-nous",
@@ -40,7 +40,7 @@ const fr = {
     axes: {
       title: "Nos axes thématiques",
       subtitle:
-        "AJIZ s'appuie sur trois piliers fondamentaux qui guident notre mission et nos activités",
+        "AJIZ s'appuie sur trois piliers fondamentaux qui guident notre mission et nos événements",
       youth: {
         title: "Jeunesse",
         description:
@@ -279,13 +279,13 @@ const fr = {
   },
   activities: {
     header: {
-      title: "Nos activités",
+      title: "Nos événements",
       subtitle:
         "Découvrez un monde d'opportunités d'apprentissage grâce à nos programmes complets conçus pour développer vos compétences techniques et faire évoluer votre carrière.",
     },
     upcoming: {
       title: "Événements à venir",
-      subtitle: "Ne manquez pas nos prochaines activités. Inscrivez-vous dès maintenant pour réserver votre place !",
+      subtitle: "Ne manquez pas nos prochains événements. Inscrivez-vous dès maintenant pour réserver votre place !",
       registerCta: "S'inscrire",
       items: [
         {
@@ -323,7 +323,7 @@ const fr = {
       ],
     },
     gallery: {
-      title: "Des activités en action",
+      title: "Des événements en action",
       subtitle: "Découvrez notre communauté à travers des photos de nos derniers ateliers, formations et événements",
       items: {
         programming: {
@@ -354,11 +354,11 @@ const fr = {
     },
     form: {
       title: "Inscription à un événement",
-      subtitle: "Prêt à nous rejoindre ? Remplissez le formulaire ci-dessous pour vous inscrire à l'une de nos activités à venir.",
+      subtitle: "Prêt à nous rejoindre ? Remplissez le formulaire ci-dessous pour vous inscrire à l'un de nos événements à venir.",
       nameLabel: "Nom complet",
       emailLabel: "Adresse e-mail",
-      activityLabel: "Activité choisie",
-      activityPlaceholder: "Sélectionnez une activité...",
+      activityLabel: "Événement choisi",
+      activityPlaceholder: "Sélectionnez un événement...",
       messageLabel: "Informations supplémentaires",
       messagePlaceholder: "Parlez-nous de votre parcours, de votre expérience ou des questions que vous avez...",
       submit: "S'inscrire",
@@ -372,7 +372,7 @@ const fr = {
     },
     earlyAccess: {
       title: "Accès anticipé",
-      description: "Soyez informé en premier des nouvelles activités, des événements spéciaux et des opportunités exclusives",
+      description: "Soyez informé en premier des nouveaux événements, des événements spéciaux et des opportunités exclusives",
       placeholder: "Entrez votre e-mail",
       button: "S'abonner",
     },

@@ -3,7 +3,7 @@ const en = {
     home: "Home",
     about: "About",
     clubs: "Clubs",
-    activities: "Activities",
+    activities: "Events",
     workshops: "Workshops",
     trainings: "Trainings",
     joinUs: "Join Us",
@@ -38,7 +38,7 @@ const en = {
     },
     axes: {
       title: "Our Thematic Axes",
-      subtitle: "AJIZ operates on three fundamental pillars that guide our mission and activities",
+      subtitle: "AJIZ operates on three fundamental pillars that guide our mission and events",
       youth: {
         title: "Youth",
         description:
@@ -276,13 +276,13 @@ const en = {
   },
   activities: {
     header: {
-      title: "Our Activities",
+      title: "Our Events",
       subtitle:
         "Discover a world of learning opportunities through our comprehensive programs designed to develop your technical skills and advance your career.",
     },
     upcoming: {
       title: "Upcoming Events",
-      subtitle: "Don't miss out on our upcoming activities. Register now to secure your spot!",
+      subtitle: "Don't miss out on our upcoming events. Register now to secure your spot!",
       registerCta: "Register Now",
       items: [
         {
@@ -320,7 +320,7 @@ const en = {
       ],
     },
     gallery: {
-      title: "Activities in Action",
+      title: "Events in Action",
       subtitle: "See our community in action through photos from recent workshops, training sessions, and events",
       items: {
         programming: {
@@ -351,11 +351,11 @@ const en = {
     },
     form: {
       title: "Register for an Event",
-      subtitle: "Ready to join us? Fill out the form below to register for any of our upcoming activities.",
+      subtitle: "Ready to join us? Fill out the form below to register for any of our upcoming events.",
       nameLabel: "Full Name",
       emailLabel: "Email Address",
-      activityLabel: "Activity of Interest",
-      activityPlaceholder: "Select an activity...",
+      activityLabel: "Event of Interest",
+      activityPlaceholder: "Select an event...",
       messageLabel: "Additional Information",
       messagePlaceholder: "Tell us about your background, experience, or any questions you have...",
       submit: "Register Now",
@@ -369,7 +369,7 @@ const en = {
     },
     earlyAccess: {
       title: "Get Early Access",
-      description: "Be the first to know about new activities, special events, and exclusive opportunities",
+      description: "Be the first to know about new events, special events, and exclusive opportunities",
       placeholder: "Enter your email",
       button: "Subscribe",
     },

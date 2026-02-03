@@ -79,7 +79,7 @@ const Home = () => {
           <p className="text-xl md:text-2xl mb-8 animate-fade-in">
             {t("home.hero.subtitle")}
           </p>
-          <p className="text-lg md:text-xl mb-12 max-w-2xl mx-auto animate-fade-in">
+          <p className="font-slogan text-2xl md:text-4xl mb-12 max-w-2xl mx-auto animate-fade-in leading-relaxed">
             {t("home.hero.description")}
           </p>
           <div className="space-y-4 md:space-y-0 md:flex md:justify-center md:gap-4 animate-fade-in">

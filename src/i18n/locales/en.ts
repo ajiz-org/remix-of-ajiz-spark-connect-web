@@ -11,13 +11,13 @@ const en = {
   },
   footer: {
     description:
-      "Association of Young Engineers in Zarzis - Empowering youth through technology, innovation, and entrepreneurship.",
+      "Association of Young Engineers of Zarzis - Builders of Today, Leaders of Tomorrow.",
     quickLinks: "Quick Links",
     contact: "Contact",
     location: "Zarzis, Tunisia",
     email: "contact@ajiz.org",
     phone: "+216 24 785 026",
-    copyright: "© {{year}} AJIZ - Association of Young Engineers in Zarzis. All rights reserved.",
+    copyright: "© {{year}} AJIZ - Association of Young Engineers of Zarzis. All rights reserved.",
   },
   common: {
     learnMore: "Learn More",
@@ -29,9 +29,9 @@ const en = {
   home: {
     hero: {
       welcome: "Welcome to <1>AJIZ</1>",
-      subtitle: "Association of Young Engineers in Zarzis",
+      subtitle: "Association of Young Engineers of Zarzis",
       description:
-        "Empowering youth through technology, innovation, and entrepreneurship. Join our community of passionate engineers shaping the future.",
+        "Builders Of Today, Leaders of Tomorrow.",
       primaryCta: "Join Our Community",
       secondaryCta: "Learn More",
     },
@@ -62,7 +62,7 @@ const en = {
     about: {
       title: "About AJIZ",
       p1:
-        "The Association of Young Engineers in Zarzis (AJIZ) is a dynamic community dedicated to fostering innovation, technology advancement, and entrepreneurial spirit among young engineers in Tunisia.",
+        "The Association of Young Engineers of Zarzis (AJIZ) is a dynamic community dedicated to fostering innovation, technology advancement, and entrepreneurial spirit among young engineers in Tunisia.",
       p2:
         "Through our comprehensive programs, specialized clubs, and collaborative initiatives, we provide a platform for growth, learning, and networking that prepares our members for successful careers in engineering and technology.",
     },

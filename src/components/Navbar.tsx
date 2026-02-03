@@ -37,14 +37,14 @@ const Navbar = () => {
     { key: "clubs", path: "/clubs" },
     { key: "activities", path: "/activities" },
     { key: "workshops", path: "/workshops" },
-    { key: "trainings", path: "/trainings" },
+    // { key: "trainings", path: "/trainings" },
   ] as const;
 
   return (
     <nav className="bg-[#184260] text-white shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
-          <div className="flex items-center">
+        <div className="flex justify-between h-16 gap-8">
+          <div className="flex items-center shrink-0">
             <Link to="/" className="flex items-center gap-2">
               <img
                 src="/logo.jpeg"
@@ -57,18 +57,19 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
-            {navItems.map((item) => (
+          <div className="hidden md:flex items-center flex-shrink overflow-hidden">
+            {navItems.map((item) => (<>
               <Link
                 key={item.path}
                 to={item.path}
                 className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 hover:text-[#fd2929] text-white ${
                   isActive(item.path) ? "text-[#fd2929] border-b-2 border-[#fd2929]" : ""
                 }`}
-              >
+                >
                 {t(`nav.${item.key}`)}
               </Link>
-            ))}
+            <div className="w-8 flex-shrink" />
+            </>))}
 
             <DropdownMenu dir={currentDirection}>
               <DropdownMenuTrigger asChild>
@@ -119,6 +120,7 @@ const Navbar = () => {
               </DropdownMenuContent>
             </DropdownMenu>
 
+            <div className="w-8" />
             <Button 
               className="bg-[#fd2929] hover:bg-[#cf1919] text-white px-6 py-2 rounded-lg transition-colors duration-200"
               asChild

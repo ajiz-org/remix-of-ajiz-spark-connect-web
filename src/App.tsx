@@ -9,9 +9,6 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Clubs from "./pages/Clubs";
-import CodingClub from "./pages/CodingClub";
-import RoboticsClub from "./pages/RoboticsClub";
-import ArtClub from "./pages/ArtClub";
 import Activities from "./pages/Activities";
 import Workshops from "./pages/Workshops";
 import Trainings from "./pages/Trainings";
@@ -32,12 +29,9 @@ const App = () => (
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/clubs" element={<Clubs />} />
-              <Route path="/clubs/coding" element={<CodingClub />} />
-              <Route path="/clubs/robotics" element={<RoboticsClub />} />
-              <Route path="/clubs/art" element={<ArtClub />} />
               <Route path="/activities" element={<Activities />} />
               <Route path="/workshops" element={<Workshops />} />
-              <Route path="/trainings" element={<Trainings />} />
+              {/* <Route path="/trainings" element={<Trainings />} /> */}
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>

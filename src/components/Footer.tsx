@@ -52,9 +52,10 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4 text-white">{t("footer.contact")}</h3>
             <ul className="space-y-2 text-gray-300">
-              <li>{t("footer.location")}</li>
-              <li>{t("footer.email")}</li>
-              <li><span style={{ unicodeBidi: "plaintext" }}>{t("footer.phone")}</span></li>
+              <li><span style={{ direction: 'ltr', unicodeBidi: 'inherit' }}>🖈 <a href="https://maps.app.goo.gl/81knzub1vghiivWA9" target="_blank">{t("footer.location")}</a></span></li>
+              <li><span style={{ unicodeBidi: "plaintext" }}>@ <a href={`mailto:${t("footer.email")}`}>{t("footer.email")}</a></span></li>
+              <li><span style={{ unicodeBidi: "plaintext" }}>✆ <a href={`tel:${t("footer.phone").replace(/\s/g, '')}`}>{t("footer.phone")}</a></span></li>
+              <li><span style={{ unicodeBidi: "plaintext" }}>✆ <a href={`tel:${t("footer.phone2").replace(/\s/g, '')}`}>{t("footer.phone2")}</a></span></li>
             </ul>
           </div>
         </div>

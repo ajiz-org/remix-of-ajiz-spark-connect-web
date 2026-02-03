@@ -17,6 +17,7 @@ const ar = {
     location: "جرجيس، تونس",
     email: "contact@ajiz.org",
     phone: "+216 24 785 026",
+    phone2: "+216 21 405 657",
     copyright:
       "© {{year}} AJIZ - جمعية المهندسين الشبّان بجرجيس. جميع الحقوق محفوظة.",
   },

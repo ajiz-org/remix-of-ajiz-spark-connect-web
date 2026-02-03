@@ -262,7 +262,7 @@ const Home = () => {
                     className="w-12 h-12 bg-[#fd2929] rounded-lg flex items-center justify-center"
                     style={{ marginInlineEnd: "1rem" }}
                   >
-                    <span className="text-white">📍</span>
+                    <span className="text-white text-2xl">🖈</span>
                   </div>
                   <div>
                     <h4 className="font-semibold text-[#184260]">{t("home.contact.locationLabel")}</h4>
@@ -274,7 +274,7 @@ const Home = () => {
                     className="w-12 h-12 bg-[#fd2929] rounded-lg flex items-center justify-center"
                     style={{ marginInlineEnd: "1rem" }}
                   >
-                    <span className="text-white">📧</span>
+                    <span className="text-white text-2xl">@</span>
                   </div>
                   <div>
                     <h4 className="font-semibold text-[#184260]">{t("home.contact.emailLabel")}</h4>
@@ -286,7 +286,7 @@ const Home = () => {
                     className="w-12 h-12 bg-[#fd2929] rounded-lg flex items-center justify-center"
                     style={{ marginInlineEnd: "1rem" }}
                   >
-                    <span className="text-white">📱</span>
+                    <span className="text-white text-2xl">✆</span>
                   </div>
                   <div>
                     <h4 className="font-semibold text-[#184260]">{t("home.contact.phoneLabel")}</h4>
@@ -295,11 +295,25 @@ const Home = () => {
                     </p>
                   </div>
                 </div>
+                <div className="flex items-center">
+                  <div
+                    className="w-12 h-12 bg-[#fd2929] rounded-lg flex items-center justify-center"
+                    style={{ marginInlineEnd: "1rem" }}
+                  >
+                    <span className="text-white text-2xl">✆</span>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-[#184260]">{t("home.contact.phoneLabel")}</h4>
+                    <p className="text-gray-600" style={{ unicodeBidi: "plaintext" }}>
+                      {t("footer.phone2")}
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
             <div className="bg-gray-100 p-8 rounded-lg">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.123456789!2d11.112233!3d33.498765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDI5JzU1LjYiTiAxMcKwMDYnNDQuMCJF!5e0!3m2!1sen!2stn!4v1234567890"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3327.179354398236!2d11.1155382!3d33.4967105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13aaef3c55d43dc3%3A0x18906f9831782dc3!2sAJIZ!5e0!3m2!1sar!2stn!4v1770140212514!5m2!1sar!2stn"
                 width="100%"
                 height="300"
                 style={{ border: 0 }}

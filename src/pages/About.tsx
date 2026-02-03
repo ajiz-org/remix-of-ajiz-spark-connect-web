@@ -15,10 +15,12 @@ const About = () => {
   ];
 
   const partners = [
-    { name: "Tech Tunisia", logo: "🏢" },
-    { name: "Innovation Hub", logo: "💡" },
-    { name: "Digital Solutions", logo: "💻" },
-    { name: "Future Labs", logo: "🔬" },
+    { name: t('partners.s2t'), logo: "/s2t.png" },
+    { name: t('partners.orange'), logo: "/orange.png" },
+    { name: t('partners.sorce'), logo: "/sorce.png" },
+    { name: t('partners.ministry'), logo: "/ministry.png" },
+    { name: t('partners.delegation'), logo: "/delegation.png" },
+    { name: t('partners.zarzinova'), logo: "/zarzinova.png" },
   ];
 
   return (
@@ -210,7 +212,7 @@ const About = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {partners.map((partner, index) => (
               <Card key={index} className="text-center p-8 hover:shadow-xl transition-all duration-300 hover:scale-105">
-                <div className="text-4xl mb-4">{partner.logo}</div>
+                <div className="text-4xl mb-4"><img src={partner.logo} alt={partner.name} /></div>
                 <h3 className="text-lg font-semibold text-[#184260]">{partner.name}</h3>
               </Card>
             ))}

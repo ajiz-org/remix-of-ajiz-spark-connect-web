@@ -277,6 +277,14 @@ const fr = {
     contactTitle: "Contactez-nous",
     contactSubtitle: "Vous avez des questions sur nos clubs ? Vous voulez en savoir plus sur l'adhésion ? Contactez-nous !",
   },
+  partners: {
+    s2t: "Technoparcs tunisiens intelligents (S2T)",
+    orange: "Fondation Orange Tunisie",
+    sorce: "Étudiants organisant des conventions partout",
+    ministry: "Ministère de l'Enseignement supérieur",
+    delegation: "Délégation de l'Éducation",
+    zarzinova: "Zarzinova",
+  },
   activities: {
     header: {
       title: "Nos événements",

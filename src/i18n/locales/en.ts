@@ -194,8 +194,6 @@ const en = {
         description: "Opened our dedicated innovation workspace",
       },
     },
-    teamTitle: "Meet Our Team",
-    teamSubtitle: "The passionate leaders driving AJIZ forward",
     partnersTitle: "Our Partners",
     partnersSubtitle: "Working together to create opportunities and drive innovation",
     ctaTitle: "Join Our Mission",

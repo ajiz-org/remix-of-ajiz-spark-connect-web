@@ -14,33 +14,6 @@ const About = () => {
     { year: "2024", event: t("about.milestones.2024.event"), description: t("about.milestones.2024.description") },
   ];
 
-  const teamMembers = [
-    {
-      name: "Yasmin Hadj Ali",
-      role: "President",
-      image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=300&h=300&fit=crop&crop=face",
-      bio: "Computer Science student passionate about AI and community building"
-    },
-    {
-      name: "Ahmed Ben Othman",
-      role: "Vice President",
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=300&h=300&fit=crop&crop=face",
-      bio: "Robotics enthusiast with expertise in automation and IoT"
-    },
-    {
-      name: "Fatma Bouslama",
-      role: "Secretary General",
-      image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=300&h=300&fit=crop&crop=face",
-      bio: "Project management specialist focused on organizational excellence"
-    },
-    {
-      name: "Khalil Mansouri",
-      role: "Treasurer",
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=300&h=300&fit=crop&crop=face",
-      bio: "Business administration student with entrepreneurial experience"
-    }
-  ];
-
   const partners = [
     { name: "Tech Tunisia", logo: "🏢" },
     { name: "Innovation Hub", logo: "💡" },
@@ -219,35 +192,6 @@ const About = () => {
                 </div>
                 <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-[#fd2929] rounded-full border-4 border-white"></div>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Team Members */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#184260] mb-4">{t("about.teamTitle")}</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              {t("about.teamSubtitle")}
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {teamMembers.map((member, index) => (
-              <Card key={index} className="text-center hover:shadow-xl transition-all duration-300 hover:scale-105">
-                <CardContent className="p-6">
-                  <img 
-                    src={member.image} 
-                    alt={member.name}
-                    className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
-                  />
-                  <h3 className="text-xl font-bold text-[#184260] mb-2">{member.name}</h3>
-                  <p className="text-[#fd2929] font-semibold mb-3">{member.role}</p>
-                  <p className="text-gray-600 text-sm leading-relaxed">{member.bio}</p>
-                </CardContent>
-              </Card>
             ))}
           </div>
         </div>

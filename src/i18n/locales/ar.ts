@@ -193,8 +193,6 @@ const ar = {
         description: "افتتحنا مساحة الابتكار المخصصة لنا",
       },
     },
-    teamTitle: "تعرف على فريقنا",
-    teamSubtitle: "القادة المتحمسون الذين يقودون AJIZ إلى الأمام",
     partnersTitle: "شركاؤنا",
     partnersSubtitle: "العمل معاً لخلق فرص ودفع الابتكار",
     ctaTitle: "انضم إلى مهمتنا",

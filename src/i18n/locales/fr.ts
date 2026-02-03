@@ -197,8 +197,6 @@ const fr = {
         description: "Ouverture de notre espace d'innovation dédié",
       },
     },
-    teamTitle: "Rencontrez notre équipe",
-    teamSubtitle: "Les leaders passionnés qui font avancer AJIZ",
     partnersTitle: "Nos partenaires",
     partnersSubtitle: "Travailler ensemble pour créer des opportunités et stimuler l'innovation",
     ctaTitle: "Rejoignez notre mission",

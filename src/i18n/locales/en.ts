@@ -26,6 +26,13 @@ const en = {
     joinOurCommunity: "Join Our Community",
     donate: "Donate",
     exploreClubs: "Explore Clubs",
+    donateDialog: {
+      title: "Donate",
+      description: "To donate, please get in touch with our treasurer on WhatsApp:",
+      phone: "{{phone}}",
+      whatsappCta: "Open WhatsApp",
+      cancel: "Close",
+    },
   },
   home: {
     hero: {

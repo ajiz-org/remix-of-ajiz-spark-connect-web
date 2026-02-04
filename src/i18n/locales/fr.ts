@@ -27,6 +27,13 @@ const fr = {
     joinOurCommunity: "Rejoindre la communauté",
     donate: "Faire un don",
     exploreClubs: "Explorer les clubs",
+    donateDialog: {
+      title: "Faire un don",
+      description: "Pour faire un don, veuillez contacter notre trésorier sur WhatsApp :",
+      phone: "{{phone}}",
+      whatsappCta: "Ouvrir WhatsApp",
+      cancel: "Fermer",
+    },
   },
   home: {
     hero: {

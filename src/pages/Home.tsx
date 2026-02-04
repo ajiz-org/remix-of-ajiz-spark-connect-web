@@ -1,6 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import DonateDialogButton from "@/components/DonateDialogButton";
 import { Link } from "react-router-dom";
 import { Trans, useTranslation } from "react-i18next";
 
@@ -225,13 +226,7 @@ const Home = () => {
             {t("home.cta.description")}
           </p>
           <div className="space-y-4 md:space-y-0 md:flex md:justify-center md:gap-6">
-            <Button 
-              size="lg" 
-              className="bg-white text-[#fd2929] hover:bg-gray-100 px-8 py-4 text-lg rounded-lg transition-all duration-300 hover:scale-105"
-              asChild
-            >
-              <Link to="/activities">{t("common.donate")}</Link>
-            </Button>
+            <DonateDialogButton className="bg-white text-[#fd2929] hover:bg-gray-100 px-8 py-4 text-lg rounded-lg transition-all duration-300 hover:scale-105" />
             <Button 
               size="lg" 
               variant="outline" 

@@ -27,6 +27,13 @@ const ar = {
     joinOurCommunity: "انضم إلى مجتمعنا",
     donate: "تبرع",
     exploreClubs: "استكشف الأندية",
+    donateDialog: {
+      title: "تبرع",
+      description: "للتبرع، يُرجى التواصل مع أمين الصندوق عبر واتساب:",
+      phone: "{{phone}}",
+      whatsappCta: "فتح واتساب",
+      cancel: "إغلاق",
+    },
   },
   home: {
     hero: {

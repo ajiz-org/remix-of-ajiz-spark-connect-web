@@ -84,13 +84,20 @@ const Home = () => {
             {t("home.hero.description")}
           </p>
           <div className="space-y-4 md:space-y-0 md:flex md:justify-center md:gap-4 animate-fade-in">
-            <Button 
-              size="lg" 
+            <ContactDialogButton
               className="bg-[#fd2929] hover:bg-[#cf1919] text-white px-8 py-4 text-lg rounded-lg transition-all duration-300 hover:scale-105"
-              asChild
-            >
-              <Link to="/activities">{t("home.hero.primaryCta")}</Link>
-            </Button>
+              buttonTextKey="home.hero.primaryCta"
+              titleKey="home.hero.hrDialog.title"
+              descriptionKey="home.hero.hrDialog.description"
+              cancelKey="home.hero.hrDialog.cancel"
+              actionKey="home.hero.hrDialog.emailCta"
+              contact={{
+                kind: "email",
+                value: "hr@ajiz.org",
+                linkTextKey: "home.hero.hrDialog.email",
+                linkVarName: "email",
+              }}
+            />
             <Button 
               size="lg" 
               variant="outline" 

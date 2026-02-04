@@ -43,6 +43,14 @@ const fr = {
         "Autonomiser la jeunesse grâce à la technologie, l'innovation et l'entrepreneuriat. Rejoignez notre communauté d'ingénieurs passionnés qui façonnent l'avenir.",
       primaryCta: "Rejoindre la communauté",
       secondaryCta: "En savoir plus",
+      hrDialog: {
+        title: "Contacter les RH",
+        description:
+          "Veuillez envoyer un e-mail à notre équipe RH en ajoutant votre parcours personnel et votre motivation.",
+        email: "{{email}}",
+        emailCta: "Envoyer un e-mail",
+        cancel: "Fermer",
+      },
     },
     axes: {
       title: "Nos axes thématiques",

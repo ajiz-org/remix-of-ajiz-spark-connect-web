@@ -42,6 +42,14 @@ const en = {
         "Builders Of Today, Leaders of Tomorrow.",
       primaryCta: "Join Our Community",
       secondaryCta: "Learn More",
+      hrDialog: {
+        title: "Contact HR",
+        description:
+          "Please email our HR team and include your personal background and your motivation.",
+        email: "{{email}}",
+        emailCta: "Send an email",
+        cancel: "Close",
+      },
     },
     axes: {
       title: "Our Thematic Axes",

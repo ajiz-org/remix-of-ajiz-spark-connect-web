@@ -25,7 +25,7 @@ const fr = {
     learnMore: "En savoir plus",
     discoverOurStory: "Découvrir notre histoire",
     joinOurCommunity: "Rejoindre la communauté",
-    joinOurEvents: "Participer à nos événements",
+    donate: "Faire un don",
     exploreClubs: "Explorer les clubs",
   },
   home: {

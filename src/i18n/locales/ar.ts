@@ -25,7 +25,7 @@ const ar = {
     learnMore: "اعرف المزيد",
     discoverOurStory: "اكتشف قصتنا",
     joinOurCommunity: "انضم إلى مجتمعنا",
-    joinOurEvents: "شارك في فعالياتنا",
+    donate: "تبرع",
     exploreClubs: "استكشف الأندية",
   },
   home: {

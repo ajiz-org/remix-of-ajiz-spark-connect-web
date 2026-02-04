@@ -47,18 +47,18 @@ const Home = () => {
   ];
 
   const testimonials = [
-    {
-      name: t("home.testimonialsData.amira.name"),
-      role: t("home.testimonialsData.amira.role"),
-      content: t("home.testimonialsData.amira.content"),
-      avatar: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=100&h=100&fit=crop&crop=face",
-    },
-    {
-      name: t("home.testimonialsData.mohamed.name"),
-      role: t("home.testimonialsData.mohamed.role"),
-      content: t("home.testimonialsData.mohamed.content"),
-      avatar: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=100&h=100&fit=crop&crop=face",
-    },
+    // {
+    //   name: t("home.testimonialsData.amira.name"),
+    //   role: t("home.testimonialsData.amira.role"),
+    //   content: t("home.testimonialsData.amira.content"),
+    //   avatar: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=100&h=100&fit=crop&crop=face",
+    // },
+    // {
+    //   name: t("home.testimonialsData.mohamed.name"),
+    //   role: t("home.testimonialsData.mohamed.role"),
+    //   content: t("home.testimonialsData.mohamed.content"),
+    //   avatar: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=100&h=100&fit=crop&crop=face",
+    // },
   ];
 
   return (
@@ -186,7 +186,7 @@ const Home = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 bg-[#184260] text-white">
+      {/* <section className="py-20 bg-[#184260] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">{t("home.testimonials.title")}</h2>
@@ -215,7 +215,7 @@ const Home = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Call to Action Section */}
       <section className="py-20 bg-gradient-to-r from-[#fd2929] to-[#cf1919] text-white">
@@ -230,7 +230,7 @@ const Home = () => {
               className="bg-white text-[#fd2929] hover:bg-gray-100 px-8 py-4 text-lg rounded-lg transition-all duration-300 hover:scale-105"
               asChild
             >
-              <Link to="/activities">{t("common.joinOurEvents")}</Link>
+              <Link to="/activities">{t("common.donate")}</Link>
             </Button>
             <Button 
               size="lg" 

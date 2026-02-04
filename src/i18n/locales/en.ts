@@ -24,7 +24,7 @@ const en = {
     learnMore: "Learn More",
     discoverOurStory: "Discover Our Story",
     joinOurCommunity: "Join Our Community",
-    joinOurEvents: "Join Our Events",
+    donate: "Donate",
     exploreClubs: "Explore Clubs",
   },
   home: {

@@ -208,8 +208,15 @@ const fr = {
     partnersSubtitle: "Travailler ensemble pour créer des opportunités et stimuler l'innovation",
     ctaTitle: "Rejoignez notre mission",
     ctaDescription: "Faites partie d'une communauté qui façonne l'avenir de la technologie et de l'ingénierie en Tunisie. Que ce soit en tant que membre, partenaire ou soutien, il existe de nombreuses façons de s'impliquer avec AJIZ.",
-    ctaPrimary: "S'impliquer",
+    ctaPrimary: "Devenir partenaire",
     ctaSecondary: "Nous contacter",
+    partnerDialog: {
+      title: "Devenir partenaire",
+      description: "Pour devenir partenaire, veuillez contacter notre secrétariat par e-mail :",
+      email: "{{email}}",
+      emailCta: "Envoyer un e-mail",
+      cancel: "Fermer",
+    },
   },
   clubs: {
     header: {

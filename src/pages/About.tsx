@@ -1,6 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import ContactDialogButton from "@/components/ContactDialogButton";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
@@ -228,13 +229,20 @@ const About = () => {
             {t("about.ctaDescription")}
           </p>
           <div className="flex flex-col gap-4 md:flex-row md:gap-6 md:justify-center">
-            <Button 
-              size="lg" 
+            <ContactDialogButton
               className="bg-white text-[#fd2929] hover:bg-gray-100 px-8 py-4 text-lg rounded-lg transition-all duration-300 hover:scale-105"
-              asChild
-            >
-              <Link to="/activities">{t("about.ctaPrimary")}</Link>
-            </Button>
+              buttonTextKey="about.ctaPrimary"
+              titleKey="about.partnerDialog.title"
+              descriptionKey="about.partnerDialog.description"
+              cancelKey="about.partnerDialog.cancel"
+              actionKey="about.partnerDialog.emailCta"
+              contact={{
+                kind: "email",
+                value: "contact@ajiz.org",
+                linkTextKey: "about.partnerDialog.email",
+                linkVarName: "email",
+              }}
+            />
             <Button 
               size="lg" 
               variant="outline" 

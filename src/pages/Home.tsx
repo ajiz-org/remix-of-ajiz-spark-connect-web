@@ -1,7 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import DonateDialogButton from "@/components/DonateDialogButton";
+import ContactDialogButton from "@/components/ContactDialogButton";
 import { Link } from "react-router-dom";
 import { Trans, useTranslation } from "react-i18next";
 
@@ -226,7 +226,21 @@ const Home = () => {
             {t("home.cta.description")}
           </p>
           <div className="space-y-4 md:space-y-0 md:flex md:justify-center md:gap-6">
-            <DonateDialogButton className="bg-white text-[#fd2929] hover:bg-gray-100 px-8 py-4 text-lg rounded-lg transition-all duration-300 hover:scale-105" />
+            <ContactDialogButton
+              className="bg-white text-[#fd2929] hover:bg-gray-100 px-8 py-4 text-lg rounded-lg transition-all duration-300 hover:scale-105"
+              buttonTextKey="common.donate"
+              titleKey="common.donateDialog.title"
+              descriptionKey="common.donateDialog.description"
+              cancelKey="common.donateDialog.cancel"
+              actionKey="common.donateDialog.whatsappCta"
+              contact={{
+                kind: "whatsapp",
+                value: "21621405657",
+                display: "+216 21 405 657",
+                linkTextKey: "common.donateDialog.phone",
+                linkVarName: "phone",
+              }}
+            />
             <Button 
               size="lg" 
               variant="outline" 

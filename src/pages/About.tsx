@@ -243,14 +243,6 @@ const About = () => {
                 linkVarName: "email",
               }}
             />
-            <Button 
-              size="lg" 
-              variant="outline" 
-              className="border-white text-white hover:bg-white hover:text-[#fd2929] px-8 py-4 text-lg rounded-lg transition-all duration-300 bg-transparent"
-              asChild
-            >
-              <Link to="#contact">{t("about.ctaSecondary")}</Link>
-            </Button>
           </div>
         </div>
       </section>

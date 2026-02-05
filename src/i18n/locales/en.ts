@@ -214,7 +214,6 @@ const en = {
     ctaTitle: "Join Our Mission",
     ctaDescription: "Be part of a community that's shaping the future of technology and engineering in Tunisia. Whether as a member, partner, or supporter, there are many ways to get involved with AJIZ.",
     ctaPrimary: "Become a partner",
-    ctaSecondary: "Contact Us",
     partnerDialog: {
       title: "Become a partner",
       description: "To become a partner, please get in touch with our secretariat by email:",

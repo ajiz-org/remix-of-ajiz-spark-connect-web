@@ -31,19 +31,16 @@ const Home = () => {
       name: t("home.cards.codingClub.name"),
       description: t("home.cards.codingClub.description"),
       image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop",
-      link: "/clubs/coding",
     },
     {
       name: t("home.cards.roboticsClub.name"),
       description: t("home.cards.roboticsClub.description"),
       image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=300&fit=crop",
-      link: "/clubs/robotics",
     },
     {
       name: t("home.cards.artClub.name"),
       description: t("home.cards.artClub.description"),
       image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&h=300&fit=crop",
-      link: "/clubs/art",
     },
   ];
 
@@ -149,12 +146,6 @@ const Home = () => {
                 <CardContent className="p-6">
                   <h3 className="text-2xl font-bold text-[#184260] mb-3">{club.name}</h3>
                   <p className="text-gray-600 mb-6 leading-relaxed">{club.description}</p>
-                  <Button 
-                    className="bg-[#fd2929] hover:bg-[#cf1919] text-white w-full transition-colors duration-200"
-                    asChild
-                  >
-                    <Link to={club.link}>{t("common.learnMore")}</Link>
-                  </Button>
                 </CardContent>
               </Card>
             ))}

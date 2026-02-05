@@ -1,7 +1,5 @@
-
-import { Button } from "@/components/ui/button";
+import ContactDialogButton from "@/components/ContactDialogButton";
 import { Card, CardContent } from "@/components/ui/card";
-import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 type ClubInfo = {
@@ -9,8 +7,9 @@ type ClubInfo = {
   description: string;
   image: string;
   features: string[];
-  link: string;
   color: string;
+  icon: string;
+  email: string;
 };
 
 const Clubs = () => {
@@ -20,26 +19,38 @@ const Clubs = () => {
     {
       name: t("clubs.codingClub.name"),
       description: t("clubs.codingClub.description"),
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=400&fit=crop",
-      features: t("clubs.codingClub.features", { returnObjects: true }) as string[],
-      link: "/clubs/coding",
+      image:
+        "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=400&fit=crop",
+      features: t("clubs.codingClub.features", {
+        returnObjects: true,
+      }) as string[],
       color: "from-blue-500 to-purple-600",
+      icon: "💻",
+      email: "coding@ajiz.org",
     },
     {
       name: t("clubs.roboticsClub.name"),
       description: t("clubs.roboticsClub.description"),
-      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&h=400&fit=crop",
-      features: t("clubs.roboticsClub.features", { returnObjects: true }) as string[],
-      link: "/clubs/robotics",
+      image:
+        "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&h=400&fit=crop",
+      features: t("clubs.roboticsClub.features", {
+        returnObjects: true,
+      }) as string[],
       color: "from-green-500 to-teal-600",
+      icon: "🤖",
+      email: "robotics@ajiz.org",
     },
     {
       name: t("clubs.artClub.name"),
       description: t("clubs.artClub.description"),
-      image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&h=400&fit=crop",
-      features: t("clubs.artClub.features", { returnObjects: true }) as string[],
-      link: "/clubs/art",
+      image:
+        "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&h=400&fit=crop",
+      features: t("clubs.artClub.features", {
+        returnObjects: true,
+      }) as string[],
       color: "from-pink-500 to-red-600",
+      icon: "🎨",
+      email: "art@ajiz.org",
     },
   ];
 
@@ -72,7 +83,9 @@ const Clubs = () => {
       <section className="py-20 bg-gradient-to-br from-[#184260] to-[#fd2929] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in">{t("clubs.header.title")}</h1>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in">
+              {t("clubs.header.title")}
+            </h1>
             <p className="text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed animate-fade-in">
               {t("clubs.header.subtitle")}
             </p>
@@ -84,7 +97,9 @@ const Clubs = () => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#184260] mb-6">{t("clubs.whyJoinTitle")}</h2>
+            <h2 className="text-4xl font-bold text-[#184260] mb-6">
+              {t("clubs.whyJoinTitle")}
+            </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               {t("clubs.whyJoinSubtitle")}
             </p>
@@ -92,11 +107,18 @@ const Clubs = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
-              <Card key={index} className="text-center hover:shadow-xl transition-all duration-300 hover:scale-105 border-t-4 border-t-[#fd2929]">
+              <Card
+                key={index}
+                className="text-center hover:shadow-xl transition-all duration-300 hover:scale-105 border-t-4 border-t-[#fd2929]"
+              >
                 <CardContent className="p-6">
                   <div className="text-4xl mb-4">{benefit.icon}</div>
-                  <h3 className="text-xl font-bold text-[#184260] mb-3">{benefit.title}</h3>
-                  <p className="text-gray-600 leading-relaxed">{benefit.description}</p>
+                  <h3 className="text-xl font-bold text-[#184260] mb-3">
+                    {benefit.title}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    {benefit.description}
+                  </p>
                 </CardContent>
               </Card>
             ))}
@@ -108,7 +130,9 @@ const Clubs = () => {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#184260] mb-4">{t("clubs.exploreTitle")}</h2>
+            <h2 className="text-4xl font-bold text-[#184260] mb-4">
+              {t("clubs.exploreTitle")}
+            </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               {t("clubs.exploreSubtitle")}
             </p>
@@ -116,44 +140,54 @@ const Clubs = () => {
 
           <div className="space-y-16">
             {clubs.map((club, index) => (
-              <div key={index} className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
-                <div className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
-                  <div className={`bg-gradient-to-r ${club.color} p-1 rounded-lg mb-6 inline-block`}>
-                    <h3 className="text-3xl font-bold text-white px-6 py-2">{club.name}</h3>
+              <div
+                key={index}
+                className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? "lg:grid-flow-col-dense" : ""}`}
+              >
+                <div className={index % 2 === 1 ? "lg:col-start-2" : ""}>
+                  <div
+                    className={`bg-gradient-to-r ${club.color} p-1 rounded-lg mb-6 inline-block`}
+                  >
+                    <h3 className="text-3xl font-bold text-white px-6 py-2">
+                      {club.name}
+                    </h3>
                   </div>
                   <p className="text-lg text-gray-600 mb-6 leading-relaxed">
                     {club.description}
                   </p>
-                  
+
                   <div className="space-y-3 mb-8">
-                    <h4 className="text-xl font-semibold text-[#184260]">{t("clubs.featuresHeading")}</h4>
+                    <h4 className="text-xl font-semibold text-[#184260]">
+                      {t("clubs.featuresHeading")}
+                    </h4>
                     <ul className="space-y-2">
                       {club.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-gray-600">
+                        <li
+                          key={featureIndex}
+                          className="flex items-center text-gray-600"
+                        >
                           <span className="text-[#fd2929] mr-3">✓</span>
                           {feature}
                         </li>
                       ))}
                     </ul>
                   </div>
-
-                  <Button 
-                    size="lg" 
-                    className="bg-[#fd2929] hover:bg-[#cf1919] text-white px-8 py-3 rounded-lg transition-all duration-300 hover:scale-105"
-                    asChild
-                  >
-                    <Link to={club.link}>{t("common.learnMore")}</Link>
-                  </Button>
                 </div>
-                
-                <div className={index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}>
+
+                <div
+                  className={
+                    index % 2 === 1 ? "lg:col-start-1 lg:row-start-1" : ""
+                  }
+                >
                   <div className="relative overflow-hidden rounded-lg shadow-xl">
-                    <img 
-                      src={club.image} 
+                    <img
+                      src={club.image}
                       alt={club.name}
                       className="w-full h-96 object-cover transition-transform duration-300 hover:scale-110"
                     />
-                    <div className={`absolute inset-0 bg-gradient-to-t ${club.color} opacity-20`}></div>
+                    <div
+                      className={`absolute inset-0 bg-gradient-to-t ${club.color} opacity-20`}
+                    ></div>
                   </div>
                 </div>
               </div>
@@ -166,7 +200,9 @@ const Clubs = () => {
       <section className="py-20 bg-[#184260] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">{t("clubs.impactTitle")}</h2>
+            <h2 className="text-4xl font-bold mb-4">
+              {t("clubs.impactTitle")}
+            </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               {t("clubs.impactSubtitle")}
             </p>
@@ -200,23 +236,22 @@ const Clubs = () => {
           <p className="text-xl mb-12 max-w-3xl mx-auto leading-relaxed">
             {t("clubs.readyDescription")}
           </p>
-          
+
           <div className="flex flex-col gap-4 md:flex-row md:gap-6 md:justify-center">
-            <Button 
-              size="lg" 
+            <ContactDialogButton
               className="bg-white text-[#fd2929] hover:bg-gray-100 px-8 py-4 text-lg rounded-lg transition-all duration-300 hover:scale-105"
-              asChild
-            >
-              <Link to="/activities">{t("clubs.readyPrimary")}</Link>
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
-              className="border-white text-white hover:bg-white hover:text-[#fd2929] px-8 py-4 text-lg rounded-lg transition-all duration-300 bg-transparent"
-              asChild
-            >
-              <Link to="#contact">{t("clubs.readySecondary")}</Link>
-            </Button>
+              buttonTextKey="clubs.readyPrimary"
+              titleKey="clubs.readyDialog.title"
+              descriptionKey="clubs.readyDialog.description"
+              cancelKey="clubs.readyDialog.cancel"
+              actionKey="clubs.readyDialog.emailCta"
+              contact={{
+                kind: "email",
+                value: "hr@ajiz.org",
+                linkTextKey: "clubs.readyDialog.email",
+                linkVarName: "email",
+              }}
+            />
           </div>
         </div>
       </section>
@@ -225,48 +260,26 @@ const Clubs = () => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#184260] mb-4">{t("clubs.contactTitle")}</h2>
+            <h2 className="text-4xl font-bold text-[#184260] mb-4">
+              {t("clubs.contactTitle")}
+            </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               {t("clubs.contactSubtitle")}
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="text-center p-8 hover:shadow-xl transition-all duration-300">
-              <div className="text-4xl mb-4">💻</div>
-              <h3 className="text-xl font-bold text-[#184260] mb-2">{t("clubs.codingClub.name")}</h3>
-              <p className="text-gray-600 mb-4">coding@ajiz.org</p>
-              <Button 
-                className="bg-[#fd2929] hover:bg-[#cf1919] text-white"
-                asChild
-              >
-                <Link to="/clubs/coding">{t("common.learnMore")}</Link>
-              </Button>
-            </Card>
-
-            <Card className="text-center p-8 hover:shadow-xl transition-all duration-300">
-              <div className="text-4xl mb-4">🤖</div>
-              <h3 className="text-xl font-bold text-[#184260] mb-2">{t("clubs.roboticsClub.name")}</h3>
-              <p className="text-gray-600 mb-4">robotics@ajiz.org</p>
-              <Button 
-                className="bg-[#fd2929] hover:bg-[#cf1919] text-white"
-                asChild
-              >
-                <Link to="/clubs/robotics">{t("common.learnMore")}</Link>
-              </Button>
-            </Card>
-
-            <Card className="text-center p-8 hover:shadow-xl transition-all duration-300">
-              <div className="text-4xl mb-4">🎨</div>
-              <h3 className="text-xl font-bold text-[#184260] mb-2">{t("clubs.artClub.name")}</h3>
-              <p className="text-gray-600 mb-4">art@ajiz.org</p>
-              <Button 
-                className="bg-[#fd2929] hover:bg-[#cf1919] text-white"
-                asChild
-              >
-                <Link to="/clubs/art">{t("common.learnMore")}</Link>
-              </Button>
-            </Card>
+            {clubs.map((club, index) => (
+              <Card key={index} className="text-center p-8 hover:shadow-xl transition-all duration-300">
+                <div className="text-4xl mb-4">{club.icon}</div>
+                <h3 className="text-xl font-bold text-[#184260] mb-2">
+                  {club.name}
+                </h3>
+                <a href={`mailto:${club.email}`}>
+                  <p className="text-gray-600 mb-4">{club.email}</p>
+                </a>
+              </Card>
+            ))}
           </div>
         </div>
       </section>

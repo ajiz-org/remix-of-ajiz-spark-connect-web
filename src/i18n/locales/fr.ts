@@ -616,11 +616,19 @@ const fr = {
       ],
     },
     cta: {
-      title: "Prêt à apprendre ?",
+      title: "Prêt à commencer à enseigner ?",
       description:
-        "Rejoignez notre prochain atelier et faites le premier pas pour maîtriser de nouvelles compétences qui boosteront votre carrière.",
-      primary: "S'inscrire",
+        "Devenez tuteur sur AJIZ Academy et aidez d'autres personnes à progresser grâce à votre expertise.",
+      primary: "Devenir tuteur",
       secondary: "Nous contacter",
+    },
+    ctaDialog: {
+      title: "Devenir tuteur",
+      description:
+        "Veuillez envoyer un e-mail à AJIZ Academy en joignant votre CV et le contenu de l'atelier que vous proposez.",
+      email: "{{email}}",
+      emailCta: "Contacter AJIZ Academy",
+      cancel: "Fermer",
     },
   },
   trainings: {

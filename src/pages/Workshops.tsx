@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import ContactDialogButton from "@/components/ContactDialogButton";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useTranslation } from "react-i18next";
@@ -498,21 +499,20 @@ const Workshops = () => {
           </p>
           
           <div className="flex flex-col md:flex-row gap-4 md:justify-center">
-            <Button 
-              size="lg" 
+            <ContactDialogButton
               className="bg-white text-[#fd2929] hover:bg-gray-100 px-8 py-4 text-lg rounded-lg transition-all duration-300 hover:scale-105"
-              asChild
-            >
-              <a href="#register">{ctaContent.primary}</a>
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
-              className="border-white text-white hover:bg-white hover:text-[#fd2929] px-8 py-4 text-lg rounded-lg transition-all duration-300"
-              asChild
-            >
-              <a href="#contact">{ctaContent.secondary}</a>
-            </Button>
+              buttonText={ctaContent.primary}
+              titleKey="workshops.ctaDialog.title"
+              descriptionKey="workshops.ctaDialog.description"
+              cancelKey="workshops.ctaDialog.cancel"
+              actionKey="workshops.ctaDialog.emailCta"
+              contact={{
+                kind: "email",
+                value: "academy@ajiz.org",
+                linkTextKey: "workshops.ctaDialog.email",
+                linkVarName: "email",
+              }}
+            />
           </div>
         </div>
       </section>

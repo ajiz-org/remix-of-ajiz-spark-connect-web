@@ -613,11 +613,19 @@ const en = {
       ],
     },
     cta: {
-      title: "Ready to Start Learning?",
+      title: "Ready to Start Teaching?",
       description:
-        "Join our next workshop and take the first step towards mastering new skills that will advance your career and expand your opportunities.",
-      primary: "Register Now",
+        "Become a tutor on AJIZ Academy and help others grow with your expertise.",
+      primary: "Become a tutor",
       secondary: "Contact Us",
+    },
+    ctaDialog: {
+      title: "Become a tutor",
+      description:
+        "Please email AJIZ Academy and attach your resume and the content of your proposed workshop.",
+      email: "{{email}}",
+      emailCta: "Email AJIZ Academy",
+      cancel: "Close",
     },
   },
   trainings: {

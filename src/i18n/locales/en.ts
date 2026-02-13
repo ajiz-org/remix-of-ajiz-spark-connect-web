@@ -154,7 +154,7 @@ const en = {
     history: {
       icon: "📚",
       title: "Our History",
-      description: "Founded in 2020 by passionate engineering students, AJIZ has grown from a small study group to a vibrant community of hundreds of members driving technological innovation in Zarzis.",
+      description: "Founded in 2016 by passionate engineering students, AJIZ has grown from a small initiative to a vibrant community driving technological innovation in Zarzis.",
     },
     axesTitle: "Our Thematic Axes",
     axesSubtitle: "Three pillars that guide everything we do at AJIZ",
@@ -188,25 +188,49 @@ const en = {
     journeyTitle: "Our Journey",
     journeySubtitle: "Key milestones in AJIZ's growth and development",
     milestones: {
+      2016: {
+        event: "Foundation",
+        description: "First Z2S (Zarzis Success Story) edition",
+      },
+      2017: {
+        event: "Orientation forums launch",
+        description: "Starting Prepa and Bac Orientation Forums",
+      },
+      2018: {
+        event: "Smart Center Challenge",
+        description: "Smart Center Challenge",
+      },
+      2019: {
+        event: "First ISWIT edition",
+        description: "First ISWIT Edition",
+      },
       2020: {
-        event: "AJIZ Foundation",
-        description: "Established as a student-led initiative",
+        event: "Webinars",
+        description: "Webinars",
       },
       2021: {
-        event: "First Tech Workshop",
-        description: "Organized our inaugural coding workshop",
+        event: "Seminars",
+        description: "Seminars",
       },
       2022: {
-        event: "Robotics Club Launch",
-        description: "Expanded with specialized robotics programs",
+        event: "Trainings",
+        description: "Trainings",
       },
       2023: {
-        event: "Community Partnership",
-        description: "Formed partnerships with local tech companies",
+        event: "Clubs creation & Digital Home",
+        description: "Partnership with Orange Foundation",
       },
       2024: {
-        event: "Innovation Hub",
-        description: "Opened our dedicated innovation workspace",
+        event: "Regional robotics competition",
+        description: "First Regional Robotic Competition",
+      },
+      2025: {
+        event: "Largest ISWIT edition",
+        description: "Starting ISO 9001 adoption",
+      },
+      2026: {
+        event: "Stay tuned",
+        description: "Stay Tuned",
       },
     },
     partnersTitle: "Our Partners",

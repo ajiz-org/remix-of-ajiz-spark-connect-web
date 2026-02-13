@@ -8,11 +8,17 @@ import { useTranslation } from "react-i18next";
 const About = () => {
   const { t } = useTranslation();
   const milestones = [
+    { year: "2016", event: t("about.milestones.2016.event"), description: t("about.milestones.2016.description") },
+    { year: "2017", event: t("about.milestones.2017.event"), description: t("about.milestones.2017.description") },
+    { year: "2018", event: t("about.milestones.2018.event"), description: t("about.milestones.2018.description") },
+    { year: "2019", event: t("about.milestones.2019.event"), description: t("about.milestones.2019.description") },
     { year: "2020", event: t("about.milestones.2020.event"), description: t("about.milestones.2020.description") },
     { year: "2021", event: t("about.milestones.2021.event"), description: t("about.milestones.2021.description") },
     { year: "2022", event: t("about.milestones.2022.event"), description: t("about.milestones.2022.description") },
     { year: "2023", event: t("about.milestones.2023.event"), description: t("about.milestones.2023.description") },
     { year: "2024", event: t("about.milestones.2024.event"), description: t("about.milestones.2024.description") },
+    { year: "2025", event: t("about.milestones.2025.event"), description: t("about.milestones.2025.description") },
+    { year: "2026", event: t("about.milestones.2026.event"), description: t("about.milestones.2026.description") },
   ];
 
   const partners = [

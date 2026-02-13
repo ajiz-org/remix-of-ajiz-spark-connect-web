@@ -157,7 +157,7 @@ const fr = {
     history: {
       icon: "📚",
       title: "Notre histoire",
-      description: "Fondée en 2020 par des étudiants en ingénierie passionnés, AJIZ est passée d'un petit groupe d'étude à une communauté dynamique de centaines de membres stimulant l'innovation technologique à Zarzis.",
+      description: "Fondée en 2016 par des étudiants en ingénierie passionnés, AJIZ est passée d'une petite initiative à une communauté dynamique stimulant l'innovation technologique à Zarzis.",
     },
     axesTitle: "Nos axes thématiques",
     axesSubtitle: "Trois piliers qui guident tout ce que nous faisons chez AJIZ",
@@ -191,25 +191,49 @@ const fr = {
     journeyTitle: "Notre parcours",
     journeySubtitle: "Jalons clés dans la croissance et le développement d'AJIZ",
     milestones: {
+      2016: {
+        event: "Fondation",
+        description: "Première édition de Z2S (Zarzis Success Story)",
+      },
+      2017: {
+        event: "Lancement des forums d'orientation",
+        description: "Démarrage des forums d'orientation Prépa et Bac",
+      },
+      2018: {
+        event: "Smart Center Challenge",
+        description: "Smart Center Challenge",
+      },
+      2019: {
+        event: "Première édition d'ISWIT",
+        description: "Première édition d'ISWIT",
+      },
       2020: {
-        event: "Fondation d'AJIZ",
-        description: "Créée comme initiative dirigée par des étudiants",
+        event: "Webinaires",
+        description: "Webinaires",
       },
       2021: {
-        event: "Premier atelier technique",
-        description: "Organisation de notre premier atelier de codage",
+        event: "Séminaires",
+        description: "Séminaires",
       },
       2022: {
-        event: "Lancement du club robotique",
-        description: "Expansion avec des programmes robotiques spécialisés",
+        event: "Formations",
+        description: "Formations",
       },
       2023: {
-        event: "Partenariat communautaire",
-        description: "Formation de partenariats avec des entreprises technologiques locales",
+        event: "Création des clubs & Digital Home",
+        description: "Partenariat avec Orange Foundation",
       },
       2024: {
-        event: "Hub d'innovation",
-        description: "Ouverture de notre espace d'innovation dédié",
+        event: "Compétition régionale de robotique",
+        description: "Première compétition régionale de robotique",
+      },
+      2025: {
+        event: "Plus grande édition d'ISWIT",
+        description: "Début de l'adoption ISO 9001",
+      },
+      2026: {
+        event: "Restez à l'écoute",
+        description: "Restez à l'écoute",
       },
     },
     partnersTitle: "Nos partenaires",

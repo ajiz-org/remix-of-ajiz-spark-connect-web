@@ -20,7 +20,7 @@ const Clubs = () => {
       name: t("clubs.codingClub.name"),
       description: t("clubs.codingClub.description"),
       image:
-        "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=400&fit=crop",
+        "/coding.png",
       features: t("clubs.codingClub.features", {
         returnObjects: true,
       }) as string[],
@@ -32,7 +32,7 @@ const Clubs = () => {
       name: t("clubs.roboticsClub.name"),
       description: t("clubs.roboticsClub.description"),
       image:
-        "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&h=400&fit=crop",
+        "/robotics.jpg",
       features: t("clubs.roboticsClub.features", {
         returnObjects: true,
       }) as string[],
@@ -44,7 +44,7 @@ const Clubs = () => {
       name: t("clubs.academyClub.name"),
       description: t("clubs.academyClub.description"),
       image:
-        "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600&h=400&fit=crop",
+        "/cswa.jpg",
       features: t("clubs.academyClub.features", {
         returnObjects: true,
       }) as string[],

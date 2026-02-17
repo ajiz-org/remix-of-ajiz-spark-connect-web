@@ -38,9 +38,9 @@ const Home = () => {
       image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=300&fit=crop",
     },
     {
-      name: t("home.cards.artClub.name"),
-      description: t("home.cards.artClub.description"),
-      image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&h=300&fit=crop",
+      name: t("home.cards.academyClub.name"),
+      description: t("home.cards.academyClub.description"),
+      image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=400&h=300&fit=crop",
     },
   ];
 

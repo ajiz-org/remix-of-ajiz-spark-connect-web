@@ -41,16 +41,16 @@ const Clubs = () => {
       email: "robotics@ajiz.org",
     },
     {
-      name: t("clubs.artClub.name"),
-      description: t("clubs.artClub.description"),
+      name: t("clubs.academyClub.name"),
+      description: t("clubs.academyClub.description"),
       image:
-        "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&h=400&fit=crop",
-      features: t("clubs.artClub.features", {
+        "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600&h=400&fit=crop",
+      features: t("clubs.academyClub.features", {
         returnObjects: true,
       }) as string[],
       color: "from-pink-500 to-red-600",
-      icon: "🎨",
-      email: "art@ajiz.org",
+      icon: "🎓",
+      email: "academy@ajiz.org",
     },
   ];
 

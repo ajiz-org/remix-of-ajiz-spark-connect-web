@@ -114,10 +114,10 @@ const fr = {
         description:
           "Concevez, construisez et programmez des robots en explorant l'automatisation, l'IA et les technologies matérielles de pointe.",
       },
-      artClub: {
-        name: "Club Art",
+      academyClub: {
+        name: "AJIZ Academy",
         description:
-          "Exprimez votre créativité à travers l'art numérique, le design, le multimédia et le storytelling visuel innovant.",
+          "Accélérez votre progression grâce à des parcours structurés, du mentorat et des sessions axées compétences.",
       },
     },
     testimonialsData: {
@@ -297,14 +297,14 @@ const fr = {
         "Compétitions nationales de robotique",
       ],
     },
-    artClub: {
-      name: "Club Art",
-      description: "Libérez votre créativité à travers l'art numérique, la conception multimédia et des projets de narration visuelle innovants qui mêlent technologie et expression artistique.",
+    academyClub: {
+      name: "AJIZ Academy",
+      description: "Renforcez vos bases et développez vos compétences grâce à des programmes structurés, de la pratique guidée et du mentorat.",
       features: [
-        "Ateliers d'art numérique",
-        "Formation en design UI/UX",
-        "Projets de production vidéo",
-        "Expositions de technologie créative",
+        "Parcours d'apprentissage structurés",
+        "Mentorat et coaching",
+        "Sessions pratiques et exercices",
+        "Compétences orientées carrière",
       ],
     },
     impactTitle: "Notre impact",

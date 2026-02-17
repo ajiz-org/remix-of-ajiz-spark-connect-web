@@ -111,10 +111,10 @@ const en = {
         description:
           "Design, build, and program robots while exploring automation, AI, and cutting-edge hardware technologies.",
       },
-      artClub: {
-        name: "Art Club",
+      academyClub: {
+        name: "AJIZ Academy",
         description:
-          "Express creativity through digital art, design, multimedia projects, and innovative visual storytelling.",
+          "Accelerate your growth through structured learning paths, mentorship, and skill-focused sessions.",
       },
     },
     testimonialsData: {
@@ -294,14 +294,14 @@ const en = {
         "National robotics competitions",
       ],
     },
-    artClub: {
-      name: "Art Club",
-      description: "Unleash your creativity through digital art, multimedia design, and innovative visual storytelling projects that blend technology with artistic expression.",
+    academyClub: {
+      name: "AJIZ Academy",
+      description: "Build strong foundations and advance your skills through structured programs, guided practice, and mentorship.",
       features: [
-        "Digital art workshops",
-        "UI/UX design training",
-        "Video production projects",
-        "Creative technology exhibitions",
+        "Structured learning tracks",
+        "Mentorship and coaching",
+        "Hands-on sessions and assignments",
+        "Career-ready skill building",
       ],
     },
     impactTitle: "Our Impact",

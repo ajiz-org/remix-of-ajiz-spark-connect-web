@@ -196,39 +196,6 @@ const Clubs = () => {
         </div>
       </section>
 
-      {/* Statistics Section */}
-      <section className="py-20 bg-[#184260] text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">
-              {t("clubs.impactTitle")}
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              {t("clubs.impactSubtitle")}
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-[#fd2929] mb-2">150+</div>
-              <p className="text-lg">{t("clubs.stats.members")}</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-[#fd2929] mb-2">50+</div>
-              <p className="text-lg">{t("clubs.stats.projects")}</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-[#fd2929] mb-2">25+</div>
-              <p className="text-lg">{t("clubs.stats.workshops")}</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-[#fd2929] mb-2">10+</div>
-              <p className="text-lg">{t("clubs.stats.partners")}</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Call to Action */}
       <section className="py-20 bg-gradient-to-r from-[#fd2929] to-[#cf1919] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -256,33 +223,7 @@ const Clubs = () => {
         </div>
       </section>
 
-      {/* Contact Information */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#184260] mb-4">
-              {t("clubs.contactTitle")}
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              {t("clubs.contactSubtitle")}
-            </p>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {clubs.map((club, index) => (
-              <Card key={index} className="text-center p-8 hover:shadow-xl transition-all duration-300">
-                <div className="text-4xl mb-4">{club.icon}</div>
-                <h3 className="text-xl font-bold text-[#184260] mb-2">
-                  {club.name}
-                </h3>
-                <a href={`mailto:${club.email}`}>
-                  <p className="text-gray-600 mb-4">{club.email}</p>
-                </a>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
     </div>
   );
 };

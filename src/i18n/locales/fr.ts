@@ -6,6 +6,7 @@ const fr = {
     activities: "Événements",
     workshops: "Ateliers",
     trainings: "Formations",
+    techChallenge: "Tech Challenge",
     joinUs: "Rejoignez-nous",
     language: "Langue",
   },
@@ -899,6 +900,75 @@ const fr = {
         "N'attendez plus pour faire avancer votre carrière. Nos programmes fournissent les compétences et le soutien nécessaires pour atteindre vos objectifs.",
       primary: "Postuler",
       secondary: "Plus d'infos",
+    },
+  },
+  techChallenge: {
+    hero: {
+      description:
+        "AJIZ Tech Challenge est un hackathon technique intensif réunissant étudiants, développeurs et ingénieurs autour d'un projet principal d'ingénierie, complété par plusieurs compétitions techniques parallèles.",
+      countdownLabel: "Compte à rebours vers le 12 avril à 15h00",
+      days: "Jours",
+      hours: "Heures",
+      minutes: "Minutes",
+      seconds: "Secondes",
+      register: "S'inscrire",
+      sponsor: "Devenir sponsor",
+    },
+    format: {
+      title: "Format de l'événement",
+      subtitle: "Un hackathon en continu, en équipes, entièrement sur la plateforme AJIZ",
+      team: {
+        title: "Équipes de 5",
+        desc: "Participation en équipes de 5 personnes.",
+      },
+      continuous: {
+        title: "Hackathon en continu",
+        desc: "L'événement se déroule sans interruption, du début à la fin.",
+      },
+      scoring: {
+        title: "Score pondéré global",
+        desc: "Le classement est basé sur un score global pondéré sur l'ensemble des épreuves.",
+      },
+      platform: {
+        title: "Plateforme AJIZ",
+        desc: "Toutes les épreuves se déroulent sur la plateforme AJIZ.",
+      },
+    },
+    scores: {
+      title: "Répartition des scores",
+      subtitle: "Le score global est calculé à partir de six catégories techniques",
+      mainProject: "Projet principal d'ingénierie",
+      security: "Sécurité",
+      competitiveProgramming: "Competitive Programming",
+      logicReverse: "Logic & Reverse Programming",
+      eventOptimization: "Optimisation événementielle",
+      softwareDesign: "Conception logicielle",
+      disclaimer:
+        "Les détails des épreuves et des critères d'évaluation seront communiqués au lancement de l'événement.",
+    },
+    schedule: {
+      title: "Déroulement & planning — 12 avril",
+      subtitle: "Une journée complète d'épreuves techniques, de pitching et de remise des prix",
+      day1: "12 avril",
+      day2: "13 avril",
+      hackathonStart: "Démarrage du hackathon",
+      challengesEnd: "Fin des épreuves",
+      pitching: "Pitching des équipes",
+      ceremony: "Remise des prix & cérémonie de clôture",
+    },
+    comingSoon: {
+      title: "Informations à venir",
+      subtitle: "Des informations complémentaires seront annoncées prochainement",
+      prizes: "Prix",
+      fees: "Frais d'inscription",
+      soon: "À venir",
+    },
+    cta: {
+      title: "Prêt à relever le défi ?",
+      description:
+        "Rejoignez l'AJIZ Tech Challenge et démontrez vos compétences techniques aux côtés des meilleurs ingénieurs et développeurs de la région.",
+      register: "S'inscrire",
+      sponsor: "Devenir sponsor",
     },
   },
 } as const;

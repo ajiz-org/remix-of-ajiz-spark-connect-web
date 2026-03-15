@@ -12,6 +12,7 @@ import Clubs from "./pages/Clubs";
 import Activities from "./pages/Activities";
 import Workshops from "./pages/Workshops";
 import Trainings from "./pages/Trainings";
+import TechChallenge from "./pages/TechChallenge";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -32,6 +33,7 @@ const App = () => (
               <Route path="/activities" element={<Activities />} />
               <Route path="/workshops" element={<Workshops />} />
               {/* <Route path="/trainings" element={<Trainings />} /> */}
+              <Route path="/tech-challenge" element={<TechChallenge />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>

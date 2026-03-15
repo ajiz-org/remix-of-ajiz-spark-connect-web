@@ -5,6 +5,7 @@ const ar = {
     clubs: "الأندية",
     activities: "الفعاليات",
     workshops: "الورشات",
+    techChallenge: "AJIZ Tech Challenge",
     trainings: "التدريبات",
     joinUs: "انضم إلينا",
     language: "اللغة",

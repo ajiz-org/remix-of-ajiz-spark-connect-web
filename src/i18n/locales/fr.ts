@@ -5,6 +5,7 @@ const fr = {
     clubs: "Clubs",
     activities: "Événements",
     workshops: "Ateliers",
+    techChallenge: "AJIZ Tech Challenge",
     trainings: "Formations",
     joinUs: "Rejoignez-nous",
     language: "Langue",

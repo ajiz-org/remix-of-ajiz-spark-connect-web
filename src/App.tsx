@@ -12,6 +12,7 @@ import Clubs from "./pages/Clubs";
 import Activities from "./pages/Activities";
 import Workshops from "./pages/Workshops";
 import Trainings from "./pages/Trainings";
+import AjizTechChallenge from "./pages/AjizTechChallenge";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -31,6 +32,7 @@ const App = () => (
               <Route path="/clubs" element={<Clubs />} />
               <Route path="/activities" element={<Activities />} />
               <Route path="/workshops" element={<Workshops />} />
+              <Route path="/ajiz-tech-challenge" element={<AjizTechChallenge />} />
               {/* <Route path="/trainings" element={<Trainings />} /> */}
               <Route path="*" element={<NotFound />} />
             </Routes>

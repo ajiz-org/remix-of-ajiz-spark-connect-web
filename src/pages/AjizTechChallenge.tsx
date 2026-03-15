@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 
-const EVENT_DATE = new Date("2025-04-12T15:00:00+01:00");
+const EVENT_DATE = new Date("2026-04-12T15:00:00+01:00");
 
 type TimeLeft = {
   days: number;
@@ -27,17 +29,34 @@ const getTimeLeft = (): TimeLeft => {
 };
 
 const AjizTechChallenge = () => {
+  const { t } = useTranslation();
   const [timeLeft, setTimeLeft] = useState<TimeLeft>(getTimeLeft());
 
   useEffect(() => {
+    const initial = getTimeLeft();
+    if (initial.days === 0 && initial.hours === 0 && initial.minutes === 0 && initial.seconds === 0) {
+      return;
+    }
+
     const interval = setInterval(() => {
-      setTimeLeft(getTimeLeft());
+      const remaining = getTimeLeft();
+      setTimeLeft(remaining);
+      if (remaining.days === 0 && remaining.hours === 0 && remaining.minutes === 0 && remaining.seconds === 0) {
+        clearInterval(interval);
+      }
     }, 1000);
 
     return () => clearInterval(interval);
   }, []);
 
   const { days, hours, minutes, seconds } = timeLeft;
+
+  const countdownItems = [
+    { labelKey: "ajizTechChallenge.countdown.days", value: days },
+    { labelKey: "ajizTechChallenge.countdown.hours", value: hours },
+    { labelKey: "ajizTechChallenge.countdown.minutes", value: minutes },
+    { labelKey: "ajizTechChallenge.countdown.seconds", value: seconds },
+  ];
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -51,134 +70,107 @@ const AjizTechChallenge = () => {
       >
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            AJIZ Tech Challenge
+            {t("ajizTechChallenge.hero.title")}
           </h1>
           <p className="text-lg md:text-xl text-gray-100 max-w-3xl leading-relaxed">
-            AJIZ Tech Challenge est un hackathon technique intensif réunissant
-            étudiants, développeurs et ingénieurs autour d'un projet principal
-            d'ingénierie, complété par plusieurs compétitions techniques
-            parallèles. L'événement se déroule en continu et met l'accent sur la
-            conception, la programmation, l'optimisation et la résolution de
-            problèmes techniques réels.
+            {t("ajizTechChallenge.hero.description")}
           </p>
 
-          {/* Compte à rebours */}
+          {/* Countdown */}
           <div className="mt-10">
             <p className="uppercase text-sm tracking-wide text-gray-300 mb-3">
-              ⏳ Compte à rebours vers le 12 avril à 15h00
+              {t("ajizTechChallenge.countdown.label")}
             </p>
             <div className="flex flex-wrap gap-3 md:gap-4">
-              {[
-                { label: "Jours", value: days },
-                { label: "Heures", value: hours },
-                { label: "Minutes", value: minutes },
-                { label: "Secondes", value: seconds },
-              ].map((item) => (
+              {countdownItems.map((item) => (
                 <div
-                  key={item.label}
+                  key={item.labelKey}
                   className="flex flex-col items-center justify-center bg-white/10 rounded-lg px-4 py-3 min-w-[72px] md:min-w-[80px] border border-white/20"
                 >
                   <span className="text-2xl md:text-3xl font-bold tabular-nums">
                     {item.value.toString().padStart(2, "0")}
                   </span>
                   <span className="text-xs uppercase tracking-wide text-gray-200 mt-0.5">
-                    {item.label}
+                    {t(item.labelKey)}
                   </span>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Boutons CTA */}
+          {/* CTA Buttons */}
           <div className="mt-10 flex flex-wrap gap-4">
             <Button
               className="bg-[#fd2929] hover:bg-[#cf1919] text-white px-6 py-3 rounded-lg transition-colors duration-200"
               asChild
             >
-              <a
-                href="/activities"
-                target="_self"
-                rel="noreferrer"
-              >
-                🔗 S'inscrire
-              </a>
+              <Link to="/activities">
+                {t("ajizTechChallenge.cta.register")}
+              </Link>
             </Button>
             <Button
               variant="outline"
               className="border-2 border-white text-white hover:bg-white hover:text-[#184260] px-6 py-3 rounded-lg transition-colors duration-200"
               asChild
             >
-              <a
-                href="/activities"
-                target="_self"
-                rel="noreferrer"
-              >
-                🤝 Devenir sponsor
-              </a>
+              <Link to="/activities">
+                {t("ajizTechChallenge.cta.sponsor")}
+              </Link>
             </Button>
           </div>
         </div>
       </section>
 
-      {/* Contenu principal */}
+      {/* Main content */}
       <section className="py-16">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           {/* Format */}
           <div>
             <h2 className="text-2xl md:text-3xl font-bold text-[#184260] mb-4">
-              Format
+              {t("ajizTechChallenge.format.title")}
             </h2>
             <ul className="list-disc list-inside text-gray-700 space-y-2 leading-relaxed">
-              <li>Participation en équipes de 5 personnes</li>
-              <li>Hackathon en continu, sans interruption</li>
-              <li>Classement basé sur un score global pondéré</li>
-              <li>Toutes les épreuves se déroulent sur la plateforme AJIZ</li>
+              {(t("ajizTechChallenge.format.items", { returnObjects: true }) as string[]).map((item, i) => (
+                <li key={i}>{item}</li>
+              ))}
             </ul>
           </div>
 
-          {/* Répartition des scores */}
+          {/* Score Breakdown */}
           <div>
             <h2 className="text-2xl md:text-3xl font-bold text-[#184260] mb-4">
-              Répartition des scores
+              {t("ajizTechChallenge.scoring.title")}
             </h2>
             <ul className="list-disc list-inside text-gray-700 space-y-2 leading-relaxed">
-              <li>Projet principal : 60 %</li>
-              <li>Sécurité : 10 %</li>
-              <li>Competitive Programming : 10 %</li>
-              <li>Logic &amp; Reverse Programming : 10 %</li>
-              <li>Optimisation événementielle : 5 %</li>
-              <li>Conception logicielle : 5 %</li>
+              {(t("ajizTechChallenge.scoring.items", { returnObjects: true }) as string[]).map((item, i) => (
+                <li key={i}>{item}</li>
+              ))}
             </ul>
             <p className="text-gray-600 mt-4 leading-relaxed">
-              Les détails des épreuves et des critères d'évaluation seront
-              communiqués au lancement de l'événement.
+              {t("ajizTechChallenge.scoring.note")}
             </p>
           </div>
 
-          {/* Déroulement & planning */}
+          {/* Schedule */}
           <div>
             <h2 className="text-2xl md:text-3xl font-bold text-[#184260] mb-4">
-              Déroulement &amp; planning
+              {t("ajizTechChallenge.schedule.title")}
             </h2>
             <ul className="text-gray-700 space-y-2 leading-relaxed">
-              <li><strong>Date :</strong> 12 avril</li>
-              <li>Démarrage du hackathon : 15h00</li>
-              <li>Fin des épreuves : 07h00</li>
-              <li>Pitching des équipes : 09h00 → 12h00</li>
-              <li>Remise des prix &amp; cérémonie de clôture : 12h00 → 13h00</li>
+              <li dangerouslySetInnerHTML={{ __html: t("ajizTechChallenge.schedule.date") }} />
+              <li>{t("ajizTechChallenge.schedule.hackathonStart")}</li>
+              <li>{t("ajizTechChallenge.schedule.challengesEnd")}</li>
+              <li>{t("ajizTechChallenge.schedule.pitching")}</li>
+              <li>{t("ajizTechChallenge.schedule.ceremony")}</li>
             </ul>
           </div>
 
-          {/* Informations à venir */}
+          {/* Coming Soon */}
           <div>
             <h2 className="text-2xl md:text-3xl font-bold text-[#184260] mb-4">
-              Informations à venir
+              {t("ajizTechChallenge.comingSoon.title")}
             </h2>
-            <p className="text-gray-700 leading-relaxed">
-              <strong>Prix</strong> — <strong>Frais d'inscription</strong> — Les
-              détails seront communiqués prochainement sur cette page et via les
-              canaux officiels AJIZ.
-            </p>
+            <p className="text-gray-700 leading-relaxed" dangerouslySetInnerHTML={{ __html: t("ajizTechChallenge.comingSoon.description") }} />
           </div>
         </div>
       </section>

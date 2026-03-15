@@ -11,7 +11,6 @@ import About from "./pages/About";
 import Clubs from "./pages/Clubs";
 import Activities from "./pages/Activities";
 import Workshops from "./pages/Workshops";
-import Trainings from "./pages/Trainings";
 import AjizTechChallenge from "./pages/AjizTechChallenge";
 import NotFound from "./pages/NotFound";
 

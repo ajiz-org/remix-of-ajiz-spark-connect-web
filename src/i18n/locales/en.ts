@@ -5,6 +5,7 @@ const en = {
     clubs: "Clubs",
     activities: "Events",
     workshops: "Workshops",
+    techChallenge: "AJIZ Tech Challenge",
     trainings: "Trainings",
     joinUs: "Join Us",
     language: "Language",
@@ -896,6 +897,57 @@ const en = {
         "Don't wait to advance your career. Our comprehensive training programs provide the skills and support you need to achieve your professional goals.",
       primary: "Apply Now",
       secondary: "Get More Info",
+    },
+  },
+  ajizTechChallenge: {
+    hero: {
+      title: "AJIZ Tech Challenge",
+      description:
+        "AJIZ Tech Challenge is an intensive technical hackathon bringing together students, developers, and engineers around a main engineering project, complemented by several parallel technical competitions. The event runs continuously and focuses on design, programming, optimization, and solving real technical problems.",
+    },
+    countdown: {
+      label: "⏳ Countdown to event start",
+      days: "Days",
+      hours: "Hours",
+      minutes: "Minutes",
+      seconds: "Seconds",
+    },
+    cta: {
+      register: "🔗 Register",
+      sponsor: "🤝 Become a Sponsor",
+    },
+    format: {
+      title: "Format",
+      items: [
+        "Teams of 5 participants",
+        "Continuous hackathon, without interruption",
+        "Ranking based on a weighted global score",
+        "All challenges take place on the AJIZ platform",
+      ],
+    },
+    scoring: {
+      title: "Score Breakdown",
+      items: [
+        "Main project: 60%",
+        "Security: 10%",
+        "Competitive Programming: 10%",
+        "Logic & Reverse Programming: 10%",
+        "Event Optimization: 5%",
+        "Software Design: 5%",
+      ],
+      note: "Details of the challenges and evaluation criteria will be communicated at the launch of the event.",
+    },
+    schedule: {
+      title: "Schedule & Planning",
+      date: "<strong>Date:</strong> April 12",
+      hackathonStart: "Hackathon start: 3:00 PM",
+      challengesEnd: "End of challenges: 7:00 AM",
+      pitching: "Team pitching: 9:00 AM → 12:00 PM",
+      ceremony: "Award ceremony & closing: 12:00 PM → 1:00 PM",
+    },
+    comingSoon: {
+      title: "Coming Soon",
+      description: "<strong>Prizes</strong> — <strong>Registration fees</strong> — Details will be communicated soon on this page and through official AJIZ channels.",
     },
   },
 } as const;

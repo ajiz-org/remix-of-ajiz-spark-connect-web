@@ -37,6 +37,7 @@ const Navbar = () => {
     { key: "clubs", path: "/clubs" },
     { key: "activities", path: "/activities" },
     { key: "workshops", path: "/workshops" },
+    { key: "techChallenge", path: "/ajiz-tech-challenge" },
     // { key: "trainings", path: "/trainings" },
   ] as const;
 

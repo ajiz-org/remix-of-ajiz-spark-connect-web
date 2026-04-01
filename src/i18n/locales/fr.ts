@@ -902,6 +902,57 @@ const fr = {
       secondary: "Plus d'infos",
     },
   },
+  ajizTechChallenge: {
+    hero: {
+      title: "AJIZ Tech Challenge",
+      description:
+        "AJIZ Tech Challenge est un hackathon technique intensif réunissant étudiants, développeurs et ingénieurs autour d'un projet principal d'ingénierie, complété par plusieurs compétitions techniques parallèles. L'événement se déroule en continu et met l'accent sur la conception, la programmation, l'optimisation et la résolution de problèmes techniques réels.",
+    },
+    countdown: {
+      label: "⏳ Compte à rebours avant le début de l'événement",
+      days: "Jours",
+      hours: "Heures",
+      minutes: "Minutes",
+      seconds: "Secondes",
+    },
+    cta: {
+      register: "🔗 S'inscrire",
+      sponsor: "🤝 Devenir sponsor",
+    },
+    format: {
+      title: "Format",
+      items: [
+        "Participation en équipes de 5 personnes",
+        "Hackathon en continu, sans interruption",
+        "Classement basé sur un score global pondéré",
+        "Toutes les épreuves se déroulent sur la plateforme AJIZ",
+      ],
+    },
+    scoring: {
+      title: "Répartition des scores",
+      items: [
+        "Projet principal : 60 %",
+        "Sécurité : 10 %",
+        "Competitive Programming : 10 %",
+        "Logic & Reverse Programming : 10 %",
+        "Optimisation événementielle : 5 %",
+        "Conception logicielle : 5 %",
+      ],
+      note: "Les détails des épreuves et des critères d'évaluation seront communiqués au lancement de l'événement.",
+    },
+    schedule: {
+      title: "Déroulement & planning",
+      date: "<strong>Date :</strong> 12 avril",
+      hackathonStart: "Démarrage du hackathon : 15h00",
+      challengesEnd: "Fin des épreuves : 07h00",
+      pitching: "Pitching des équipes : 09h00 → 12h00",
+      ceremony: "Remise des prix & cérémonie de clôture : 12h00 → 13h00",
+    },
+    comingSoon: {
+      title: "Informations à venir",
+      description: "<strong>Prix</strong> — <strong>Frais d'inscription</strong> — Les détails seront communiqués prochainement sur cette page et via les canaux officiels AJIZ.",
+    },
+  },
 } as const;
 
 export default fr;
